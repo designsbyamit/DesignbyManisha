@@ -104,8 +104,8 @@ export default function HolmesWorldHome() {
 
   return (
     <div>
-      {/* ── HERO ── full-bleed with headline + search, categories peek below */}
-      <section className="relative flex flex-col" style={{ minHeight: "100vh" }}>
+      {/* ── HERO ── full-bleed, fixed height, categories straddle bottom edge */}
+      <section className="relative" style={{ height: "88vh", minHeight: "600px" }}>
         {/* Background */}
         <div className="absolute inset-0">
           <Image
@@ -116,18 +116,17 @@ export default function HolmesWorldHome() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(18,16,14,0.72) 0%, rgba(18,16,14,0.55) 60%, rgba(18,16,14,0.85) 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(18,16,14,0.70) 0%, rgba(18,16,14,0.50) 50%, rgba(18,16,14,0.75) 100%)" }} />
         </div>
 
-        {/* Hero content — centred vertically in ~80% of viewport */}
-        <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 pt-20 pb-0" style={{ minHeight: "80vh" }}>
+        {/* Hero text + search — centred */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 z-10">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={stagger}
             className="w-full max-w-2xl flex flex-col items-center text-center"
           >
-            {/* Headline */}
             <motion.h1
               variants={fadeUp}
               className="mb-8 tracking-tight leading-none"
@@ -141,7 +140,6 @@ export default function HolmesWorldHome() {
               Build Better.<br />Live Better.
             </motion.h1>
 
-            {/* Search bar */}
             <motion.div variants={fadeUp} className="relative w-full">
               <span className="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none">
                 <Search size={18} style={{ color: "var(--hw-ink-muted)" }} />
@@ -167,7 +165,6 @@ export default function HolmesWorldHome() {
               </button>
             </motion.div>
 
-            {/* Category chips — no BoM here (moved to nav) */}
             <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-2 mt-5">
               {["Tiles & Flooring", "Bathroom Fittings", "Cement", "Steel TMT", "Paint", "Electrical"].map(tag => (
                 <Link
@@ -187,88 +184,62 @@ export default function HolmesWorldHome() {
             </motion.div>
           </motion.div>
         </div>
+      </section>
 
-        {/* Category cards — peek into viewport from bottom, creating scroll pull */}
-        <div className="relative z-10 px-6 pb-0" style={{ marginTop: "auto" }}>
-          <div className="max-w-7xl mx-auto">
-            <div className="flex items-baseline justify-between mb-5">
-              <p className="text-sm font-semibold" style={{ color: "rgba(255,255,255,0.5)", letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "11px" }}>Shop by Category</p>
-              <Link href="/work/holmesworld/categories" className="text-xs font-medium flex items-center gap-1" style={{ color: "rgba(255,255,255,0.5)" }}>
+      {/* ── CATEGORY CARDS ── straddle hero/content boundary */}
+      <section style={{ background: "var(--hw-surface)", paddingTop: "0", paddingBottom: "4rem", marginTop: "-120px", position: "relative", zIndex: 20 }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={stagger}
+          >
+            <div className="flex items-baseline justify-between mb-4 px-1">
+              <p style={{ color: "rgba(255,255,255,0.8)", letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "11px", fontWeight: 600 }}>
+                Shop by Category
+              </p>
+              <Link href="/work/holmesworld/categories" className="text-xs font-medium flex items-center gap-1" style={{ color: "rgba(255,255,255,0.7)" }}>
                 All <ChevronRight size={12} />
               </Link>
             </div>
-            {/* Only top ~55% of cards visible — bottom gets clipped by overflow:hidden on section */}
-            <div
-              className="grid gap-3"
-              style={{
-                gridTemplateColumns: "repeat(6, 1fr)",
-                height: "160px",
-                overflow: "hidden",
-              }}
-            >
+            <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(6, 1fr)" }}>
               {categories.slice(0, 6).map((cat, i) => {
                 const overrideImg = Object.entries(CATEGORY_IMAGES).find(([k]) => cat.slug.includes(k))?.[1];
                 return (
-                  <motion.div
-                    key={cat.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 + i * 0.07, duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-                  >
+                  <motion.div key={cat.id} variants={fadeUp}>
                     <Link href={`/work/holmesworld/categories/${cat.slug}`}>
-                      <div
-                        className="relative rounded-t-xl overflow-hidden cursor-pointer"
-                        style={{ height: "160px", background: "#2a2723" }}
+                      <motion.div
+                        className="rounded-xl overflow-hidden cursor-pointer"
+                        style={{
+                          background: "var(--hw-surface-card)",
+                          border: "1px solid var(--hw-surface-3)",
+                          boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+                        }}
+                        whileHover={{ y: -4, boxShadow: "0 16px 48px rgba(0,0,0,0.22)" }}
+                        transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
                       >
-                        <Image
-                          src={overrideImg ?? cat.image}
-                          alt={cat.name}
-                          fill
-                          className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
-                          sizes="16vw"
-                        />
-                        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(18,16,14,0.7) 0%, transparent 60%)" }} />
-                        <p className="absolute bottom-3 left-3 text-xs font-semibold" style={{ color: "var(--hw-white)" }}>{cat.name}</p>
-                      </div>
+                        {/* Image — square */}
+                        <div className="relative overflow-hidden" style={{ aspectRatio: "1/1" }}>
+                          <Image
+                            src={overrideImg ?? cat.image}
+                            alt={cat.name}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            sizes="16vw"
+                          />
+                        </div>
+                        {/* Label */}
+                        <div className="px-3 py-3">
+                          <p className="text-xs font-semibold truncate" style={{ color: "var(--hw-ink)" }}>{cat.name}</p>
+                          <p className="text-xs mt-0.5" style={{ color: "var(--hw-ink-subtle)" }}>{cat.productCount} products</p>
+                        </div>
+                      </motion.div>
                     </Link>
                   </motion.div>
                 );
               })}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CATEGORIES (continued below fold) ── */}
-      <section style={{ background: "var(--hw-surface)" }}>
-        <div className="max-w-7xl mx-auto px-6 pb-16 pt-0">
-          {/* Cards revealed below fold — same grid, bottom half */}
-          <div
-            className="grid gap-3 mb-10"
-            style={{ gridTemplateColumns: "repeat(6, 1fr)" }}
-          >
-            {categories.slice(0, 6).map((cat) => {
-              const overrideImg = Object.entries(CATEGORY_IMAGES).find(([k]) => cat.slug.includes(k))?.[1];
-              return (
-                <Link key={cat.id} href={`/work/holmesworld/categories/${cat.slug}`}>
-                  <motion.div
-                    className="rounded-b-xl overflow-hidden border-x border-b cursor-pointer"
-                    style={{
-                      background: "var(--hw-surface-card)",
-                      borderColor: "var(--hw-surface-3)",
-                    }}
-                    whileHover={{ boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="px-3 py-3">
-                      <p className="text-xs font-semibold truncate" style={{ color: "var(--hw-ink)" }}>{cat.name}</p>
-                      <p className="text-xs mt-0.5" style={{ color: "var(--hw-ink-subtle)" }}>{cat.productCount} products</p>
-                    </div>
-                  </motion.div>
-                </Link>
-              );
-            })}
-          </div>
+          </motion.div>
         </div>
       </section>
 
