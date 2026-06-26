@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Upload, ChevronRight, CheckCircle2 } from "lucide-react";
+import { Search, Upload, ChevronRight, CheckCircle2, ArrowRight } from "lucide-react";
 import { categories } from "@/lib/holmesworld/data/categories";
 import { getTrendingProducts, getFeaturedProducts } from "@/lib/holmesworld/data/products";
 import { useStore } from "@/lib/holmesworld/store";
@@ -85,8 +85,9 @@ export default function HolmesWorldHome() {
 
   return (
     <div>
-      {/* HERO */}
-      <section className="relative h-[90vh] min-h-[560px] flex items-center">
+      {/* HERO — full-bleed image with mode toggle + search centred */}
+      <section className="relative h-[92vh] min-h-[600px] flex items-center justify-center">
+        {/* Background image */}
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=85"
@@ -96,100 +97,54 @@ export default function HolmesWorldHome() {
             priority
             sizes="100vw"
           />
-          <div
-            className="absolute inset-0"
-            style={{ background: "rgba(26,24,20,0.62)" }}
-          />
+          <div className="absolute inset-0" style={{ background: "rgba(18,16,14,0.68)" }} />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+
+        {/* Centred content */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={stagger}
+          className="relative z-10 w-full max-w-2xl mx-auto px-6 flex flex-col items-center text-center"
+        >
+          {/* Mode toggle — My Workspace | eStore */}
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-            className="max-w-2xl"
+            variants={fadeUp}
+            className="flex items-center rounded-full p-1 mb-10"
+            style={{ background: "rgba(255,255,255,0.12)", backdropFilter: "blur(12px)" }}
           >
-            <motion.p
-              variants={fadeUp}
-              className="text-xs font-semibold uppercase tracking-widest mb-4"
-              style={{ color: "var(--hw-gold)" }}
-            >
-              Premium Construction Materials
-            </motion.p>
-            <motion.h1
-              variants={fadeUp}
-              className="text-5xl md:text-7xl tracking-wide mb-6"
-              style={{ color: "var(--hw-white)", lineHeight: 1.1, fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}
-            >
-              Build Your<br />Dream Home.
-            </motion.h1>
-            <motion.p
-              variants={fadeUp}
-              className="text-lg mb-10"
+            <Link
+              href="/work/holmesworld/projects"
+              className="px-5 py-2 rounded-full text-sm font-medium transition-all"
               style={{ color: "rgba(255,255,255,0.7)" }}
             >
-              Everything you need, from foundation to fittings.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
-              <Link
-                href="/work/holmesworld/categories"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-md transition-all"
-                style={{ background: "var(--hw-gold)", color: "var(--hw-white)" }}
-              >
-                Browse Materials <ArrowRight size={16} />
-              </Link>
-              <Link
-                href="/work/holmesworld/bom"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-md border transition-all"
-                style={{ borderColor: "rgba(255,255,255,0.4)", color: "var(--hw-white)" }}
-              >
-                <Upload size={16} /> Upload Bill of Materials
-              </Link>
-            </motion.div>
+              My Workspace
+            </Link>
+            <span
+              className="px-5 py-2 rounded-full text-sm font-semibold"
+              style={{ background: "var(--hw-accent)", color: "var(--hw-white)" }}
+            >
+              eStore
+            </span>
           </motion.div>
-        </div>
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <div className="w-px h-8" style={{ background: "rgba(255,255,255,0.4)" }} />
-        </motion.div>
-      </section>
 
-      {/* SEARCH HERO */}
-      <section style={{ background: "var(--hw-surface)" }}>
-        <div className="max-w-4xl mx-auto px-6 py-20 text-center">
-          {/* Small label */}
-          <p className="text-xs font-semibold uppercase tracking-widest mb-6"
-             style={{ color: "var(--hw-ink-subtle)" }}>
-            India&apos;s largest construction material catalogue
-          </p>
-          {/* Large serif heading */}
-          <h2 className="text-4xl md:text-5xl mb-10 leading-tight"
-              style={{
-                color: "var(--hw-ink)",
-                fontFamily: "Georgia, 'Times New Roman', serif",
-                fontWeight: 300
-              }}>
-            Find exactly what<br />your project needs.
-          </h2>
           {/* Search bar */}
-          <div className="relative max-w-2xl mx-auto">
+          <motion.div variants={fadeUp} className="relative w-full">
+            <span className="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none">
+              <Search size={18} style={{ color: "var(--hw-ink-muted)" }} />
+            </span>
             <input
               type="text"
               placeholder="Search tiles, cement, fittings, steel..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-6 py-4 text-base rounded-full border-2 outline-none transition-all"
+              className="w-full pl-12 pr-32 py-5 text-base rounded-full outline-none transition-all"
               style={{
                 background: "var(--hw-white)",
-                borderColor: "var(--hw-surface-3)",
                 color: "var(--hw-ink)",
-                boxShadow: "0 4px 24px rgba(0,0,0,0.06)"
+                boxShadow: "0 8px 40px rgba(0,0,0,0.3)",
+                fontSize: "15px",
               }}
-              onFocus={(e) => { e.target.style.borderColor = "var(--hw-accent)"; }}
-              onBlur={(e) => { e.target.style.borderColor = "var(--hw-surface-3)"; }}
             />
             <button
               className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2.5 rounded-full text-sm font-semibold transition-colors"
@@ -197,25 +152,48 @@ export default function HolmesWorldHome() {
             >
               Search
             </button>
-          </div>
-          {/* Quick links */}
-          <div className="flex flex-wrap justify-center gap-2 mt-6">
+          </motion.div>
+
+          {/* Category chips */}
+          <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-2 mt-5">
             {["Tiles & Flooring", "Bathroom Fittings", "Cement", "Steel TMT", "Paint", "Electrical"].map(tag => (
               <Link
                 key={tag}
                 href="/work/holmesworld/categories"
-                className="px-4 py-1.5 rounded-full text-xs font-medium border transition-colors"
+                className="px-4 py-1.5 rounded-full text-xs font-medium transition-all"
                 style={{
-                  borderColor: "var(--hw-surface-3)",
-                  color: "var(--hw-ink-muted)",
-                  background: "var(--hw-surface-card)"
+                  background: "rgba(255,255,255,0.14)",
+                  color: "rgba(255,255,255,0.85)",
+                  backdropFilter: "blur(8px)",
+                  border: "1px solid rgba(255,255,255,0.2)",
                 }}
               >
                 {tag}
               </Link>
             ))}
-          </div>
-        </div>
+            <Link
+              href="/work/holmesworld/bom"
+              className="px-4 py-1.5 rounded-full text-xs font-medium flex items-center gap-1.5 transition-all"
+              style={{
+                background: "rgba(196,97,58,0.3)",
+                color: "rgba(255,255,255,0.9)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(196,97,58,0.5)",
+              }}
+            >
+              <Upload size={11} /> Upload BoM
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="w-px h-8 mx-auto" style={{ background: "rgba(255,255,255,0.3)" }} />
+        </motion.div>
       </section>
 
       {/* CATEGORIES STRIP */}
