@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
-import { Search, Upload, ChevronRight, CheckCircle2, ArrowRight } from "lucide-react";
+import { Search, ChevronRight, CheckCircle2, ArrowRight } from "lucide-react";
 import { categories } from "@/lib/holmesworld/data/categories";
 import { getTrendingProducts, getFeaturedProducts } from "@/lib/holmesworld/data/products";
 import { useStore } from "@/lib/holmesworld/store";
@@ -19,46 +19,73 @@ const stagger: Variants = {
   visible: { transition: { staggerChildren: 0.08 } },
 };
 
+/* ── verified construction-relevant Unsplash IDs ── */
+const CATEGORY_IMAGES: Record<string, string> = {
+  "tiles":          "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&q=80",
+  "bathroom":       "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=80",
+  "steel":          "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&q=80",
+  "electrical":     "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80",
+  "paint":          "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80",
+  "cement":         "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80",
+};
+
+/* ── editorial images for "Curated" section — distinct from categories ── */
+const CURATED_IMAGES = [
+  "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=900&q=85",  // premium shower tile wall
+  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=85",     // kitchen tile floor
+  "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=85",  // wood-look living room floor
+];
+
+const constructionStages = [
+  { label: "Foundation",      icon: "🏗️", desc: "Cement, TMT Steel, Aggregates, Waterproofing" },
+  { label: "Structural Work", icon: "🧱", desc: "Bricks, Blocks, Columns, Beams" },
+  { label: "Masonry",         icon: "🪨", desc: "Mortar, Plaster, Dry-wall, Cladding" },
+  { label: "Electrical",      icon: "⚡", desc: "Wires, Switches, Panels, MCBs" },
+  { label: "Plumbing",        icon: "🚿", desc: "CPVC Pipes, Faucets, Tanks, Valves" },
+  { label: "Flooring",        icon: "🪵", desc: "Tiles, Marble, Wood, Vinyl, Epoxy" },
+  { label: "Finishing",       icon: "🎨", desc: "Paints, Putty, Primers, Texture" },
+  { label: "Interiors",       icon: "🛋️", desc: "Doors, Windows, False Ceiling, Lighting" },
+];
+
 function ProductCard({ product }: { product: ReturnType<typeof getTrendingProducts>[0] }) {
   const { dispatch } = useStore();
   return (
     <motion.div
       variants={fadeUp}
-      className="group rounded-lg overflow-hidden border"
-      style={{
-        background: "var(--hw-white)",
-        borderColor: "var(--hw-surface-3)",
-      }}
-      whileHover={{ boxShadow: "0 4px 24px rgba(0,0,0,0.08)" }}
+      className="group rounded-xl overflow-hidden"
+      style={{ background: "var(--hw-surface-card)", border: "1px solid var(--hw-surface-3)" }}
+      whileHover={{ boxShadow: "0 8px 32px rgba(0,0,0,0.09)", y: -3 }}
+      transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
     >
       <Link href={`/work/holmesworld/products/${product.slug}`}>
-        <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+        <div className="relative aspect-[4/3] overflow-hidden" style={{ background: "#F0EDE8" }}>
           <Image
             src={product.images[0]}
             alt={`${product.name} by ${product.brand}`}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, 25vw"
+            sizes="(max-width: 768px) 50vw, 25vw"
           />
         </div>
         <div className="p-4">
-          <p className="text-xs font-medium mb-1" style={{ color: "var(--hw-ink-muted)" }}>{product.brand}</p>
-          <p className="text-sm font-semibold mb-2 line-clamp-2" style={{ color: "var(--hw-ink)" }}>{product.name}</p>
+          <p className="text-xs mb-1" style={{ color: "var(--hw-ink-subtle)" }}>{product.brand}</p>
+          {/* Single line — truncated with ellipsis */}
+          <p className="text-sm font-semibold mb-2 truncate" style={{ color: "var(--hw-ink)" }}>{product.name}</p>
           <div className="flex items-center gap-1 mb-3">
             <span className="text-xs" style={{ color: "var(--hw-gold)" }}>{"★".repeat(Math.floor(product.rating))}</span>
-            <span className="text-xs" style={{ color: "var(--hw-ink-muted)" }}>({product.reviewCount.toLocaleString("en-IN")})</span>
+            <span className="text-xs" style={{ color: "var(--hw-ink-subtle)" }}>({product.reviewCount.toLocaleString("en-IN")})</span>
           </div>
-          <p className="text-base font-semibold" style={{ color: "var(--hw-gold)" }}>
+          <p className="text-base font-semibold" style={{ color: "var(--hw-ink)" }}>
             ₹{product.price.toLocaleString("en-IN")}
-            <span className="text-xs font-normal ml-1" style={{ color: "var(--hw-ink-muted)" }}>/{product.unit}</span>
+            <span className="text-xs font-normal ml-1" style={{ color: "var(--hw-ink-subtle)" }}>/{product.unit}</span>
           </p>
         </div>
       </Link>
       <div className="px-4 pb-4">
         <motion.button
-          className="w-full py-2 text-sm font-medium rounded-md transition-colors"
-          style={{ background: "var(--hw-ink)", color: "var(--hw-white)" }}
-          whileHover={{ scale: 1.02 }}
+          className="w-full py-2 text-xs font-semibold rounded-lg border transition-all opacity-0 group-hover:opacity-100"
+          style={{ borderColor: "var(--hw-accent)", color: "var(--hw-accent)", background: "transparent" }}
+          whileHover={{ background: "var(--hw-accent)", color: "var(--hw-white)" } as never}
           whileTap={{ scale: 0.98 }}
           onClick={() => dispatch({ type: "ADD_TO_CART", payload: { productId: product.id, quantity: 1, source: "browse" } })}
         >
@@ -69,14 +96,6 @@ function ProductCard({ product }: { product: ReturnType<typeof getTrendingProduc
   );
 }
 
-const constructionStages = [
-  { label: "Foundation", icon: "🏗️", desc: "Cement, Steel, Aggregates" },
-  { label: "Structure", icon: "🧱", desc: "Bricks, Blocks, Formwork" },
-  { label: "Electrical & Plumbing", icon: "⚡", desc: "Wires, Pipes, Valves" },
-  { label: "Interiors", icon: "🪟", desc: "Doors, Windows, False Ceiling" },
-  { label: "Finishes", icon: "✨", desc: "Tiles, Paint, Fittings" },
-];
-
 export default function HolmesWorldHome() {
   const featured = getFeaturedProducts().slice(0, 3);
   const trending = getTrendingProducts();
@@ -85,9 +104,9 @@ export default function HolmesWorldHome() {
 
   return (
     <div>
-      {/* HERO — full-bleed image with mode toggle + search centred */}
-      <section className="relative h-[92vh] min-h-[600px] flex items-center justify-center">
-        {/* Background image */}
+      {/* ── HERO ── full-bleed with headline + search, categories peek below */}
+      <section className="relative flex flex-col" style={{ minHeight: "100vh" }}>
+        {/* Background */}
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=85"
@@ -97,134 +116,163 @@ export default function HolmesWorldHome() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0" style={{ background: "rgba(18,16,14,0.68)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(18,16,14,0.72) 0%, rgba(18,16,14,0.55) 60%, rgba(18,16,14,0.85) 100%)" }} />
         </div>
 
-        {/* Centred content */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={stagger}
-          className="relative z-10 w-full max-w-2xl mx-auto px-6 flex flex-col items-center text-center"
-        >
-          {/* Search bar */}
-          <motion.div variants={fadeUp} className="relative w-full">
-            <span className="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none">
-              <Search size={18} style={{ color: "var(--hw-ink-muted)" }} />
-            </span>
-            <input
-              type="text"
-              placeholder="Search tiles, cement, fittings, steel..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-32 py-5 text-base rounded-full outline-none transition-all"
+        {/* Hero content — centred vertically in ~80% of viewport */}
+        <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6 pt-20 pb-0" style={{ minHeight: "80vh" }}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={stagger}
+            className="w-full max-w-2xl flex flex-col items-center text-center"
+          >
+            {/* Headline */}
+            <motion.h1
+              variants={fadeUp}
+              className="mb-8 tracking-tight leading-none"
               style={{
-                background: "var(--hw-white)",
-                color: "var(--hw-ink)",
-                boxShadow: "0 8px 40px rgba(0,0,0,0.3)",
-                fontSize: "15px",
+                color: "var(--hw-white)",
+                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontWeight: 300,
+                fontSize: "clamp(2.6rem, 6vw, 4.5rem)",
               }}
-            />
-            <button
-              className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2.5 rounded-full text-sm font-semibold transition-colors"
-              style={{ background: "var(--hw-accent)", color: "var(--hw-white)" }}
             >
-              Search
-            </button>
-          </motion.div>
+              Build Better.<br />Live Better.
+            </motion.h1>
 
-          {/* Category chips */}
-          <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-2 mt-5">
-            {["Tiles & Flooring", "Bathroom Fittings", "Cement", "Steel TMT", "Paint", "Electrical"].map(tag => (
-              <Link
-                key={tag}
-                href="/work/holmesworld/categories"
-                className="px-4 py-1.5 rounded-full text-xs font-medium transition-all"
+            {/* Search bar */}
+            <motion.div variants={fadeUp} className="relative w-full">
+              <span className="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none">
+                <Search size={18} style={{ color: "var(--hw-ink-muted)" }} />
+              </span>
+              <input
+                type="text"
+                placeholder="Search tiles, cement, fittings, steel..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-32 py-5 rounded-full outline-none transition-all"
                 style={{
-                  background: "rgba(255,255,255,0.14)",
-                  color: "rgba(255,255,255,0.85)",
-                  backdropFilter: "blur(8px)",
-                  border: "1px solid rgba(255,255,255,0.2)",
+                  background: "var(--hw-white)",
+                  color: "var(--hw-ink)",
+                  boxShadow: "0 8px 40px rgba(0,0,0,0.35)",
+                  fontSize: "15px",
                 }}
+              />
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2.5 rounded-full text-sm font-semibold"
+                style={{ background: "var(--hw-accent)", color: "var(--hw-white)" }}
               >
-                {tag}
+                Search
+              </button>
+            </motion.div>
+
+            {/* Category chips — no BoM here (moved to nav) */}
+            <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-2 mt-5">
+              {["Tiles & Flooring", "Bathroom Fittings", "Cement", "Steel TMT", "Paint", "Electrical"].map(tag => (
+                <Link
+                  key={tag}
+                  href="/work/holmesworld/categories"
+                  className="px-4 py-1.5 rounded-full text-xs font-medium transition-all"
+                  style={{
+                    background: "rgba(255,255,255,0.13)",
+                    color: "rgba(255,255,255,0.85)",
+                    backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(255,255,255,0.2)",
+                  }}
+                >
+                  {tag}
+                </Link>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Category cards — peek into viewport from bottom, creating scroll pull */}
+        <div className="relative z-10 px-6 pb-0" style={{ marginTop: "auto" }}>
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-baseline justify-between mb-5">
+              <p className="text-sm font-semibold" style={{ color: "rgba(255,255,255,0.5)", letterSpacing: "0.08em", textTransform: "uppercase", fontSize: "11px" }}>Shop by Category</p>
+              <Link href="/work/holmesworld/categories" className="text-xs font-medium flex items-center gap-1" style={{ color: "rgba(255,255,255,0.5)" }}>
+                All <ChevronRight size={12} />
               </Link>
-            ))}
-            <Link
-              href="/work/holmesworld/bom"
-              className="px-4 py-1.5 rounded-full text-xs font-medium flex items-center gap-1.5 transition-all"
+            </div>
+            {/* Only top ~55% of cards visible — bottom gets clipped by overflow:hidden on section */}
+            <div
+              className="grid gap-3"
               style={{
-                background: "rgba(196,97,58,0.3)",
-                color: "rgba(255,255,255,0.9)",
-                backdropFilter: "blur(8px)",
-                border: "1px solid rgba(196,97,58,0.5)",
+                gridTemplateColumns: "repeat(6, 1fr)",
+                height: "160px",
+                overflow: "hidden",
               }}
             >
-              <Upload size={11} /> Upload BoM
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <div className="w-px h-8 mx-auto" style={{ background: "rgba(255,255,255,0.3)" }} />
-        </motion.div>
+              {categories.slice(0, 6).map((cat, i) => {
+                const overrideImg = Object.entries(CATEGORY_IMAGES).find(([k]) => cat.slug.includes(k))?.[1];
+                return (
+                  <motion.div
+                    key={cat.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 + i * 0.07, duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                  >
+                    <Link href={`/work/holmesworld/categories/${cat.slug}`}>
+                      <div
+                        className="relative rounded-t-xl overflow-hidden cursor-pointer"
+                        style={{ height: "160px", background: "#2a2723" }}
+                      >
+                        <Image
+                          src={overrideImg ?? cat.image}
+                          alt={cat.name}
+                          fill
+                          className="object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
+                          sizes="16vw"
+                        />
+                        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(18,16,14,0.7) 0%, transparent 60%)" }} />
+                        <p className="absolute bottom-3 left-3 text-xs font-semibold" style={{ color: "var(--hw-white)" }}>{cat.name}</p>
+                      </div>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* CATEGORIES STRIP */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="border-t mb-10" style={{ borderColor: "var(--hw-surface-3)" }} />
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          variants={stagger}
-        >
-          <motion.div variants={fadeUp} className="flex items-baseline justify-between mb-10">
-            <h2 className="text-2xl" style={{ color: "var(--hw-ink)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}>Shop by Category</h2>
-            <Link href="/work/holmesworld/categories" className="text-sm font-medium flex items-center gap-1" style={{ color: "var(--hw-gold)" }}>
-              All categories <ChevronRight size={14} />
-            </Link>
-          </motion.div>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-            {categories.slice(0, 6).map((cat) => (
-              <motion.div key={cat.id} variants={fadeUp}>
-                <Link href={`/work/holmesworld/categories/${cat.slug}`}>
+      {/* ── CATEGORIES (continued below fold) ── */}
+      <section style={{ background: "var(--hw-surface)" }}>
+        <div className="max-w-7xl mx-auto px-6 pb-16 pt-0">
+          {/* Cards revealed below fold — same grid, bottom half */}
+          <div
+            className="grid gap-3 mb-10"
+            style={{ gridTemplateColumns: "repeat(6, 1fr)" }}
+          >
+            {categories.slice(0, 6).map((cat) => {
+              const overrideImg = Object.entries(CATEGORY_IMAGES).find(([k]) => cat.slug.includes(k))?.[1];
+              return (
+                <Link key={cat.id} href={`/work/holmesworld/categories/${cat.slug}`}>
                   <motion.div
-                    className="rounded-xl overflow-hidden border cursor-pointer"
+                    className="rounded-b-xl overflow-hidden border-x border-b cursor-pointer"
                     style={{
                       background: "var(--hw-surface-card)",
-                      borderColor: "var(--hw-surface-3)"
+                      borderColor: "var(--hw-surface-3)",
                     }}
-                    whileHover={{ boxShadow: "0 8px 32px rgba(0,0,0,0.10)", y: -2 }}
-                    transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                    whileHover={{ boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }}
+                    transition={{ duration: 0.2 }}
                   >
-                    <div className="relative aspect-square overflow-hidden">
-                      <Image
-                        src={cat.image}
-                        alt={cat.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 33vw, 16vw"
-                      />
-                    </div>
                     <div className="px-3 py-3">
-                      <p className="text-xs font-semibold" style={{ color: "var(--hw-ink)" }}>{cat.name}</p>
+                      <p className="text-xs font-semibold truncate" style={{ color: "var(--hw-ink)" }}>{cat.name}</p>
                       <p className="text-xs mt-0.5" style={{ color: "var(--hw-ink-subtle)" }}>{cat.productCount} products</p>
                     </div>
                   </motion.div>
                 </Link>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
-        </motion.div>
+        </div>
       </section>
 
-      {/* FEATURED COLLECTION */}
+      {/* ── CURATED FOR YOUR HOME ── editorial, distinct imagery */}
       <section style={{ background: "var(--hw-surface-2)" }}>
         <div className="max-w-7xl mx-auto px-6 py-20">
           <motion.div
@@ -236,41 +284,38 @@ export default function HolmesWorldHome() {
             <motion.h2 variants={fadeUp} className="text-2xl mb-10" style={{ color: "var(--hw-ink)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}>
               Curated for Your Home
             </motion.h2>
-            <div className="grid grid-cols-3 gap-4">
-              {/* Large card */}
-              <motion.div variants={fadeUp} className="col-span-2 rounded-lg overflow-hidden relative aspect-[4/3] group">
+            <div className="grid grid-cols-3 gap-4" style={{ gridTemplateRows: "340px" }}>
+              {/* Large editorial card */}
+              <motion.div variants={fadeUp} className="col-span-2 rounded-xl overflow-hidden relative group cursor-pointer">
                 <Image
-                  src={featured[0]?.images[0] ?? "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"}
-                  alt={featured[0]?.name ?? "Featured product"}
+                  src={CURATED_IMAGES[0]}
+                  alt="Premium bathroom tile wall"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="60vw"
                 />
-                <div className="absolute inset-0 flex flex-col justify-end p-8" style={{ background: "linear-gradient(to top, rgba(26,24,20,0.8) 0%, transparent 50%)" }}>
-                  <p className="text-xs mb-1" style={{ color: "var(--hw-gold)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>{featured[0]?.brand}</p>
-                  <p className="text-xl font-semibold mb-2" style={{ color: "var(--hw-white)", textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}>{featured[0]?.name}</p>
-                  <p className="text-base font-medium mb-4" style={{ color: "var(--hw-gold)", textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>₹{featured[0]?.price.toLocaleString("en-IN")}/{featured[0]?.unit}</p>
-                  <Link href={`/work/holmesworld/products/${featured[0]?.slug}`} className="self-start text-xs font-semibold px-5 py-2.5 rounded-md" style={{ background: "var(--hw-gold)", color: "var(--hw-white)" }}>
-                    View Product
+                <div className="absolute inset-0 flex flex-col justify-end p-8" style={{ background: "linear-gradient(to top, rgba(18,16,14,0.8) 0%, transparent 55%)" }}>
+                  <p className="text-xs mb-1 font-semibold uppercase tracking-widest" style={{ color: "var(--hw-gold)" }}>Bathroom</p>
+                  <p className="text-xl mb-3" style={{ color: "var(--hw-white)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}>Premium Shower Tile Systems</p>
+                  <Link href="/work/holmesworld/categories/bathroom-fittings" className="self-start text-xs font-semibold px-5 py-2.5 rounded-md" style={{ background: "var(--hw-accent)", color: "var(--hw-white)" }}>
+                    Explore
                   </Link>
                 </div>
               </motion.div>
-              {/* 2 stacked cards */}
+              {/* Two stacked cards */}
               <div className="flex flex-col gap-4">
-                {featured.slice(1, 3).map((p) => (
-                  <motion.div key={p.id} variants={fadeUp} className="rounded-lg overflow-hidden relative flex-1 group" style={{ minHeight: 0 }}>
-                    <div className="relative h-full min-h-[160px]">
-                      <Image
-                        src={p.images[0]}
-                        alt={p.name}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        sizes="30vw"
-                      />
-                      <div className="absolute inset-0 flex flex-col justify-end p-4" style={{ background: "linear-gradient(to top, rgba(26,24,20,0.8) 0%, transparent 50%)" }}>
-                        <p className="text-xs font-semibold mb-1" style={{ color: "var(--hw-white)" }}>{p.name}</p>
-                        <Link href={`/work/holmesworld/products/${p.slug}`} className="text-xs" style={{ color: "var(--hw-gold)" }}>View →</Link>
-                      </div>
+                {CURATED_IMAGES.slice(1).map((img, i) => (
+                  <motion.div key={i} variants={fadeUp} className="rounded-xl overflow-hidden relative flex-1 group cursor-pointer">
+                    <Image
+                      src={img}
+                      alt={i === 0 ? "Kitchen tile flooring" : "Living room wood-look floor"}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="30vw"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-end p-4" style={{ background: "linear-gradient(to top, rgba(18,16,14,0.75) 0%, transparent 55%)" }}>
+                      <p className="text-xs font-semibold mb-1" style={{ color: "var(--hw-white)" }}>{i === 0 ? "Kitchen Tile Floors" : "Wood-Look Flooring"}</p>
+                      <Link href="/work/holmesworld/categories/tiles" className="text-xs" style={{ color: "var(--hw-gold)" }}>View →</Link>
                     </div>
                   </motion.div>
                 ))}
@@ -280,7 +325,7 @@ export default function HolmesWorldHome() {
         </div>
       </section>
 
-      {/* CONSTRUCTION STAGES */}
+      {/* ── SHOP BY STAGE ── full-width immersive cards */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <motion.div
           initial="hidden"
@@ -291,20 +336,27 @@ export default function HolmesWorldHome() {
           <motion.h2 variants={fadeUp} className="text-2xl mb-10 text-center" style={{ color: "var(--hw-ink)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}>
             Shop by Stage
           </motion.h2>
-          <div className="flex gap-2 overflow-x-auto pb-2">
+          <div className="flex flex-col gap-2">
             {constructionStages.map((stage, i) => (
-              <motion.div key={stage.label} variants={fadeUp} className="flex-shrink-0">
+              <motion.div key={stage.label} variants={fadeUp}>
                 <button
                   onClick={() => setActiveStage(i)}
-                  className="px-5 py-4 rounded-lg border text-center min-w-[140px] transition-all cursor-pointer"
+                  className="w-full text-left px-6 py-5 rounded-xl border transition-all"
                   style={{
-                    background: activeStage === i ? "var(--hw-gold-light)" : "var(--hw-white)",
-                    borderColor: activeStage === i ? "var(--hw-gold)" : "var(--hw-surface-3)",
+                    background: activeStage === i ? "var(--hw-accent-light)" : "var(--hw-surface-card)",
+                    borderColor: activeStage === i ? "var(--hw-accent)" : "var(--hw-surface-3)",
+                    display: "grid",
+                    gridTemplateColumns: "2rem 1fr auto",
+                    alignItems: "center",
+                    gap: "1rem",
                   }}
                 >
-                  <div className="text-2xl mb-2">{stage.icon}</div>
-                  <p className="text-xs font-semibold mb-1" style={{ color: "var(--hw-ink)" }}>{stage.label}</p>
-                  <p className="text-xs" style={{ color: "var(--hw-ink-muted)" }}>{stage.desc}</p>
+                  <span className="text-lg">{stage.icon}</span>
+                  <span>
+                    <p className="text-sm font-semibold" style={{ color: activeStage === i ? "var(--hw-accent)" : "var(--hw-ink)" }}>{stage.label}</p>
+                    <p className="text-xs mt-0.5" style={{ color: "var(--hw-ink-subtle)" }}>{stage.desc}</p>
+                  </span>
+                  <ChevronRight size={16} style={{ color: activeStage === i ? "var(--hw-accent)" : "var(--hw-surface-3)", transition: "transform 0.2s", transform: activeStage === i ? "translateX(4px)" : "none" }} />
                 </button>
               </motion.div>
             ))}
@@ -312,7 +364,7 @@ export default function HolmesWorldHome() {
         </motion.div>
       </section>
 
-      {/* TRENDING PRODUCTS */}
+      {/* ── TRENDING PRODUCTS ── */}
       <section style={{ background: "var(--hw-surface-2)" }}>
         <div className="max-w-7xl mx-auto px-6 py-20">
           <motion.div
@@ -323,7 +375,7 @@ export default function HolmesWorldHome() {
           >
             <motion.div variants={fadeUp} className="flex items-baseline justify-between mb-10">
               <h2 className="text-2xl" style={{ color: "var(--hw-ink)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}>Trending Products</h2>
-              <Link href="/work/holmesworld/categories" className="text-sm font-medium flex items-center gap-1" style={{ color: "var(--hw-gold)" }}>
+              <Link href="/work/holmesworld/categories" className="text-sm font-medium flex items-center gap-1" style={{ color: "var(--hw-accent)" }}>
                 View all <ChevronRight size={14} />
               </Link>
             </motion.div>
@@ -336,7 +388,7 @@ export default function HolmesWorldHome() {
         </div>
       </section>
 
-      {/* PROMO BANNER */}
+      {/* ── PROMO BANNER ── */}
       <section style={{ background: "var(--hw-surface-dark)" }}>
         <div className="max-w-7xl mx-auto px-6 py-16 text-center">
           <motion.div
@@ -345,20 +397,20 @@ export default function HolmesWorldHome() {
             viewport={{ once: true }}
             variants={stagger}
           >
-            <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--hw-gold)" }}>
+            <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--hw-accent)" }}>
               Limited Time
             </motion.p>
             <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl mb-4" style={{ color: "var(--hw-white)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}>
               No Cost EMI on orders above ₹50,000
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-base mb-8" style={{ color: "rgba(255,255,255,0.6)" }}>
+            <motion.p variants={fadeUp} className="text-base mb-8" style={{ color: "rgba(255,255,255,0.55)" }}>
               Available on HDFC, ICICI, SBI, and Axis cards. Tenures of 3, 6, 9, and 12 months.
             </motion.p>
             <motion.div variants={fadeUp}>
               <Link
                 href="/work/holmesworld/categories"
                 className="inline-flex items-center gap-2 px-8 py-3 text-sm font-medium rounded-md"
-                style={{ background: "var(--hw-gold)", color: "var(--hw-white)" }}
+                style={{ background: "var(--hw-accent)", color: "var(--hw-white)" }}
               >
                 Shop Now <ArrowRight size={16} />
               </Link>
@@ -367,7 +419,7 @@ export default function HolmesWorldHome() {
         </div>
       </section>
 
-      {/* BOM CTA */}
+      {/* ── BOM CTA ── */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <motion.div
           initial="hidden"
@@ -375,13 +427,10 @@ export default function HolmesWorldHome() {
           viewport={{ once: true, margin: "-80px" }}
           variants={fadeUp}
           className="rounded-2xl p-12 flex flex-col md:flex-row items-center justify-between gap-8 border"
-          style={{
-            background: "var(--hw-gold-light)",
-            borderColor: "var(--hw-gold)",
-          }}
+          style={{ background: "var(--hw-accent-light)", borderColor: "var(--hw-accent)" }}
         >
           <div className="max-w-lg">
-            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--hw-gold)" }}>
+            <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "var(--hw-accent)" }}>
               Smart Procurement
             </p>
             <h2 className="text-3xl mb-4" style={{ color: "var(--hw-ink)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}>
@@ -397,7 +446,7 @@ export default function HolmesWorldHome() {
                 "One-click add all to cart",
               ].map((feat) => (
                 <li key={feat} className="flex items-center gap-2">
-                  <CheckCircle2 size={15} style={{ color: "var(--hw-gold)", flexShrink: 0 }} />
+                  <CheckCircle2 size={15} style={{ color: "var(--hw-accent)", flexShrink: 0 }} />
                   <span className="text-sm" style={{ color: "var(--hw-ink-muted)" }}>{feat}</span>
                 </li>
               ))}
@@ -409,7 +458,7 @@ export default function HolmesWorldHome() {
               className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-md"
               style={{ background: "var(--hw-ink)", color: "var(--hw-white)" }}
             >
-              <Upload size={18} /> Upload BoM
+              Upload BoM
             </Link>
           </div>
         </motion.div>

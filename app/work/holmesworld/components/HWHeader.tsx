@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
-import { ShoppingCart, Search, Bell, X, ChevronDown } from "lucide-react";
+import { ShoppingCart, Search, Bell, X, ChevronDown, Upload } from "lucide-react";
 import { useCartCount } from "@/lib/holmesworld/store";
 import { categories } from "@/lib/holmesworld/data/categories";
 import { motion, AnimatePresence } from "framer-motion";
@@ -247,6 +247,19 @@ export default function HWHeader() {
               {searchOpen ? <X size={18} /> : <Search size={18} />}
             </button>
           </div>
+
+          {/* Upload BoM — utility CTA in nav */}
+          <Link
+            href="/work/holmesworld/bom"
+            className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold transition-colors"
+            style={{
+              background: "var(--hw-accent-light)",
+              color: "var(--hw-accent)",
+              border: "1px solid var(--hw-accent)",
+            }}
+          >
+            <Upload size={12} /> Upload BoM
+          </Link>
 
           {/* Bell */}
           <button
