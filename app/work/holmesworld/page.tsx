@@ -307,19 +307,19 @@ export default function HolmesWorldHome() {
           <motion.h2 variants={fadeUp} className="text-2xl mb-10 text-center" style={{ color: "var(--hw-ink)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 300 }}>
             Shop by Stage
           </motion.h2>
-          <div className="flex flex-col gap-2">
+          <div className="grid grid-cols-3 gap-3">
             {constructionStages.map((stage, i) => (
               <motion.div key={stage.label} variants={fadeUp}>
                 <button
                   onClick={() => setActiveStage(i)}
-                  className="w-full text-left px-6 py-5 rounded-xl border transition-all"
+                  className="w-full text-left px-5 py-5 rounded-xl border transition-all"
                   style={{
                     background: activeStage === i ? "var(--hw-accent-light)" : "var(--hw-surface-card)",
                     borderColor: activeStage === i ? "var(--hw-accent)" : "var(--hw-surface-3)",
                     display: "grid",
                     gridTemplateColumns: "2rem 1fr auto",
                     alignItems: "center",
-                    gap: "1rem",
+                    gap: "0.875rem",
                   }}
                 >
                   <span className="text-lg">{stage.icon}</span>
