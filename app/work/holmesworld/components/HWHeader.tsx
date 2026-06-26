@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { ShoppingCart, Search, Bell, X, ChevronDown } from "lucide-react";
 import { useCartCount } from "@/lib/holmesworld/store";
@@ -9,6 +10,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function HWHeader() {
   const cartCount = useCartCount();
+  const pathname = usePathname();
+  const isWorkspace = pathname?.includes("/projects");
   const [megaOpen, setMegaOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -176,17 +179,33 @@ export default function HWHeader() {
             <Link
               href="/work/holmesworld/projects"
               className="px-3 py-2 text-sm font-medium rounded-md transition-colors"
-              style={{ color: "var(--hw-ink-muted)" }}
+              style={{ color: isWorkspace ? "var(--hw-ink)" : "var(--hw-ink-muted)" }}
             >
               Projects
             </Link>
-            <span
-              className="px-3 py-2 text-sm font-medium rounded-md cursor-not-allowed"
-              style={{ color: "var(--hw-ink-muted)" }}
-              title="Coming soon"
-            >
-              Experience Centre
-            </span>
+            {isWorkspace ? (
+              <Link
+                href="/work/holmesworld"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1.5"
+                style={{
+                  color: "var(--hw-accent)",
+                  border: "1px solid var(--hw-accent-light)",
+                  background: "var(--hw-accent-light)",
+                }}
+              >
+                eStore ↗
+              </Link>
+            ) : (
+              <span
+                className="px-3 py-2 text-sm font-medium rounded-md cursor-not-allowed"
+                style={{ color: "var(--hw-ink-muted)" }}
+                title="Coming soon"
+              >
+                Experience Centre
+              </span>
+            )}
           </nav>
 
           {/* Spacer */}
