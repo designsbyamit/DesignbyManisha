@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   motion,
   useScroll,
@@ -643,20 +642,9 @@ export default function HomesWorldCaseStudy() {
 
       {/* ── HERO ────────────────────────────────────────────── */}
       <div ref={heroRef} style={{ minHeight: "100vh", position: "relative", overflow: "hidden" }}>
-        {/* BG texture */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
-            alt="Premium home interior"
-            fill
-            priority
-            className="object-cover"
-            style={{ opacity: 0.06 }}
-          />
-        </div>
 
         <motion.div
-          style={{ y: heroY, opacity: heroOpacity, position: "relative", zIndex: 1 }}
+          style={{ y: heroY, opacity: heroOpacity }}
           initial="hidden"
           animate="visible"
           variants={stagger}
@@ -752,15 +740,8 @@ export default function HomesWorldCaseStudy() {
       </div>
 
       {/* ── PROJECT CONTEXT ─────────────────────────────────── */}
-      <div style={{ position: "relative", overflow: "hidden" }}>
-        <Image
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400&q=75"
-          alt="Construction context"
-          fill
-          className="object-cover"
-          style={{ opacity: 0.07 }}
-        />
-        <Section style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 48px", position: "relative" }}>
+      <div style={{ background: P.stone }}>
+        <Section style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 48px" }}>
           <div style={{ maxWidth: 720 }}>
             <Label>Project Context</Label>
             <motion.h2
@@ -1470,16 +1451,8 @@ export default function HomesWorldCaseStudy() {
       </Section>
 
       {/* ── NEXT PROJECT ────────────────────────────────────── */}
-      <section style={{ position: "relative", overflow: "hidden", minHeight: 320, display: "flex", alignItems: "center" }}>
-        <Image
-          src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1400&q=75"
-          alt="CogniCure — next case study"
-          fill
-          className="object-cover"
-          style={{ opacity: 0.12 }}
-        />
-        <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, ${P.charcoal} 0%, #1a2535 100%)` }} />
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", padding: "80px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
+      <section style={{ minHeight: 320, display: "flex", alignItems: "center", background: `linear-gradient(135deg, ${P.charcoal} 0%, #1a2535 100%)` }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
           <div>
             <p style={{ ...sans, fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 12 }}>Next Case Study</p>
             <h2 style={{ ...serif, fontSize: "clamp(1.8rem, 3vw, 3rem)", color: P.white, lineHeight: 1.2, marginBottom: 12 }}>CogniCure</h2>
