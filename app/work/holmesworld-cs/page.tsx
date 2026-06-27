@@ -239,8 +239,17 @@ function CementJourneyDemo() {
                   </div>
                 </div>
 
-                {/* Hero area */}
-                <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "0 32px", background: P.charcoal }}>
+                {/* Hero area — real image bg with gradient overlay */}
+                <div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
+                  {/* bg image */}
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=75"
+                    alt=""
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                  <div style={{ position: "absolute", inset: 0, background: "rgba(18,16,14,0.65)" }} />
+                  {/* content */}
+                  <div style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100%", padding: "0 32px" }}>
                   <p style={{ ...serif, color: P.white, fontSize: 26, lineHeight: 1.2, textAlign: "center", marginBottom: 28, fontWeight: 300 }}>
                     Build Better.<br />Live Better.
                   </p>
@@ -281,7 +290,7 @@ function CementJourneyDemo() {
 
                   {/* Category chips */}
                   <div style={{ display: "flex", gap: 8, marginTop: 16, flexWrap: "wrap", justifyContent: "center" }}>
-                    {["Tiles & Flooring", "Bathroom Fittings", "Cement", "Steel TMT"].map((t, i) => (
+                    {["Tiles & Flooring", "Bathroom Fittings", "Cement", "Steel TMT"].map((t) => (
                       <motion.span
                         key={t}
                         animate={t === "Cement" && stage === 1 ? { background: "rgba(196,97,58,0.25)", borderColor: P.terracotta } : {}}
@@ -295,6 +304,7 @@ function CementJourneyDemo() {
                         }}
                       >{t}</motion.span>
                     ))}
+                  </div>
                   </div>
                 </div>
               </motion.div>
