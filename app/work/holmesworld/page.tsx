@@ -434,6 +434,71 @@ export default function HolmesWorldHome() {
           </div>
         </motion.div>
       </section>
+
+      {/* ── NEXT PROJECT ─────────────────────────────────────────────────── */}
+      <NextProject />
     </div>
+  );
+}
+
+function NextProject() {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <section style={{ background: "var(--hw-surface-dark)", padding: "100px 0 60px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(1.5rem,5vw,48px)" }}>
+        <p style={{ textAlign: "center", fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.22)", marginBottom: 40 }}>
+          Next Case Study
+        </p>
+
+        <Link href="/work/cognicure" style={{ textDecoration: "none", display: "block" }}>
+          <motion.div
+            onMouseEnter={() => hovered || setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            animate={{ y: hovered ? -4 : 0, boxShadow: hovered ? "0 40px 80px rgba(0,0,0,0.4)" : "0 20px 40px rgba(0,0,0,0.2)" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            style={{
+              background: "#1a1a22",
+              borderRadius: 28,
+              border: `1px solid ${hovered ? "rgba(27,58,92,0.6)" : "rgba(255,255,255,0.06)"}`,
+              padding: "56px 64px",
+              display: "grid",
+              gridTemplateColumns: "1fr 300px",
+              gap: 64,
+              alignItems: "center",
+              cursor: "pointer",
+              transition: "border-color 0.25s ease",
+            }}
+          >
+            <div>
+              <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4F9CF9", marginBottom: 16 }}>
+                Healthcare · Mobile App
+              </p>
+              <h3 style={{ fontSize: 32, fontWeight: 800, letterSpacing: "-0.03em", color: "#ffffff", lineHeight: 1.2, marginBottom: 28 }}>
+                Designing healthcare continuity<br />for patients navigating<br />complex journeys
+              </h3>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#4F9CF9", fontSize: 14, fontWeight: 600 }}>
+                View case study <ChevronRight size={14} />
+              </div>
+            </div>
+            <div style={{
+              background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)",
+              borderRadius: 16, height: 200,
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}>
+              <div style={{ width: 60, height: 60, borderRadius: 14, background: "rgba(27,58,92,0.3)", border: "1px solid rgba(79,156,249,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 22 }}>🏥</span>
+              </div>
+            </div>
+          </motion.div>
+        </Link>
+
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 80, paddingTop: 32, borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+          <Link href="/" style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "rgba(255,255,255,0.35)", fontSize: 13, fontWeight: 500, textDecoration: "none" }}>
+            ← Back to all work
+          </Link>
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.18)", margin: 0 }}>© 2025 Manisha. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
   );
 }

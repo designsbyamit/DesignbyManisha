@@ -177,10 +177,10 @@ function CementJourneyDemo() {
   }, [stage === 0 ? stage : -1]); // re-run on reset
 
   const cementProducts = [
-    { brand: "UltraTech Cement", name: "OPC 53 Grade Cement", price: "₹410", unit: "bag", rating: 4.8 },
-    { brand: "JK Cement", name: "PPC Blended Cement", price: "₹390", unit: "bag", rating: 4.6 },
-    { brand: "ACC Cement", name: "Gold PPC Premium", price: "₹405", unit: "bag", rating: 4.7 },
-    { brand: "Ambuja Cement", name: "Plus Composite Cement", price: "₹395", unit: "bag", rating: 4.5 },
+    { brand: "UltraTech Cement", name: "OPC 53 Grade Cement", price: "₹410", unit: "bag", rating: 4.8, img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=80&q=80" },
+    { brand: "JK Cement", name: "PPC Blended Cement", price: "₹390", unit: "bag", rating: 4.6, img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=80&q=80" },
+    { brand: "ACC Cement", name: "Gold PPC Premium", price: "₹405", unit: "bag", rating: 4.7, img: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=80&q=80" },
+    { brand: "Ambuja Cement", name: "Plus Composite Cement", price: "₹395", unit: "bag", rating: 4.5, img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=80&q=80" },
   ];
 
   const iPad = { width: 520, height: 680 };
@@ -220,7 +220,7 @@ function CementJourneyDemo() {
               >
                 {/* Mini nav */}
                 <div style={{ padding: "10px 16px", borderBottom: `1px solid ${P.stone3}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: P.stone }}>
-                  <span style={{ ...serif, color: P.ink, fontSize: 14 }}>Holmes<span style={{ color: P.terracotta }}>World</span></span>
+                  <span style={{ ...serif, color: P.ink, fontSize: 14 }}>Homes<span style={{ color: P.terracotta }}>World</span></span>
                   <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
                     {["Categories", "Projects"].map(n => <span key={n} style={{ ...sans, fontSize: 10, color: P.muted }}>{n}</span>)}
                     {/* Cart with badge */}
@@ -308,7 +308,7 @@ function CementJourneyDemo() {
               >
                 {/* Nav */}
                 <div style={{ padding: "10px 16px", borderBottom: `1px solid ${P.stone3}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: P.cream }}>
-                  <span style={{ ...serif, color: P.ink, fontSize: 14 }}>Holmes<span style={{ color: P.terracotta }}>World</span></span>
+                  <span style={{ ...serif, color: P.ink, fontSize: 14 }}>Homes<span style={{ color: P.terracotta }}>World</span></span>
                   <div style={{ background: P.stone2, borderRadius: 99, padding: "5px 12px", display: "flex", alignItems: "center", gap: 6 }}>
                     <span style={{ fontSize: 11, color: P.muted }}>🔍</span>
                     <span style={{ ...sans, fontSize: 11, color: P.ink, fontWeight: 500 }}>cement</span>
@@ -358,9 +358,10 @@ function CementJourneyDemo() {
                           transition: "all 0.25s ease",
                         }}
                       >
-                        {/* Product image placeholder */}
-                        <div style={{ width: 44, height: 44, borderRadius: 8, background: P.stone2, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>
-                          🏗️
+                        {/* Product image */}
+                        <div style={{ width: 44, height: 44, borderRadius: 8, background: P.stone2, flexShrink: 0, overflow: "hidden" }}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={p.img} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                         </div>
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <p style={{ ...sans, fontSize: 9, color: P.muted, marginBottom: 1 }}>{p.brand}</p>

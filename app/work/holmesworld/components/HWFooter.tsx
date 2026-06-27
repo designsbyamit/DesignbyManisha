@@ -15,7 +15,7 @@ export default function HWFooter() {
           {/* About */}
           <div>
             <div className="flex items-center gap-1 mb-4">
-              <span className="text-lg" style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}>Holmes</span>
+              <span className="text-lg" style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}>Homes</span>
               <span className="text-lg" style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400, color: "var(--hw-accent)" }}>World</span>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
@@ -78,7 +78,7 @@ export default function HWFooter() {
           style={{ borderColor: "rgba(255,255,255,0.1)" }}
         >
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
-            © HolmesWorld 2025. All rights reserved.
+            © HomesWorld 2025. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
             Made in India 🇮🇳 · GST: 29AABCH1234M1Z5

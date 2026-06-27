@@ -3,7 +3,7 @@ import Image from "next/image";
 import { categories } from "../../../../lib/holmesworld/data/categories";
 
 export const metadata = {
-  title: "All Categories — HolmesWorld",
+  title: "All Categories — HomesWorld",
 };
 
 export default function CategoriesPage() {

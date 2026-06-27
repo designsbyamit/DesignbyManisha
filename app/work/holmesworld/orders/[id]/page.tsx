@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ChevronRight, CheckCircle, Circle, MapPin } from "lucide-react";
 import { orders } from "../../../../../lib/holmesworld/data/orders";
 
-export const metadata = { title: "Order Detail — HolmesWorld" };
+export const metadata = { title: "Order Detail — HomesWorld" };
 
 const TRACKING_STEPS = [
   "Order Placed",

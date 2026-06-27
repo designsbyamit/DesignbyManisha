@@ -3,7 +3,7 @@ import Image from "next/image";
 import { CheckCircle, XCircle } from "lucide-react";
 import { products } from "../../../../lib/holmesworld/data/products";
 
-export const metadata = { title: "Compare Products — HolmesWorld" };
+export const metadata = { title: "Compare Products — HomesWorld" };
 
 // Pre-select 3 premium bathroom shower products for comparison
 const COMPARE_IDS = ["p-009", "p-015", "p-016"];

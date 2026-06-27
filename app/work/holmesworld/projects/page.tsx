@@ -4,7 +4,7 @@ import { projects } from "../../../../lib/holmesworld/data/projects";
 import { orders } from "../../../../lib/holmesworld/data/orders";
 import { products } from "../../../../lib/holmesworld/data/products";
 
-export const metadata = { title: "Project Workspace — HolmesWorld" };
+export const metadata = { title: "Project Workspace — HomesWorld" };
 
 function ProgressRing({ percent }: { percent: number }) {
   const r = 36;

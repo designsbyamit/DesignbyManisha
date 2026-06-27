@@ -59,7 +59,7 @@ export default function HWHeader() {
               className="text-xl tracking-tight"
               style={{ color: "var(--hw-ink)", fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: 400 }}
             >
-              Holmes
+              Homes
             </span>
             <span
               className="text-xl tracking-tight"
