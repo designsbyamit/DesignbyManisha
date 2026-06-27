@@ -130,175 +130,327 @@ function Label({ children }: { children: React.ReactNode }) {
 /* ─────────────────────────────────────────────────────────────────────────
    MOCK SCREENS — hero composition
 ───────────────────────────────────────────────────────────────────────── */
-function HeroUIComposition() {
-  const [activeScreen, setActiveScreen] = useState(0);
+function CementJourneyDemo() {
+  // Stages: 0=homepage idle, 1=typing, 2=plp, 3=added-to-cart
+  const [stage, setStage] = useState(0);
+  const [typed, setTyped] = useState("");
+  const [cartCount, setCartCount] = useState(0);
+  const [addedIndex, setAddedIndex] = useState<number | null>(null);
+  const [cursorY, setCursorY] = useState(0);
+  const fullWord = "cement";
 
+  // Master timeline
   useEffect(() => {
-    const t = setInterval(() => setActiveScreen(s => (s + 1) % 3), 3200);
-    return () => clearInterval(t);
-  }, []);
+    let timeouts: ReturnType<typeof setTimeout>[] = [];
 
-  const screens = [
-    /* Homepage preview */
-    <div key="home" style={{ background: P.charcoal, borderRadius: 8, overflow: "hidden", height: "100%" }}>
-      <div style={{ padding: "10px 14px", borderBottom: `1px solid rgba(255,255,255,0.08)`, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <span style={{ ...serif, color: P.white, fontSize: 13 }}>Holmes<span style={{ color: P.terracotta }}>World</span></span>
-        <div style={{ display: "flex", gap: 8 }}>
-          {["Categories", "Projects"].map(n => <span key={n} style={{ ...sans, fontSize: 9, color: "rgba(255,255,255,0.45)" }}>{n}</span>)}
-          <div style={{ width: 56, height: 14, background: P.terracotta, borderRadius: 99, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ ...sans, fontSize: 8, color: P.white, fontWeight: 600 }}>Upload BoM</span>
-          </div>
-        </div>
-      </div>
-      <div style={{ padding: "20px 14px 0" }}>
-        <p style={{ ...serif, color: P.white, fontSize: 18, lineHeight: 1.2, marginBottom: 12 }}>Build Better.<br />Live Better.</p>
-        <div style={{ background: P.white, borderRadius: 99, padding: "8px 12px", display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-          <div style={{ width: 10, height: 10, borderRadius: "50%", border: `1px solid ${P.stone3}` }} />
-          <span style={{ ...sans, fontSize: 9, color: P.muted }}>Search tiles, cement, fittings...</span>
-          <div style={{ marginLeft: "auto", background: P.terracotta, borderRadius: 99, padding: "3px 10px" }}>
-            <span style={{ ...sans, fontSize: 8, color: P.white, fontWeight: 600 }}>Search</span>
-          </div>
-        </div>
-        <div style={{ display: "flex", gap: 4, flexWrap: "wrap", marginBottom: 16 }}>
-          {["Tiles", "Bathroom", "Cement", "Steel"].map(t => (
-            <span key={t} style={{ ...sans, fontSize: 8, color: "rgba(255,255,255,0.6)", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 99, padding: "2px 7px" }}>{t}</span>
-          ))}
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 4 }}>
-          {[P.stone3, P.sand, P.stone2].map((bg, i) => (
-            <div key={i} style={{ background: bg, borderRadius: 6, height: 48 }} />
-          ))}
-        </div>
-      </div>
-    </div>,
+    function schedule(fn: () => void, delay: number) {
+      timeouts.push(setTimeout(fn, delay));
+    }
 
-    /* Product detail */
-    <div key="pdp" style={{ background: P.cream, borderRadius: 8, overflow: "hidden", height: "100%" }}>
-      <div style={{ padding: "8px 12px", borderBottom: `1px solid ${P.stone3}`, display: "flex", alignItems: "center", gap: 6 }}>
-        <span style={{ ...serif, color: P.ink, fontSize: 12 }}>Holmes<span style={{ color: P.terracotta }}>World</span></span>
-        <span style={{ ...sans, fontSize: 8, color: P.muted }}>/ Bathroom / Jaquar Lyric</span>
-      </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, height: "calc(100% - 32px)" }}>
-        <div style={{ background: P.stone2, display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <div style={{ width: 60, height: 60, borderRadius: "50%", background: P.stone3, opacity: 0.6 }} />
-        </div>
-        <div style={{ padding: "12px 10px" }}>
-          <p style={{ ...sans, fontSize: 8, color: P.muted, marginBottom: 4 }}>Jaquar</p>
-          <p style={{ ...serif, fontSize: 11, color: P.ink, lineHeight: 1.3, marginBottom: 8 }}>Lyric Series Overhead Shower</p>
-          <p style={{ ...sans, fontSize: 13, fontWeight: 700, color: P.ink, marginBottom: 2 }}>₹18,500</p>
-          <p style={{ ...sans, fontSize: 8, color: P.muted, marginBottom: 10 }}>per piece</p>
-          <div style={{ background: P.terracotta, borderRadius: 6, padding: "6px 10px", textAlign: "center" }}>
-            <span style={{ ...sans, fontSize: 9, color: P.white, fontWeight: 600 }}>Add to Cart</span>
-          </div>
-          <div style={{ marginTop: 6, border: `1px solid ${P.terracotta}`, borderRadius: 6, padding: "5px 10px", textAlign: "center" }}>
-            <span style={{ ...sans, fontSize: 9, color: P.terracotta, fontWeight: 600 }}>Add to Project</span>
-          </div>
-        </div>
-      </div>
-    </div>,
+    // Phase 1: type "cement" — one char every 120ms starting at 1s
+    fullWord.split("").forEach((_, i) => {
+      schedule(() => {
+        setTyped(fullWord.slice(0, i + 1));
+        setStage(1);
+      }, 1000 + i * 120);
+    });
 
-    /* BoM upload */
-    <div key="bom" style={{ background: P.cream, borderRadius: 8, overflow: "hidden", height: "100%", display: "flex", flexDirection: "column" }}>
-      <div style={{ padding: "8px 12px", borderBottom: `1px solid ${P.stone3}` }}>
-        <span style={{ ...serif, color: P.ink, fontSize: 12 }}>Holmes<span style={{ color: P.terracotta }}>World</span></span>
-      </div>
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "16px 14px", textAlign: "center" }}>
-        <p style={{ ...sans, fontSize: 9, color: P.terracotta, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Smart Procurement</p>
-        <p style={{ ...serif, fontSize: 14, color: P.ink, lineHeight: 1.3, marginBottom: 12 }}>Your architect gave you a list. We'll find everything on it.</p>
-        <div style={{ width: "100%", border: `2px dashed ${P.stone3}`, borderRadius: 10, padding: "16px 10px", marginBottom: 10 }}>
-          <div style={{ width: 20, height: 20, background: P.stone2, borderRadius: "50%", margin: "0 auto 6px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <span style={{ fontSize: 10 }}>↑</span>
-          </div>
-          <p style={{ ...sans, fontSize: 9, color: P.muted }}>Drop your BoM here</p>
-          <p style={{ ...sans, fontSize: 8, color: P.subtle }}>PDF, Excel, CSV</p>
-        </div>
-        <div style={{ background: P.terracotta, borderRadius: 6, padding: "7px 20px" }}>
-          <span style={{ ...sans, fontSize: 9, color: P.white, fontWeight: 600 }}>Use Sample BoM</span>
-        </div>
-      </div>
-    </div>,
+    // Phase 2: pause, then transition to PLP
+    schedule(() => setStage(2), 1000 + fullWord.length * 120 + 700);
+
+    // Phase 3: cursor drifts down the list (simulated via cursorY)
+    schedule(() => setCursorY(60),  1000 + fullWord.length * 120 + 1200);
+    schedule(() => setCursorY(120), 1000 + fullWord.length * 120 + 1700);
+    schedule(() => setCursorY(180), 1000 + fullWord.length * 120 + 2200);
+
+    // Phase 4: click "Add to Cart" on first item
+    schedule(() => setAddedIndex(0), 1000 + fullWord.length * 120 + 2800);
+    schedule(() => { setCartCount(1); setStage(3); }, 1000 + fullWord.length * 120 + 3100);
+
+    // Reset and loop
+    const loopDelay = 1000 + fullWord.length * 120 + 5000;
+    schedule(() => {
+      setStage(0); setTyped(""); setCartCount(0); setAddedIndex(null); setCursorY(0);
+    }, loopDelay);
+
+    return () => timeouts.forEach(clearTimeout);
+  }, [stage === 0 ? stage : -1]); // re-run on reset
+
+  const cementProducts = [
+    { brand: "UltraTech Cement", name: "OPC 53 Grade Cement", price: "₹410", unit: "bag", rating: 4.8 },
+    { brand: "JK Cement", name: "PPC Blended Cement", price: "₹390", unit: "bag", rating: 4.6 },
+    { brand: "ACC Cement", name: "Gold PPC Premium", price: "₹405", unit: "bag", rating: 4.7 },
+    { brand: "Ambuja Cement", name: "Plus Composite Cement", price: "₹395", unit: "bag", rating: 4.5 },
   ];
 
+  const iPad = { width: 520, height: 680 };
+
   return (
-    <div style={{ position: "relative", width: "100%", maxWidth: 360 }}>
-      {/* Browser chrome */}
-      <div style={{ borderRadius: 12, overflow: "hidden", boxShadow: "0 32px 80px rgba(28,25,23,0.35)", border: `1px solid ${P.stone3}` }}>
-        <div style={{ background: "#2a2724", padding: "8px 14px", display: "flex", alignItems: "center", gap: 6 }}>
-          {(["#ff5f57","#febc2e","#28c840"] as const).map(c => (
-            <div key={c} style={{ width: 9, height: 9, borderRadius: "50%", background: c }} />
-          ))}
-          <div style={{ flex: 1, marginLeft: 8, background: "rgba(255,255,255,0.08)", borderRadius: 4, height: 16, display: "flex", alignItems: "center", paddingLeft: 8 }}>
-            <span style={{ color: "rgba(255,255,255,0.28)", fontSize: 9, ...sans }}>homesworld.in</span>
-          </div>
-        </div>
-        <div style={{ height: 320, position: "relative" }}>
+    <div style={{ position: "relative" }}>
+      {/* iPad frame */}
+      <div style={{
+        width: iPad.width,
+        height: iPad.height + 60,
+        background: "#1C1917",
+        borderRadius: 28,
+        padding: "20px 14px 16px",
+        boxShadow: "0 40px 100px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.06)",
+        position: "relative",
+      }}>
+        {/* Camera */}
+        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#2a2724", margin: "0 auto 10px", display: "block" }} />
+
+        {/* Screen */}
+        <div style={{
+          width: "100%",
+          height: iPad.height,
+          borderRadius: 14,
+          overflow: "hidden",
+          background: P.stone,
+          position: "relative",
+        }}>
           <AnimatePresence mode="wait">
-            <motion.div
-              key={activeScreen}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
-              style={{ position: "absolute", inset: 0 }}
-            >
-              {screens[activeScreen]}
-            </motion.div>
+            {(stage === 0 || stage === 1) ? (
+              /* ── SCREEN 1: Homepage ── */
+              <motion.div
+                key="home"
+                initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.35 }}
+                style={{ height: "100%", display: "flex", flexDirection: "column" }}
+              >
+                {/* Mini nav */}
+                <div style={{ padding: "10px 16px", borderBottom: `1px solid ${P.stone3}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: P.stone }}>
+                  <span style={{ ...serif, color: P.ink, fontSize: 14 }}>Holmes<span style={{ color: P.terracotta }}>World</span></span>
+                  <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                    {["Categories", "Projects"].map(n => <span key={n} style={{ ...sans, fontSize: 10, color: P.muted }}>{n}</span>)}
+                    {/* Cart with badge */}
+                    <div style={{ position: "relative" }}>
+                      <div style={{ width: 24, height: 24, borderRadius: "50%", background: P.stone2, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12 }}>🛒</div>
+                      <AnimatePresence>
+                        {cartCount > 0 && (
+                          <motion.div
+                            initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}
+                            style={{ position: "absolute", top: -4, right: -4, width: 14, height: 14, borderRadius: "50%", background: P.terracotta, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                            <span style={{ ...sans, fontSize: 8, color: P.white, fontWeight: 700 }}>{cartCount}</span>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hero area */}
+                <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "0 32px", background: P.charcoal }}>
+                  <p style={{ ...serif, color: P.white, fontSize: 26, lineHeight: 1.2, textAlign: "center", marginBottom: 28, fontWeight: 300 }}>
+                    Build Better.<br />Live Better.
+                  </p>
+
+                  {/* Animated search bar */}
+                  <div style={{ width: "100%", position: "relative" }}>
+                    <div style={{
+                      background: P.white,
+                      borderRadius: 99,
+                      padding: "10px 16px",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      boxShadow: stage === 1 ? `0 0 0 3px ${P.terracotta}40` : "0 6px 24px rgba(0,0,0,0.3)",
+                      transition: "box-shadow 0.3s",
+                    }}>
+                      <span style={{ fontSize: 13, color: P.muted }}>🔍</span>
+                      <span style={{ ...sans, fontSize: 13, color: typed ? P.ink : P.muted, flex: 1 }}>
+                        {typed || "Search tiles, cement, fittings..."}
+                        {/* Blinking cursor */}
+                        {stage === 1 && (
+                          <motion.span
+                            animate={{ opacity: [1, 0, 1] }}
+                            transition={{ duration: 0.8, repeat: Infinity }}
+                            style={{ display: "inline-block", width: 1.5, height: 13, background: P.ink, marginLeft: 1, verticalAlign: "middle" }}
+                          />
+                        )}
+                      </span>
+                      <motion.div
+                        animate={stage === 1 && typed === fullWord ? { scale: [1, 0.95, 1] } : {}}
+                        transition={{ duration: 0.2 }}
+                        style={{ background: P.terracotta, borderRadius: 99, padding: "5px 14px", flexShrink: 0 }}
+                      >
+                        <span style={{ ...sans, fontSize: 11, color: P.white, fontWeight: 600 }}>Search</span>
+                      </motion.div>
+                    </div>
+                  </div>
+
+                  {/* Category chips */}
+                  <div style={{ display: "flex", gap: 8, marginTop: 16, flexWrap: "wrap", justifyContent: "center" }}>
+                    {["Tiles & Flooring", "Bathroom Fittings", "Cement", "Steel TMT"].map((t, i) => (
+                      <motion.span
+                        key={t}
+                        animate={t === "Cement" && stage === 1 ? { background: "rgba(196,97,58,0.25)", borderColor: P.terracotta } : {}}
+                        style={{
+                          ...sans, fontSize: 10,
+                          color: "rgba(255,255,255,0.7)",
+                          background: "rgba(255,255,255,0.1)",
+                          border: "1px solid rgba(255,255,255,0.15)",
+                          borderRadius: 99, padding: "4px 12px",
+                          transition: "all 0.3s",
+                        }}
+                      >{t}</motion.span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ) : (
+              /* ── SCREEN 2: Cement PLP ── */
+              <motion.div
+                key="plp"
+                initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+                style={{ height: "100%", display: "flex", flexDirection: "column", background: P.stone }}
+              >
+                {/* Nav */}
+                <div style={{ padding: "10px 16px", borderBottom: `1px solid ${P.stone3}`, display: "flex", alignItems: "center", justifyContent: "space-between", background: P.cream }}>
+                  <span style={{ ...serif, color: P.ink, fontSize: 14 }}>Holmes<span style={{ color: P.terracotta }}>World</span></span>
+                  <div style={{ background: P.stone2, borderRadius: 99, padding: "5px 12px", display: "flex", alignItems: "center", gap: 6 }}>
+                    <span style={{ fontSize: 11, color: P.muted }}>🔍</span>
+                    <span style={{ ...sans, fontSize: 11, color: P.ink, fontWeight: 500 }}>cement</span>
+                  </div>
+                  {/* Cart */}
+                  <div style={{ position: "relative" }}>
+                    <div style={{ width: 24, height: 24, borderRadius: "50%", background: P.stone2, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12 }}>🛒</div>
+                    <AnimatePresence>
+                      {cartCount > 0 && (
+                        <motion.div
+                          initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}
+                          style={{ position: "absolute", top: -4, right: -4, width: 14, height: 14, borderRadius: "50%", background: P.terracotta, display: "flex", alignItems: "center", justifyContent: "center" }}
+                        >
+                          <span style={{ ...sans, fontSize: 8, color: P.white, fontWeight: 700 }}>{cartCount}</span>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </div>
+
+                {/* PLP header */}
+                <div style={{ padding: "12px 16px 8px", background: P.cream, borderBottom: `1px solid ${P.stone3}` }}>
+                  <p style={{ ...sans, fontSize: 11, color: P.muted, marginBottom: 2 }}>Home / Categories /</p>
+                  <p style={{ ...serif, fontSize: 18, color: P.ink }}>Cement & Concrete</p>
+                  <p style={{ ...sans, fontSize: 10, color: P.subtle }}>4 products</p>
+                </div>
+
+                {/* Product list */}
+                <div style={{ flex: 1, overflowY: "auto", padding: "10px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+                  {cementProducts.map((p, i) => {
+                    const isHovered = cursorY > i * 60 && cursorY <= (i + 1) * 60;
+                    const isAdded = addedIndex === i;
+                    return (
+                      <motion.div
+                        key={p.name}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.08 }}
+                        style={{
+                          background: isHovered ? P.terracottaL : P.cream,
+                          border: `1px solid ${isHovered ? P.terracotta : P.stone3}`,
+                          borderRadius: 12,
+                          padding: "10px 12px",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 12,
+                          transition: "all 0.25s ease",
+                        }}
+                      >
+                        {/* Product image placeholder */}
+                        <div style={{ width: 44, height: 44, borderRadius: 8, background: P.stone2, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>
+                          🏗️
+                        </div>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <p style={{ ...sans, fontSize: 9, color: P.muted, marginBottom: 1 }}>{p.brand}</p>
+                          <p style={{ ...sans, fontSize: 12, fontWeight: 600, color: P.ink, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</p>
+                          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                            <p style={{ ...sans, fontSize: 13, fontWeight: 700, color: P.ink }}>{p.price}</p>
+                            <span style={{ ...sans, fontSize: 9, color: P.muted }}>/ {p.unit}</span>
+                            <span style={{ ...sans, fontSize: 9, color: P.terracotta }}>★ {p.rating}</span>
+                          </div>
+                        </div>
+                        {/* Add to Cart button */}
+                        <motion.button
+                          animate={isAdded ? { scale: [1, 0.88, 1.1, 1], background: [P.terracotta, "#2D6A4F"] } : isHovered ? { scale: 1.04 } : { scale: 1 }}
+                          transition={{ duration: 0.35 }}
+                          style={{
+                            background: isAdded ? "#2D6A4F" : P.terracotta,
+                            color: P.white,
+                            border: "none",
+                            borderRadius: 8,
+                            padding: "7px 12px",
+                            ...sans,
+                            fontSize: 10,
+                            fontWeight: 600,
+                            cursor: "pointer",
+                            flexShrink: 0,
+                            whiteSpace: "nowrap",
+                            transition: "background 0.3s",
+                          }}
+                        >
+                          {isAdded ? "✓ Added" : "+ Cart"}
+                        </motion.button>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Animated cursor dot */}
+          <AnimatePresence>
+            {stage >= 2 && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1, y: cursorY }}
+                exit={{ opacity: 0, scale: 0 }}
+                transition={{ type: "spring", stiffness: 280, damping: 26 }}
+                style={{
+                  position: "absolute",
+                  right: 32,
+                  top: 130,
+                  width: 16,
+                  height: 16,
+                  borderRadius: "50%",
+                  background: P.terracotta,
+                  boxShadow: `0 0 0 4px ${P.terracottaL}`,
+                  pointerEvents: "none",
+                  zIndex: 20,
+                }}
+              />
+            )}
           </AnimatePresence>
         </div>
+
+        {/* Home indicator bar */}
+        <div style={{ display: "flex", justifyContent: "center", paddingTop: 10 }}>
+          <div style={{ width: 80, height: 4, borderRadius: 99, background: "rgba(255,255,255,0.2)" }} />
+        </div>
       </div>
-      {/* Screen dots */}
-      <div style={{ display: "flex", justifyContent: "center", gap: 6, marginTop: 12 }}>
-        {screens.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setActiveScreen(i)}
-            style={{
-              width: i === activeScreen ? 20 : 6,
-              height: 6,
-              borderRadius: 99,
-              background: i === activeScreen ? P.terracotta : P.stone3,
-              border: "none",
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-              padding: 0,
-            }}
-          />
-        ))}
-      </div>
-      {/* Floating label */}
-      <motion.div
-        animate={{ y: [0, -6, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        style={{
-          position: "absolute",
-          top: -16,
-          right: -20,
-          background: P.white,
-          borderRadius: 10,
-          padding: "8px 12px",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
-          border: `1px solid ${P.stone3}`,
-        }}
-      >
-        <p style={{ ...sans, fontSize: 10, fontWeight: 600, color: P.ink, margin: 0 }}>10 routes</p>
-        <p style={{ ...sans, fontSize: 9, color: P.muted, margin: 0 }}>fully interactive</p>
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, 6, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        style={{
-          position: "absolute",
-          bottom: 40,
-          left: -24,
-          background: P.terracotta,
-          borderRadius: 10,
-          padding: "8px 12px",
-          boxShadow: "0 8px 24px rgba(196,97,58,0.3)",
-        }}
-      >
-        <p style={{ ...sans, fontSize: 10, fontWeight: 600, color: P.white, margin: 0 }}>₹50,000+</p>
-        <p style={{ ...sans, fontSize: 9, color: "rgba(255,255,255,0.75)", margin: 0 }}>avg. order value</p>
-      </motion.div>
+
+      {/* Stage label */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={stage}
+          initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }}
+          transition={{ duration: 0.3 }}
+          style={{ textAlign: "center", marginTop: 16 }}
+        >
+          <span style={{
+            ...sans, fontSize: 11, fontWeight: 600,
+            color: P.terracotta,
+            background: P.terracottaL,
+            padding: "4px 14px",
+            borderRadius: 99,
+            letterSpacing: "0.06em",
+          }}>
+            {stage === 0 ? "Homepage" : stage === 1 ? `Typing "cement"…` : stage === 2 ? "Browsing results" : "Added to cart ✓"}
+          </span>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
@@ -733,7 +885,7 @@ export default function HomesWorldCaseStudy() {
 
             {/* Right — animated UI */}
             <motion.div variants={scaleIn} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <HeroUIComposition />
+              <CementJourneyDemo />
             </motion.div>
           </div>
         </motion.div>
