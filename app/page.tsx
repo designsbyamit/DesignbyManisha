@@ -4,6 +4,8 @@ import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, useInView, useScroll, useTransform, type Variants } from "framer-motion";
 import { ArrowRight, Download, Mail, ExternalLink } from "lucide-react";
+import { PortfolioNav } from "@/components/PortfolioNav";
+import { IPadMockup, BrowserMockupWithShine, PhoneRotatingMockup } from "@/components/ProjectMockups";
 
 /* ─── Inline LinkedIn icon (lucide-react v1 naming inconsistency) ─────── */
 function LinkedInIcon({ size = 16 }: { size?: number }) {
@@ -18,15 +20,15 @@ function LinkedInIcon({ size = 16 }: { size?: number }) {
 
 /* ─── Palette (matches globals.css tokens) ───────────────────────────────── */
 const P = {
-  ink: "#0e0e0e",
-  muted: "#6b6b6b",
-  subtle: "#a8a8a8",
-  surface: "#f9f8f6",
-  s2: "#f1eeea",
-  s3: "#e8e3dc",
-  accent: "#c8a96e",
-  accentLight: "#f0e6d3",
-  white: "#ffffff",
+  ink:         "var(--p-ink)",
+  muted:       "var(--p-muted)",
+  subtle:      "var(--p-subtle)",
+  surface:     "var(--p-surface)",
+  s2:          "var(--p-s2)",
+  s3:          "var(--p-s3)",
+  accent:      "var(--p-accent)",
+  accentLight: "var(--p-accent-lt)",
+  white:       "var(--p-white)",
 } as const;
 
 /* ─── Shared animation variants ─────────────────────────────────────────── */
@@ -62,7 +64,7 @@ const PROJECTS = [
   {
     slug: "holmesworld-cs",
     title: "HomesWorld",
-    headline: "Designing the digital marketplace for dream homes",
+    headline: "Turning a construction material marketplace into a trusted buying experience",
     industry: "Construction · E-commerce",
     role: "Product Designer",
     duration: "4 months",
@@ -177,10 +179,12 @@ function Reveal({
   children,
   delay = 0,
   className = "",
+  style,
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  style?: React.CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -188,6 +192,7 @@ function Reveal({
     <motion.div
       ref={ref}
       className={className}
+      style={style}
       variants={fadeUp}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
@@ -233,23 +238,18 @@ function Nav() {
         Manisha
       </span>
       <div style={{ display: "flex", gap: "clamp(1.5rem, 3vw, 2.5rem)", alignItems: "center" }}>
-        {["Work", "About", "Contact"].map((label) => (
+        {[{ label: "Work", href: "/work" }, { label: "About", href: "/about" }].map(({ label, href }) => (
           <a
             key={label}
-            href={`#${label.toLowerCase()}`}
-            style={{
-              fontSize: 14,
-              color: P.muted,
-              textDecoration: "none",
-              fontWeight: 500,
-              transition: "color 0.2s",
-            }}
+            href={href}
+            style={{ fontSize: 14, color: P.muted, textDecoration: "none", fontWeight: 500, transition: "color 0.2s" }}
             onMouseEnter={(e) => ((e.target as HTMLElement).style.color = P.ink)}
             onMouseLeave={(e) => ((e.target as HTMLElement).style.color = P.muted)}
           >
             {label}
           </a>
         ))}
+        <a href="https://drive.google.com/file/d/1sGE2ReJoqJKbga0SDpcge8vDMjbx59aZ/view?usp=sharing" target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: P.ink, textDecoration: "none", padding: "6px 14px", borderRadius: 9999, border: `1.5px solid ${P.s3}`, transition: "border-color 0.2s" }} onMouseEnter={(e) => (e.currentTarget as HTMLElement).style.borderColor = P.accent} onMouseLeave={(e) => (e.currentTarget as HTMLElement).style.borderColor = P.s3}>Resume ↓</a>
       </div>
     </motion.nav>
   );
@@ -275,7 +275,7 @@ function Hero() {
       <OrgBlob style={{ width: 560, height: 400, top: "5%", right: "-8%", opacity: 0.35 }} />
       <OrgBlob
         style={{ width: 320, height: 280, bottom: "10%", left: "-4%", opacity: 0.28 }}
-        color="#e8f0f8"
+        color="var(--p-blob-2)"
       />
 
       <motion.div
@@ -313,14 +313,14 @@ function Hero() {
             variants={fadeUp}
             style={{
               fontSize: "clamp(2.4rem, 5vw, 4rem)",
-              fontWeight: 700,
               color: P.ink,
               lineHeight: 1.1,
-              letterSpacing: "-0.03em",
               marginBottom: "1.5rem",
             }}
           >
-            Turning complexity into clarity.
+            People first.
+            <br />
+            <span style={{ color: P.muted, fontWeight: 400, fontStyle: "italic" }}>Clarity always.</span>
           </motion.h1>
 
           <motion.p
@@ -333,8 +333,8 @@ function Hero() {
               marginBottom: "2.5rem",
             }}
           >
-            I design thoughtful experiences that help people navigate complex systems with
-            confidence — from enterprise manufacturing workflows to health-tech apps.
+            <span style={{ fontFamily: "var(--font-jakarta), system-ui, sans-serif", fontSize: "clamp(0.95rem, 1.5vw, 1.05rem)", color: P.accent, fontWeight: 400, letterSpacing: "0.01em" }}>Hi! My name is Manisha.</span>
+            {" "}I design experiences that make the complex feel simple — without hiding the depth that makes them useful.
           </motion.p>
 
           <motion.div
@@ -342,26 +342,26 @@ function Hero() {
             style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
           >
             <a
-              href="#work"
+              href="/work"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
                 padding: "0.75rem 1.75rem",
                 borderRadius: 9999,
-                background: P.ink,
-                color: P.white,
+                background: "var(--p-accent)",
+                color: "var(--p-surface)",
                 fontSize: 14,
-                fontWeight: 600,
+                fontWeight: 700,
                 textDecoration: "none",
-                transition: "background 0.2s, transform 0.15s",
+                transition: "opacity 0.2s, transform 0.15s",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "#333";
-                (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
+                (e.currentTarget as HTMLElement).style.opacity = "0.85";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = P.ink;
+                (e.currentTarget as HTMLElement).style.opacity = "1";
                 (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
               }}
             >
@@ -413,7 +413,7 @@ function Hero() {
             </svg>
             <span
               style={{
-                fontFamily: "'Caveat', 'Segoe Script', cursive",
+                fontFamily: "var(--font-handwritten), cursive",
                 fontSize: 15,
                 color: P.muted,
                 letterSpacing: "0.01em",
@@ -449,14 +449,14 @@ function Hero() {
               borderRadius: "56% 44% 52% 48% / 48% 58% 42% 52%",
               overflow: "hidden",
               aspectRatio: "4/5",
-              background: "linear-gradient(160deg, #e8e3dc 0%, #f1eeea 100%)",
+              background: "var(--p-portrait-bg)",
               boxShadow: "0 24px 80px rgba(0,0,0,0.08)",
             }}
           >
             {/* Portrait — replace src with Manisha's actual photo */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/manisha.png"
+              src="/portraits/manisha.png"
               alt="Manisha — UX Designer"
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
             />
@@ -471,7 +471,7 @@ function Hero() {
               bottom: "10%",
               left: "-12%",
               zIndex: 2,
-              background: P.white,
+              background: "var(--p-card-bg)",
               borderRadius: 12,
               padding: "0.75rem 1.25rem",
               boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
@@ -519,18 +519,27 @@ function Hero() {
   );
 }
 
+/* ─── Per-project mockup selector ───────────────────────────────────────── */
+function ProjectMockupPane({ slug, title }: { slug: string; title: string }) {
+  if (slug === "hexsolve") return <IPadMockup src="/hexsolve/hexsolve-login.png" alt={title} />;
+  if (slug === "holmesworld-cs") return <BrowserMockupWithShine src="/homesworld/homesworld-hero.png" alt={title} />;
+  if (slug === "cognicure") return <PhoneRotatingMockup alt={title} />;
+  return null;
+}
+
 /* ─── Project card ───────────────────────────────────────────────────────── */
 function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const imageLeft = index % 2 === 0;
 
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, ease: "easeOut", delay: index * 0.12 }}
+      transition={{ duration: 0.65, ease: "easeOut", delay: index * 0.1 }}
     >
       <Link
         href={`/work/${project.slug}`}
@@ -542,141 +551,56 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
           style={{
             borderRadius: 20,
             overflow: "hidden",
-            background: P.white,
+            background: "var(--p-card-bg)",
             border: `1px solid ${P.s3}`,
-            transition: "box-shadow 0.35s, transform 0.35s",
-            boxShadow: hovered
-              ? "0 32px 80px rgba(0,0,0,0.12)"
-              : "0 4px 24px rgba(0,0,0,0.05)",
-            transform: hovered ? "translateY(-6px)" : "translateY(0)",
+            display: "grid",
+            gridTemplateColumns: "1.1fr 1fr",
+            minHeight: 380,
+            transition: "box-shadow 0.35s, transform 0.3s",
+            boxShadow: hovered ? "0 28px 72px rgba(0,0,0,0.11)" : "0 4px 20px rgba(0,0,0,0.05)",
+            transform: hovered ? "translateY(-4px)" : "translateY(0)",
           }}
         >
-          {/* Image */}
-          <div
-            style={{
-              position: "relative",
-              aspectRatio: "16/9",
-              overflow: "hidden",
-              background: P.s2,
-            }}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={project.image}
-              alt={project.title}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                transition: "transform 0.6s ease",
-                transform: hovered ? "scale(1.04)" : "scale(1)",
-              }}
-            />
-            {/* Accent overlay on hover */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background: `linear-gradient(180deg, transparent 50%, ${project.accent}18 100%)`,
-                opacity: hovered ? 1 : 0,
-                transition: "opacity 0.35s",
-              }}
-            />
-            {/* Arrow button */}
-            <motion.div
-              animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0.8 }}
-              transition={{ duration: 0.2 }}
-              style={{
-                position: "absolute",
-                top: 16,
-                right: 16,
-                width: 40,
-                height: 40,
-                borderRadius: "50%",
-                background: P.white,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
-              }}
-            >
-              <ArrowRight size={16} color={P.ink} />
-            </motion.div>
-          </div>
+          {/* Image — left on even rows */}
+          {imageLeft && (
+            <div style={{ position: "relative", overflow: "hidden", minHeight: 380 }}>
+              <ProjectMockupPane slug={project.slug} title={project.title} />
+            </div>
+          )}
 
           {/* Content */}
-          <div style={{ padding: "1.75rem 2rem 2rem" }}>
-            {/* Tags */}
-            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: "1rem" }}>
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    fontSize: 11,
-                    fontWeight: 600,
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    color: project.accent,
-                    background: project.accentLight,
-                    borderRadius: 6,
-                    padding: "3px 10px",
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
+          <div style={{ padding: "clamp(2rem, 4vw, 3rem)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: "1.25rem" }}>
+                {project.tags.map((tag) => (
+                  <span key={tag} style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: project.accent, background: project.accentLight, borderRadius: 6, padding: "3px 10px" }}>{tag}</span>
+                ))}
+              </div>
+              <p style={{ fontSize: 12, color: P.subtle, margin: "0 0 0.4rem", letterSpacing: "0.04em" }}>{project.title}</p>
+              <h3 style={{ fontSize: "clamp(1.2rem, 2.2vw, 1.65rem)", color: P.ink, lineHeight: 1.25, marginBottom: "0.9rem" }}>{project.headline}</h3>
+              <p style={{ fontSize: 14, color: P.muted, lineHeight: 1.7, marginBottom: "1.5rem" }}>{project.description}</p>
             </div>
-
-            <h3
-              style={{
-                fontSize: "clamp(1.1rem, 2vw, 1.35rem)",
-                fontWeight: 700,
-                color: P.ink,
-                lineHeight: 1.3,
-                letterSpacing: "-0.02em",
-                marginBottom: "0.5rem",
-              }}
-            >
-              {project.headline}
-            </h3>
-
-            <p
-              style={{
-                fontSize: 14,
-                color: P.muted,
-                lineHeight: 1.6,
-                marginBottom: "1.5rem",
-              }}
-            >
-              {project.description}
-            </p>
-
-            {/* Meta row */}
-            <div
-              style={{
-                display: "flex",
-                gap: "1.5rem",
-                paddingTop: "1.25rem",
-                borderTop: `1px solid ${P.s2}`,
-                flexWrap: "wrap",
-              }}
-            >
-              {[
-                { label: "Industry", value: project.industry },
-                { label: "Role", value: project.role },
-                { label: "Duration", value: project.duration },
-              ].map(({ label, value }) => (
-                <div key={label}>
-                  <p style={{ fontSize: 11, color: P.subtle, margin: 0, letterSpacing: "0.04em" }}>
-                    {label}
-                  </p>
-                  <p style={{ fontSize: 13, color: P.ink, fontWeight: 500, margin: 0 }}>
-                    {value}
-                  </p>
-                </div>
-              ))}
+            <div>
+              <div style={{ display: "flex", gap: "1.75rem", padding: "1.25rem 0", borderTop: `1px solid ${P.s2}`, borderBottom: `1px solid ${P.s2}`, marginBottom: "1.25rem", flexWrap: "wrap" }}>
+                {[{ label: "Industry", value: project.industry }, { label: "Role", value: project.role }, { label: "Duration", value: project.duration }].map(({ label, value }) => (
+                  <div key={label}>
+                    <p style={{ fontSize: 11, color: P.subtle, margin: 0, letterSpacing: "0.04em" }}>{label}</p>
+                    <p style={{ fontSize: 13, color: P.ink, fontWeight: 500, margin: 0 }}>{value}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 600, color: project.accent }}>
+                View Case Study <ArrowRight size={14} style={{ transition: "transform 0.2s", transform: hovered ? "translateX(4px)" : "translateX(0)" }} />
+              </div>
             </div>
           </div>
+
+          {/* Image — right on odd rows */}
+          {!imageLeft && (
+            <div style={{ position: "relative", overflow: "hidden", minHeight: 380 }}>
+              <ProjectMockupPane slug={project.slug} title={project.title} />
+            </div>
+          )}
         </div>
       </Link>
     </motion.div>
@@ -721,27 +645,23 @@ function SelectedWork() {
               <h2
                 style={{
                   fontSize: "clamp(2rem, 4vw, 3rem)",
-                  fontWeight: 700,
                   color: P.ink,
-                  letterSpacing: "-0.03em",
                   lineHeight: 1.1,
                   margin: 0,
                 }}
               >
-                Three projects.
-                <br />
-                <span style={{ color: P.muted, fontWeight: 400 }}>Three different problems.</span>
+                Work that matters.
               </h2>
             </div>
           </div>
         </Reveal>
 
-        {/* Project grid */}
+        {/* Full-width stacked cards */}
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",
-            gap: "clamp(1.25rem, 2.5vw, 2rem)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "clamp(1.5rem, 3vw, 2rem)",
           }}
         >
           {PROJECTS.map((project, i) => (
@@ -764,7 +684,7 @@ function Principles() {
     >
       <OrgBlob
         style={{ width: 500, height: 360, top: "-10%", right: "-5%", opacity: 0.3 }}
-        color="#e8d9c4"
+        color="var(--p-blob-1)"
       />
 
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
@@ -784,9 +704,7 @@ function Principles() {
           <h2
             style={{
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 700,
               color: P.ink,
-              letterSpacing: "-0.03em",
               lineHeight: 1.1,
               marginBottom: "clamp(3rem, 6vw, 5rem)",
             }}
@@ -800,24 +718,29 @@ function Principles() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            alignItems: "stretch",
             gap: "clamp(1.5rem, 3vw, 2.5rem)",
           }}
         >
           {PRINCIPLES.map((p, i) => (
-            <Reveal key={p.number} delay={i * 0.08}>
+            <Reveal key={p.number} delay={i * 0.08} style={{ height: "100%" }}>
               <div
                 style={{
-                  background: P.white,
+                  background: "var(--p-card-bg)",
                   borderRadius: 16,
                   padding: "2rem",
                   border: `1px solid ${P.s3}`,
+                  height: "100%",
+                  boxSizing: "border-box",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
                 <span
                   style={{
                     display: "block",
-                    fontFamily: "'Caveat', cursive",
+                    fontFamily: "var(--font-handwritten), cursive",
                     fontSize: 28,
                     color: P.accent,
                     lineHeight: 1,
@@ -829,11 +752,9 @@ function Principles() {
                 <h3
                   style={{
                     fontSize: 17,
-                    fontWeight: 700,
                     color: P.ink,
                     marginBottom: "0.75rem",
-                    letterSpacing: "-0.015em",
-                  }}
+                    }}
                 >
                   {p.title}
                 </h3>
@@ -875,9 +796,7 @@ function CareerTimeline() {
           <h2
             style={{
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 700,
               color: P.ink,
-              letterSpacing: "-0.03em",
               lineHeight: 1.1,
               marginBottom: "clamp(3rem, 6vw, 5rem)",
             }}
@@ -951,7 +870,7 @@ function CareerTimeline() {
                   {item.note && (
                     <p
                       style={{
-                        fontFamily: "'Caveat', cursive",
+                        fontFamily: "var(--font-handwritten), cursive",
                         fontSize: 13,
                         color: P.muted,
                         margin: 0,
@@ -983,7 +902,7 @@ function AboutPreview() {
     >
       <OrgBlob
         style={{ width: 420, height: 340, bottom: "-5%", left: "-4%", opacity: 0.28 }}
-        color="#dbe8f0"
+        color="var(--p-blob-2)"
       />
 
       <div
@@ -1014,9 +933,7 @@ function AboutPreview() {
           <h2
             style={{
               fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)",
-              fontWeight: 700,
               color: P.ink,
-              letterSpacing: "-0.025em",
               lineHeight: 1.15,
               marginBottom: "1.5rem",
             }}
@@ -1077,7 +994,7 @@ function AboutPreview() {
               <div
                 key={group.label}
                 style={{
-                  background: P.white,
+                  background: "var(--p-card-bg)",
                   borderRadius: 14,
                   padding: "1.25rem 1.5rem",
                   border: `1px solid ${P.s3}`,
@@ -1119,13 +1036,13 @@ function Contact() {
       id="contact"
       style={{
         padding: "clamp(5rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem)",
-        background: P.ink,
+        background: "var(--p-dark-bg)",
         overflow: "hidden",
       }}
     >
       <OrgBlob
         style={{ width: 480, height: 360, top: "-15%", right: "-5%", opacity: 0.08 }}
-        color="#c8a96e"
+        color="var(--p-accent)"
       />
 
       <div
@@ -1152,9 +1069,7 @@ function Contact() {
           <h2
             style={{
               fontSize: "clamp(2.4rem, 5vw, 4.5rem)",
-              fontWeight: 700,
-              color: P.white,
-              letterSpacing: "-0.04em",
+              color: "var(--p-on-ink)",
               lineHeight: 1.05,
               marginBottom: "1.5rem",
             }}
@@ -1214,7 +1129,7 @@ function Contact() {
                 padding: "0.875rem 2rem",
                 borderRadius: 9999,
                 background: "transparent",
-                color: P.white,
+                color: "var(--p-on-ink)",
                 fontSize: 14,
                 fontWeight: 600,
                 textDecoration: "none",
@@ -1233,7 +1148,7 @@ function Contact() {
               <LinkedInIcon size={16} /> LinkedIn <ExternalLink size={12} />
             </a>
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1sGE2ReJoqJKbga0SDpcge8vDMjbx59aZ/view?usp=sharing" target="_blank" rel="noreferrer"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -1241,7 +1156,7 @@ function Contact() {
                 padding: "0.875rem 2rem",
                 borderRadius: 9999,
                 background: "transparent",
-                color: P.white,
+                color: "var(--p-on-ink)",
                 fontSize: 14,
                 fontWeight: 600,
                 textDecoration: "none",
@@ -1276,7 +1191,7 @@ function Contact() {
         >
           <p
             style={{
-              fontFamily: "'Caveat', cursive",
+              fontFamily: "var(--font-handwritten), cursive",
               fontSize: 16,
               color: "rgba(255,255,255,0.35)",
               margin: 0,
@@ -1297,13 +1212,11 @@ function Contact() {
 export default function HomePage() {
   return (
     <>
-      <Nav />
+      <PortfolioNav />
       <main>
         <Hero />
         <SelectedWork />
         <Principles />
-        <CareerTimeline />
-        <AboutPreview />
         <Contact />
       </main>
     </>

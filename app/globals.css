@@ -11,8 +11,10 @@
   --color-accent-light: #f0e6d3;
   --color-white: #ffffff;
 
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-display);
   --font-mono: var(--font-geist-mono);
+  --font-handwritten: var(--font-handwritten);
 
   /* HolmesWorld tokens */
   --hw-surface: #F5F3F0;
@@ -34,28 +36,93 @@
   --hw-font-display: 'Georgia', 'Times New Roman', serif;
 }
 
+/* ── Portfolio design tokens ────────────────────────────────────────────── */
+:root {
+  --p-ink:         #0e0e0e;
+  --p-muted:       #6b6b6b;
+  --p-subtle:      #a8a8a8;
+  --p-surface:     #f9f8f6;
+  --p-s2:          #f1eeea;
+  --p-s3:          #e8e3dc;
+  --p-accent:      #c8a96e;
+  --p-accent-lt:   #f0e6d3;
+  --p-white:       #ffffff;
+  --p-card-bg:     #ffffff;
+  --p-card-border: #e8e3dc;
+  --p-nav-bg:      rgba(249,248,246,0.92);
+  --p-blob-1:      #f0e6d3;
+  --p-blob-2:      #e8f0f8;
+  --p-portrait-bg: linear-gradient(160deg, #e8e3dc 0%, #f1eeea 100%);
+  --p-on-ink:      #ffffff;
+  /* CTA button — always high-contrast against page surface */
+  --p-cta-bg:      #0e0e0e;
+  --p-cta-fg:      #ffffff;
+  /* Footer/dark section — always dark regardless of theme */
+  --p-dark-bg:     #0e0e0e;
+}
+
+.dark {
+  --p-ink:         #f0ede8;
+  --p-muted:       #a09a90;
+  --p-subtle:      #6b6460;
+  --p-surface:     #141210;
+  --p-s2:          #1c1917;
+  --p-s3:          #2a2520;
+  --p-accent:      #d4a85a;
+  --p-accent-lt:   #2a2010;
+  --p-white:       #f0ede8;
+  --p-card-bg:     #1c1917;
+  --p-card-border: #2a2520;
+  --p-nav-bg:      rgba(18,16,14,0.92);
+  --p-blob-1:      rgba(212,168,90,0.12);
+  --p-blob-2:      rgba(60,100,160,0.1);
+  --p-portrait-bg: linear-gradient(160deg, #2a2520 0%, #1c1917 100%);
+  --p-on-ink:      #ffffff;
+  /* CTA flips: light fg on dark bg */
+  --p-cta-bg:      #f0ede8;
+  --p-cta-fg:      #141210;
+  /* Footer stays dark */
+  --p-dark-bg:     #0e0e0e;
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
-  background: var(--color-surface);
-  color: var(--color-ink);
+  background: var(--p-surface);
+  color: var(--p-ink);
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Display headings — Playfair */
+h1, h2, h3, h4 {
+  font-family: var(--font-display), "Georgia", serif;
+  font-weight: 400;
+  letter-spacing: -0.04rem;
+}
+
+/* Strong/bold body text uses 500 not 700 */
+strong, b {
+  font-weight: 500;
 }
 
 ::selection {
-  background: var(--color-accent-light);
-  color: var(--color-ink);
+  background: var(--p-accent-lt);
+  color: var(--p-ink);
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--color-surface); }
-::-webkit-scrollbar-thumb { background: var(--color-surface-3); border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--p-surface); }
+::-webkit-scrollbar-thumb { background: var(--p-s3); border-radius: 2px; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

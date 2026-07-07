@@ -3,6 +3,48 @@ import React, { useReducer, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { PhoneFrame } from "./components/PhoneFrame";
 import type { ScreenId, ScreenParams, NavEntry, NavigateFn, ScreenProps } from "./types";
+import { SplashScreen } from "./screens/journey1/Splash";
+import { WelcomeScreen } from "./screens/journey1/Welcome";
+import { LoginScreen } from "./screens/journey1/Login";
+import { OtpScreen } from "./screens/journey1/Otp";
+import { CreateProfileScreen } from "./screens/journey1/CreateProfile";
+import { HealthInfoScreen } from "./screens/journey1/HealthInfo";
+import { CirclesIntroScreen } from "./screens/journey1/Circles";
+import { InviteFamilyScreen } from "./screens/journey1/InviteFamily";
+import { PatientDashboard } from "./screens/journey2/Dashboard";
+import { ConsultationDetailsScreen } from "./screens/journey2/ConsultationDetails";
+import { AiPrepScreen } from "./screens/journey2/AiPrep";
+import { WaitingRoomScreen } from "./screens/journey2/WaitingRoom";
+import { ConsultationSummaryScreen } from "./screens/journey2/ConsultationSummary";
+import { PrescriptionScreen } from "./screens/journey2/Prescription";
+import { SaveToWalletScreen } from "./screens/journey2/SaveToWallet";
+import { ConsultationFeedbackScreen } from "./screens/journey2/ConsultationFeedback";
+import { CirclesLandingScreen } from "./screens/journey3/CirclesLanding";
+import { FamilyListScreen } from "./screens/journey3/FamilyList";
+import { AddFamilyMemberScreen } from "./screens/journey3/AddFamilyMember";
+import { FamilyOtpScreen } from "./screens/journey3/FamilyOtp";
+import { InviteAcceptedScreen } from "./screens/journey3/InviteAccepted";
+import { AssignRelationshipScreen } from "./screens/journey3/AssignRelationship";
+import { MemberPermissionsScreen } from "./screens/journey3/MemberPermissions";
+import { FamilyDashboardScreen } from "./screens/journey3/FamilyDashboard";
+import { DoctorsNetworkScreen } from "./screens/journey3/DoctorsNetwork";
+import { FriendsCircleScreen } from "./screens/journey3/FriendsCircle";
+import { NetworkGraphScreen } from "./screens/journey3/NetworkGraph";
+import { HealthWalletScreen } from "./screens/journey4/HealthWallet";
+import { BodyVitalsScreen } from "./screens/journey4/BodyVitals";
+import { PrescriptionsListScreen } from "./screens/journey4/PrescriptionsList";
+import { MedicalReportsScreen } from "./screens/journey4/MedicalReports";
+import { HistoricalComplaintsScreen } from "./screens/journey4/HistoricalComplaints";
+import { AddComplaintScreen } from "./screens/journey4/AddComplaint";
+import { LifestyleScreen } from "./screens/journey4/Lifestyle";
+import { AiSummaryScreen } from "./screens/journey4/AiSummary";
+import { GlobalSearchScreen } from "./screens/journey4/GlobalSearch";
+import { DocumentScannerScreen } from "./screens/journey4/DocumentScanner";
+import { HealthTimelineScreen } from "./screens/journey4/HealthTimeline";
+import { AiCompanionScreen } from "./screens/premium/AiCompanion";
+import { EmergencyModeScreen } from "./screens/premium/EmergencyMode";
+import { NotificationsScreen } from "./screens/premium/Notifications";
+import { ProfileScreen } from "./screens/premium/Profile";
 
 // ── Navigation reducer ────────────────────────────────────────────────────────
 type NavState = { stack: NavEntry[] };
@@ -37,50 +79,50 @@ function PlaceholderScreen({ goBack, params }: ScreenProps) {
 
 // ── Screen registry — Journey plans replace PlaceholderScreen with real screens
 const SCREEN_REGISTRY: Record<ScreenId, React.FC<ScreenProps>> = {
-  splash: PlaceholderScreen,
-  welcome: PlaceholderScreen,
-  login: PlaceholderScreen,
-  otp: PlaceholderScreen,
-  createProfile: PlaceholderScreen,
-  healthInfo: PlaceholderScreen,
-  circles: PlaceholderScreen,
-  inviteFamily: PlaceholderScreen,
-  dashboard: PlaceholderScreen,
-  consultationDetails: PlaceholderScreen,
-  aiPrep: PlaceholderScreen,
-  waitingRoom: PlaceholderScreen,
-  consultationSummary: PlaceholderScreen,
-  prescription: PlaceholderScreen,
-  saveToWallet: PlaceholderScreen,
-  consultationFeedback: PlaceholderScreen,
-  circlesLanding: PlaceholderScreen,
-  familyList: PlaceholderScreen,
-  addFamilyMember: PlaceholderScreen,
-  familyOtp: PlaceholderScreen,
-  inviteAccepted: PlaceholderScreen,
-  assignRelationship: PlaceholderScreen,
-  memberPermissions: PlaceholderScreen,
-  familyDashboard: PlaceholderScreen,
-  doctorsNetwork: PlaceholderScreen,
-  friendsCircle: PlaceholderScreen,
-  networkGraph: PlaceholderScreen,
-  healthWallet: PlaceholderScreen,
-  bodyVitals: PlaceholderScreen,
-  prescriptionsList: PlaceholderScreen,
-  medicalReports: PlaceholderScreen,
-  historicalComplaints: PlaceholderScreen,
-  addComplaint: PlaceholderScreen,
-  lifestyle: PlaceholderScreen,
-  aiSummary: PlaceholderScreen,
-  globalSearch: PlaceholderScreen,
-  documentScanner: PlaceholderScreen,
-  healthTimeline: PlaceholderScreen,
-  aiCompanion: PlaceholderScreen,
-  emergencyMode: PlaceholderScreen,
-  notifications: PlaceholderScreen,
-  profile: PlaceholderScreen,
+  splash: SplashScreen,
+  welcome: WelcomeScreen,
+  login: LoginScreen,
+  otp: OtpScreen,
+  createProfile: CreateProfileScreen,
+  healthInfo: HealthInfoScreen,
+  circles: CirclesIntroScreen,
+  inviteFamily: InviteFamilyScreen,
+  dashboard: PatientDashboard,
+  consultationDetails: ConsultationDetailsScreen,
+  aiPrep: AiPrepScreen,
+  waitingRoom: WaitingRoomScreen,
+  consultationSummary: ConsultationSummaryScreen,
+  prescription: PrescriptionScreen,
+  saveToWallet: SaveToWalletScreen,
+  consultationFeedback: ConsultationFeedbackScreen,
+  circlesLanding: CirclesLandingScreen,
+  familyList: FamilyListScreen,
+  addFamilyMember: AddFamilyMemberScreen,
+  familyOtp: FamilyOtpScreen,
+  inviteAccepted: InviteAcceptedScreen,
+  assignRelationship: AssignRelationshipScreen,
+  memberPermissions: MemberPermissionsScreen,
+  familyDashboard: FamilyDashboardScreen,
+  doctorsNetwork: DoctorsNetworkScreen,
+  friendsCircle: FriendsCircleScreen,
+  networkGraph: NetworkGraphScreen,
+  healthWallet: HealthWalletScreen,
+  bodyVitals: BodyVitalsScreen,
+  prescriptionsList: PrescriptionsListScreen,
+  medicalReports: MedicalReportsScreen,
+  historicalComplaints: HistoricalComplaintsScreen,
+  addComplaint: AddComplaintScreen,
+  lifestyle: LifestyleScreen,
+  aiSummary: AiSummaryScreen,
+  globalSearch: GlobalSearchScreen,
+  documentScanner: DocumentScannerScreen,
+  healthTimeline: HealthTimelineScreen,
+  aiCompanion: AiCompanionScreen,
+  emergencyMode: EmergencyModeScreen,
+  notifications: NotificationsScreen,
+  profile: ProfileScreen,
   appointments: PlaceholderScreen,
-  consultations: PlaceholderScreen,
+  consultations: PatientDashboard,
 };
 
 // ── Slide transition variants ─────────────────────────────────────────────────
