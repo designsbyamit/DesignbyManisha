@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# dev tool artifacts — never commit
+.playwright-mcp/
+Skills/.playwright-mcp/
+Skills/*.png
+docs/superpowers/
+*.png
+*.jpeg
