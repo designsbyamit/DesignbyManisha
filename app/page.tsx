@@ -280,7 +280,6 @@ function Hero() {
 
       <motion.div
         ref={ref}
-        className="hero-grid"
         className="grid-2col"
         style={{
           y,
