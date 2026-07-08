@@ -132,7 +132,7 @@ function Label({ children }: { children: React.ReactNode }) {
 /* ─────────────────────────────────────────────────────────────────────────
    MOCK SCREENS — hero composition
 ───────────────────────────────────────────────────────────────────────── */
-function CementJourneyDemo({ TP }: { TP: typeof P }) {
+function CementJourneyDemo({ TP }: { TP: Record<string, string> }) {
   // Stages: 0=homepage idle, 1=typing, 2=plp, 3=added-to-cart
   const [stage, setStage] = useState(0);
   const [typed, setTyped] = useState("");
