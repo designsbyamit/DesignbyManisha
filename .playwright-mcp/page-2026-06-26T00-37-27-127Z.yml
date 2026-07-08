@@ -1,0 +1,136 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Holmes World" [ref=e5] [cursor=pointer]:
+          - /url: /work/holmesworld
+          - generic [ref=e6]: Holmes
+          - generic [ref=e7]: World
+        - navigation [ref=e8]:
+          - button "Categories" [ref=e10]:
+            - text: Categories
+            - img [ref=e11]
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /work/holmesworld/projects
+          - generic "Coming soon" [ref=e14]: Experience Centre
+        - button "Open search" [ref=e16]:
+          - img [ref=e17]
+        - button "Notifications" [ref=e20]:
+          - img [ref=e21]
+        - link "Cart — 0 items" [ref=e24] [cursor=pointer]:
+          - /url: /work/holmesworld/cart
+          - img [ref=e25]
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: Account
+          - heading "My Orders" [level=1] [ref=e33]
+          - paragraph [ref=e34]: 3 orders
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - paragraph [ref=e39]: "Order #HW-2024-00801"
+                - paragraph [ref=e40]: Placed on 28 November 2024
+              - generic [ref=e41]: Delivered
+            - generic [ref=e42]:
+              - img "Kajaria Glazed Vitrified White Marble Tile" [ref=e44]
+              - img "Somany Glossy White Wall Tile 300×600" [ref=e46]
+              - img "Laticrete 254 Platinum Tile Adhesive 20kg" [ref=e48]
+            - generic [ref=e49]:
+              - generic [ref=e50]:
+                - paragraph [ref=e51]:
+                  - text: "Total:"
+                  - generic [ref=e52]: ₹41,709
+                - paragraph [ref=e53]: UPI — GooglePay
+              - link "View Order" [ref=e54] [cursor=pointer]:
+                - /url: /work/holmesworld/orders/HW-2024-00801
+                - text: View Order
+                - img [ref=e55]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - paragraph [ref=e60]: "Order #HW-2024-00834"
+                - paragraph [ref=e61]: Placed on 15 December 2024
+              - generic [ref=e62]: Dispatched
+            - generic [ref=e63]:
+              - img "UltraTech OPC 53 Grade Cement" [ref=e65]
+              - img "Tata Tiscon TMT Bar 12mm Fe-500D" [ref=e67]
+              - img "GI Binding Wire 20 Gauge — 10kg Coil" [ref=e69]
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - paragraph [ref=e72]:
+                  - text: "Total:"
+                  - generic [ref=e73]: ₹24,136
+                - paragraph [ref=e74]: No Cost EMI — 6 months (HDFC)
+              - link "View Order" [ref=e75] [cursor=pointer]:
+                - /url: /work/holmesworld/orders/HW-2024-00834
+                - text: View Order
+                - img [ref=e76]
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - paragraph [ref=e81]: "Order #HW-2024-00847"
+                - paragraph [ref=e82]: Placed on 22 December 2024
+              - generic [ref=e83]: Processing
+            - generic [ref=e84]:
+              - img "Jaquar Lyric Series Overhead Shower" [ref=e86]
+              - img "Jaquar Aria Single Lever Basin Faucet" [ref=e88]
+              - img "Cera Floor Mounted EWC with Soft-Close Seat" [ref=e90]
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - paragraph [ref=e93]:
+                  - text: "Total:"
+                  - generic [ref=e94]: ₹70,112
+                - paragraph [ref=e95]: Credit Card — ICICI Visa
+              - link "View Order" [ref=e96] [cursor=pointer]:
+                - /url: /work/holmesworld/orders/HW-2024-00847
+                - text: View Order
+                - img [ref=e97]
+    - contentinfo [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - generic [ref=e104]: Holmes
+              - generic [ref=e105]: World
+            - paragraph [ref=e106]: Premium construction materials for Indian homes. Delivered fast, priced right.
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: Categories
+            - list [ref=e109]:
+              - listitem [ref=e110]:
+                - link "Tiles & Flooring" [ref=e111] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e112]:
+                - link "Bathroom Fittings" [ref=e113] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e114]:
+                - link "Cement & Concrete" [ref=e115] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e116]:
+                - link "Steel & TMT" [ref=e117] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e118]:
+                - link "Paints" [ref=e119] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+          - generic [ref=e120]:
+            - paragraph [ref=e121]: Support
+            - list [ref=e122]:
+              - listitem [ref=e123]: Track Order
+              - listitem [ref=e124]: Returns Policy
+              - listitem [ref=e125]: Bulk Orders
+              - listitem [ref=e126]: Installation Help
+              - listitem [ref=e127]: Contact Us
+          - generic [ref=e128]:
+            - paragraph [ref=e129]: Connect
+            - list [ref=e130]:
+              - listitem [ref=e131]: Instagram
+              - listitem [ref=e132]: YouTube
+              - listitem [ref=e133]: LinkedIn
+              - listitem [ref=e134]: WhatsApp Business
+        - generic [ref=e135]:
+          - paragraph [ref=e136]: © HolmesWorld 2025. All rights reserved.
+          - paragraph [ref=e137]: "Made in India 🇮🇳 · GST: 29AABCH1234M1Z5"
+  - button "Open Next.js Dev Tools" [ref=e143] [cursor=pointer]:
+    - img [ref=e144]
+  - alert [ref=e147]

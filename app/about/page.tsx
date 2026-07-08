@@ -56,7 +56,7 @@ export default function AboutPage() {
         <OrgBlob style={{ width: 480, height: 360, top: "-5%", right: "-6%", opacity: 0.35 }} />
         <OrgBlob style={{ width: 300, height: 240, bottom: "5%", left: "-3%", opacity: 0.25 }} color="var(--p-blob-2)" />
 
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(2.5rem, 6vw, 5rem)", alignItems: "center", position: "relative", zIndex: 1 }}>
+        <div className="grid-2col" style={{ maxWidth: 1200, margin: "0 auto", gap: "clamp(2.5rem, 6vw, 5rem)", alignItems: "center", position: "relative", zIndex: 1 }}>
           {/* Left */}
           <motion.div variants={stagger} initial="hidden" animate="visible">
             <motion.p variants={fadeUp} style={{ fontSize: 12, letterSpacing: "0.12em", textTransform: "uppercase", color: P.muted, fontWeight: 500, marginBottom: "1rem" }}>About Manisha</motion.p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {STORY.map((item, i) => (
               <Reveal key={i} delay={i * 0.06}>
-                <div style={{ display: "grid", gridTemplateColumns: "200px 1fr", gap: "clamp(2rem, 4vw, 4rem)", padding: "clamp(1.5rem, 3vw, 2.5rem) 0", borderBottom: i < STORY.length - 1 ? `1px solid ${P.s3}` : "none", alignItems: "start" }}>
+                <div className="grid-story" style={{ gap: "clamp(2rem, 4vw, 4rem)", padding: "clamp(1.5rem, 3vw, 2.5rem) 0", borderBottom: i < STORY.length - 1 ? `1px solid ${P.s3}` : "none", alignItems: "start" }}>
                   <p style={{ fontSize: 13, fontWeight: 600, color: P.accent, margin: 0, paddingTop: 3, letterSpacing: "0.01em" }}>{item.period}</p>
                   <p style={{ fontSize: "clamp(0.95rem, 1.6vw, 1.05rem)", color: P.muted, lineHeight: 1.8, margin: 0 }}>{item.text}</p>
                 </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
               Principles I design by.
             </h2>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "clamp(1rem, 2vw, 1.75rem)", alignItems: "stretch" }}>
+          <div className="grid-skills" style={{ gap: "clamp(1rem, 2vw, 1.75rem)", alignItems: "stretch" }}>
             {PHILOSOPHY.map((p, i) => (
               <Reveal key={p.number} delay={i * 0.08} style={{ height: "100%" }}>
                 <div style={{ background: "var(--p-card-bg)", borderRadius: 16, padding: "2rem", border: `1px solid ${P.s3}`, height: "100%", boxSizing: "border-box", display: "flex", flexDirection: "column" }}>

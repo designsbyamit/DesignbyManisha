@@ -1,0 +1,205 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Holmes World" [ref=e5] [cursor=pointer]:
+          - /url: /work/holmesworld
+          - generic [ref=e6]: Holmes
+          - generic [ref=e7]: World
+        - navigation [ref=e8]:
+          - button "Categories" [ref=e10]:
+            - text: Categories
+            - img [ref=e11]
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /work/holmesworld/projects
+          - generic "Coming soon" [ref=e14]: Experience Centre
+        - button "Open search" [ref=e16]:
+          - img [ref=e17]
+        - button "Notifications" [ref=e20]:
+          - img [ref=e21]
+        - link "Cart — 0 items" [ref=e24] [cursor=pointer]:
+          - /url: /work/holmesworld/cart
+          - img [ref=e25]
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: Account
+          - heading "Project Workspace" [level=1] [ref=e33]
+          - paragraph [ref=e34]: 2 active projects
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - heading "3BHK Koramangala Renovation" [level=2] [ref=e39]
+                - paragraph [ref=e40]: 📍 Koramangala, Bengaluru · Last updated 20 Dec
+              - img [ref=e41]:
+                - generic [ref=e44]: 68%
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - paragraph [ref=e47]:
+                  - img [ref=e48]
+                  - text: Budget
+                - paragraph [ref=e51]: 69% spent
+              - generic [ref=e52]:
+                - generic [ref=e53]:
+                  - paragraph [ref=e54]: Total Budget
+                  - paragraph [ref=e55]: ₹28.0L
+                - generic [ref=e56]:
+                  - paragraph [ref=e57]: Spent
+                  - paragraph [ref=e58]: ₹19.4L
+                - generic [ref=e59]:
+                  - paragraph [ref=e60]: Remaining
+                  - paragraph [ref=e61]: ₹8.6L
+            - generic [ref=e64]:
+              - paragraph [ref=e65]:
+                - img [ref=e66]
+                - text: Orders (2)
+              - generic [ref=e70]:
+                - link "#HW-2024-00801 Delivered" [ref=e71] [cursor=pointer]:
+                  - /url: /work/holmesworld/orders/HW-2024-00801
+                  - text: "#HW-2024-00801"
+                  - generic [ref=e72]: Delivered
+                - link "#HW-2024-00834 Dispatched" [ref=e73] [cursor=pointer]:
+                  - /url: /work/holmesworld/orders/HW-2024-00834
+                  - text: "#HW-2024-00834"
+                  - generic [ref=e74]: Dispatched
+            - generic [ref=e75]:
+              - paragraph [ref=e76]:
+                - img [ref=e77]
+                - text: Pending Purchases (5)
+              - generic [ref=e80]:
+                - link "Asian Paints Royale" [ref=e81] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/asian-paints-royale-luxury-emulsion
+                  - img [ref=e82]
+                  - text: Asian Paints Royale
+                - link "Asian Paints Interior" [ref=e86] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/asian-paints-interior-primer
+                  - img [ref=e87]
+                  - text: Asian Paints Interior
+                - link "Philips LED Recessed" [ref=e91] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/philips-led-panel-18w
+                  - img [ref=e92]
+                  - text: Philips LED Recessed
+                - link "Wipro LED Strip" [ref=e96] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/wipro-led-strip-light-5m
+                  - img [ref=e97]
+                  - text: Wipro LED Strip
+                - link "Saint-Gobain Gyproc Gypsum" [ref=e101] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/saint-gobain-gyproc-gypsum-board
+                  - img [ref=e102]
+                  - text: Saint-Gobain Gyproc Gypsum
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - heading "Villa Interiors — Whitefield" [level=2] [ref=e109]
+                - paragraph [ref=e110]: 📍 Whitefield, Bengaluru · Last updated 22 Dec
+              - img [ref=e111]:
+                - generic [ref=e114]: 22%
+            - generic [ref=e115]:
+              - generic [ref=e116]:
+                - paragraph [ref=e117]:
+                  - img [ref=e118]
+                  - text: Budget
+                - paragraph [ref=e121]: 22% spent
+              - generic [ref=e122]:
+                - generic [ref=e123]:
+                  - paragraph [ref=e124]: Total Budget
+                  - paragraph [ref=e125]: ₹55.0L
+                - generic [ref=e126]:
+                  - paragraph [ref=e127]: Spent
+                  - paragraph [ref=e128]: ₹12.0L
+                - generic [ref=e129]:
+                  - paragraph [ref=e130]: Remaining
+                  - paragraph [ref=e131]: ₹43.0L
+            - generic [ref=e134]:
+              - paragraph [ref=e135]:
+                - img [ref=e136]
+                - text: Orders (1)
+              - link "#HW-2024-00847 Processing" [ref=e141] [cursor=pointer]:
+                - /url: /work/holmesworld/orders/HW-2024-00847
+                - text: "#HW-2024-00847"
+                - generic [ref=e142]: Processing
+            - generic [ref=e143]:
+              - paragraph [ref=e144]:
+                - img [ref=e145]
+                - text: Pending Purchases (8)
+              - generic [ref=e148]:
+                - link "Jaquar Lyric Series" [ref=e149] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/jaquar-lyric-overhead-shower
+                  - img [ref=e150]
+                  - text: Jaquar Lyric Series
+                - link "Hindware Neo Counter-Top" [ref=e154] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/hindware-neo-wash-basin
+                  - img [ref=e155]
+                  - text: Hindware Neo Counter-Top
+                - link "Cera Primo Wall-Hung" [ref=e159] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/cera-primo-wall-hung-basin
+                  - img [ref=e160]
+                  - text: Cera Primo Wall-Hung
+                - link "Jaquar Continental Free-Standing" [ref=e164] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/jaquar-continental-bathtub
+                  - img [ref=e165]
+                  - text: Jaquar Continental Free-Standing
+                - link "Cera Opus Thermostatic" [ref=e169] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/cera-opus-shower-panel
+                  - img [ref=e170]
+                  - text: Cera Opus Thermostatic
+                - link "Cera Floor Mounted" [ref=e174] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/cera-floor-mounted-ewc
+                  - img [ref=e175]
+                  - text: Cera Floor Mounted
+                - link "Hindware Rimless Wall-Hung" [ref=e179] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/hindware-wall-hung-rimless-wc
+                  - img [ref=e180]
+                  - text: Hindware Rimless Wall-Hung
+                - link "Jaquar Concealed Cistern" [ref=e184] [cursor=pointer]:
+                  - /url: /work/holmesworld/products/jaquar-concealed-cistern
+                  - img [ref=e185]
+                  - text: Jaquar Concealed Cistern
+    - contentinfo [ref=e189]:
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - generic [ref=e192]:
+            - generic [ref=e193]:
+              - generic [ref=e194]: Holmes
+              - generic [ref=e195]: World
+            - paragraph [ref=e196]: Premium construction materials for Indian homes. Delivered fast, priced right.
+          - generic [ref=e197]:
+            - paragraph [ref=e198]: Categories
+            - list [ref=e199]:
+              - listitem [ref=e200]:
+                - link "Tiles & Flooring" [ref=e201] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e202]:
+                - link "Bathroom Fittings" [ref=e203] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e204]:
+                - link "Cement & Concrete" [ref=e205] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e206]:
+                - link "Steel & TMT" [ref=e207] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e208]:
+                - link "Paints" [ref=e209] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+          - generic [ref=e210]:
+            - paragraph [ref=e211]: Support
+            - list [ref=e212]:
+              - listitem [ref=e213]: Track Order
+              - listitem [ref=e214]: Returns Policy
+              - listitem [ref=e215]: Bulk Orders
+              - listitem [ref=e216]: Installation Help
+              - listitem [ref=e217]: Contact Us
+          - generic [ref=e218]:
+            - paragraph [ref=e219]: Connect
+            - list [ref=e220]:
+              - listitem [ref=e221]: Instagram
+              - listitem [ref=e222]: YouTube
+              - listitem [ref=e223]: LinkedIn
+              - listitem [ref=e224]: WhatsApp Business
+        - generic [ref=e225]:
+          - paragraph [ref=e226]: © HolmesWorld 2025. All rights reserved.
+          - paragraph [ref=e227]: "Made in India 🇮🇳 · GST: 29AABCH1234M1Z5"
+  - button "Open Next.js Dev Tools" [ref=e233] [cursor=pointer]:
+    - img [ref=e234]
+  - alert [ref=e237]

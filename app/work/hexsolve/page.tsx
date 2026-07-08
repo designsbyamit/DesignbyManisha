@@ -1262,17 +1262,11 @@ export default function HexSolvePage() {
               </div>
             </div>
             <div style={{
-              background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: 16, height: 240,
-              display: "flex", alignItems: "center", justifyContent: "center",
+              borderRadius: 16, height: 240, overflow: "hidden", position: "relative",
             }}>
-              <div style={{
-                width: 64, height: 64, borderRadius: 16,
-                background: "rgba(196,97,58,0.15)", border: "1px solid rgba(196,97,58,0.3)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-              }}>
-                <span style={{ fontSize: 24 }}>🏗</span>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/homesworld/homesworld-hero.png" alt="HomesWorld"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} />
             </div>
           </motion.div>
           </Link>

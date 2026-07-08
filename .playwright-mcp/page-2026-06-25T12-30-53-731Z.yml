@@ -1,0 +1,469 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Manisha" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+        - text: Manisha
+      - generic [ref=e8]: Case Study
+  - generic [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e13]: Case Study — HexSolve
+        - heading "Designing Precision Manufacturing Workflows from the Ground Up" [level=1] [ref=e14]:
+          - text: Designing Precision
+          - text: Manufacturing
+          - text: Workflows from the
+          - text: Ground Up
+        - paragraph [ref=e15]: HexSolve digitized the end-to-end manufacturing process for custom rotary engines — transforming paper-based documentation into a structured, collaborative platform used by engineers, reviewers, and assembly technicians.
+      - generic [ref=e16]:
+        - generic [ref=e18]:
+          - generic [ref=e23]: hexsolve — Instruction Document
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: Document
+              - generic [ref=e27]: Sections
+              - generic [ref=e28]: Instructions
+              - generic [ref=e29]: Assets
+            - paragraph [ref=e35]: "Engine Assembly — Section 3.2: Apex Seal Installation"
+        - generic [ref=e36]: Revision Approved · 14:32
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - paragraph [ref=e40]: Role
+        - paragraph [ref=e41]: UX Designer
+      - generic [ref=e42]:
+        - paragraph [ref=e43]: Industry
+        - paragraph [ref=e44]: Industrial Manufacturing
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: Platform
+        - paragraph [ref=e47]: Enterprise Web App
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: Scope
+        - paragraph [ref=e50]: End-to-End Design
+      - generic [ref=e51]:
+        - paragraph [ref=e52]: Users
+        - paragraph [ref=e53]: Authors, Reviewers, Engineers, QA
+    - img [ref=e55]
+  - generic [ref=e58]:
+    - generic [ref=e59]:
+      - generic [ref=e61]: Background
+      - heading "Manufacturing a rotary engine is not a repeatable process — it is a series of expert decisions executed precisely." [level=2] [ref=e62]
+      - paragraph [ref=e63]: Unlike automotive assembly lines where identical parts follow identical steps, rotary engine manufacturing at this scale is driven by individual customer orders. Every engine is unique. Every order triggers a distinct manufacturing project with its own documentation set — detailed instruction documents that become the single source of truth for everyone who touches that engine.
+      - paragraph [ref=e64]: Before HexSolve, this documentation existed in disconnected formats — spreadsheets, printed sheets, email threads. Engineers worked from documents that were sometimes outdated, reviewers couldn't track what had changed, and manufacturing teams had no reliable way to confirm they were working from the latest approved version.
+    - generic [ref=e65]:
+      - paragraph [ref=e66]: Existing Workflow
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: Customer Order
+          - img [ref=e70]
+        - generic [ref=e72]:
+          - generic [ref=e73]: Create Project
+          - img [ref=e74]
+        - generic [ref=e76]:
+          - generic [ref=e77]: Author Instructions
+          - img [ref=e78]
+        - generic [ref=e80]:
+          - generic [ref=e81]: Review & Approve
+          - img [ref=e82]
+        - generic [ref=e84]:
+          - generic [ref=e85]: Assemble Engine
+          - img [ref=e86]
+        - generic [ref=e88]:
+          - generic [ref=e89]: QA Validation
+          - img [ref=e90]
+        - generic [ref=e93]: Project Close
+  - generic [ref=e96]:
+    - generic [ref=e97]:
+      - generic [ref=e98]: Document Structure
+      - heading "Understanding the anatomy of a manufacturing instruction" [level=2] [ref=e99]
+      - paragraph [ref=e100]: Early in the project I spent time reading actual instruction documents — not just talking about them, but understanding what every field meant, why it existed, and how it was used. This gave me enough language to earn the trust of subject matter experts.
+      - paragraph [ref=e101]: Each document follows a rigid hierarchy. Understanding this was the foundation for all later information architecture work.
+    - generic [ref=e102]:
+      - generic [ref=e105]:
+        - paragraph [ref=e106]: Instruction Document
+        - paragraph [ref=e107]: The complete manufacturing record for a specific engine order
+      - generic [ref=e110]:
+        - paragraph [ref=e111]: Section
+        - paragraph [ref=e112]: Major phase e.g. Pre-Assembly, Core Assembly, Quality Check
+      - generic [ref=e115]:
+        - paragraph [ref=e116]: Subsection
+        - paragraph [ref=e117]: Specific assembly area or component grouping
+      - generic [ref=e120]:
+        - paragraph [ref=e121]: Instruction
+        - paragraph [ref=e122]: Individual step with full operational context
+      - generic [ref=e125]:
+        - paragraph [ref=e126]: Instruction Detail
+        - paragraph [ref=e127]: Text · Tools · Parts · Reference image · Checklist
+  - generic [ref=e129]:
+    - generic [ref=e130]:
+      - generic [ref=e132]: Research & Discovery
+      - heading "The work started long before any wireframe." [level=2] [ref=e133]
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - paragraph [ref=e136]: What I needed to understand
+          - paragraph [ref=e137]: I didn't know how rotary engines were manufactured. That wasn't a weakness — it was an opportunity to ask better questions. I came into stakeholder workshops as a genuine learner.
+        - generic [ref=e139]:
+          - paragraph [ref=e140]: Stakeholder workshops
+          - paragraph [ref=e141]: Three sessions with cross-functional stakeholders helped me map the existing workflow, surface assumptions, and understand where different roles experienced friction. I came away with far more than a requirements list — I came away with a mental model of the operation.
+        - generic [ref=e143]:
+          - paragraph [ref=e144]: Conversations with authors and engineers
+          - paragraph [ref=e145]: Instruction authors described the effort required to maintain consistency across documents. Assembly engineers described the anxiety of starting a job and not being sure if the document in front of them was the latest approved version. These weren't abstract usability concerns — they were operational risks.
+        - generic [ref=e147]:
+          - paragraph [ref=e148]: Reviewing real documentation
+          - paragraph [ref=e149]: Reading actual instruction documents let me understand not just the structure but the cognitive demands they placed on users. Some documents contained hundreds of instructions. Navigation was a real challenge.
+    - generic [ref=e150]:
+      - paragraph [ref=e156]: Workshop Board
+      - paragraph [ref=e162]: Workflow Sketch
+      - paragraph [ref=e168]: Journey Map
+      - paragraph [ref=e174]: Affinity Clusters
+      - paragraph [ref=e180]: Requirement Notes
+      - paragraph [ref=e186]: Role Analysis
+  - generic [ref=e188]:
+    - generic [ref=e190]: Key Insights
+    - heading "What the research actually revealed" [level=2] [ref=e191]
+    - generic [ref=e192]:
+      - generic [ref=e193]:
+        - generic [ref=e194]: "01"
+        - paragraph [ref=e195]: No shared source of truth
+        - paragraph [ref=e196]: Different roles worked from different versions of the same document. This ambiguity introduced errors and slowed down manufacturing cycles.
+      - generic [ref=e197]:
+        - generic [ref=e198]: "02"
+        - paragraph [ref=e199]: Authoring was time-consuming and error-prone
+        - paragraph [ref=e200]: Authors copied structures from previous documents manually. Without a proper authoring tool, consistency depended entirely on individual discipline.
+      - generic [ref=e201]:
+        - generic [ref=e202]: "03"
+        - paragraph [ref=e203]: Reviewers lacked confidence in their approval
+        - paragraph [ref=e204]: Without change tracking or visual diffing, reviewers couldn't easily tell what had changed between versions — making approval an uncertain act.
+      - generic [ref=e205]:
+        - generic [ref=e206]: "04"
+        - paragraph [ref=e207]: Assembly engineers needed guidance at the point of action
+        - paragraph [ref=e208]: Engineers needed tools and part information exactly when they needed it — not on a separate reference screen. Context switching was costly on the floor.
+      - generic [ref=e209]:
+        - generic [ref=e210]: "05"
+        - paragraph [ref=e211]: QA traceability was fragmented
+        - paragraph [ref=e212]: Quality engineers could not directly trace completed work back to approved instruction versions. This created audit gaps and compliance exposure.
+      - generic [ref=e213]:
+        - generic [ref=e214]: "06"
+        - paragraph [ref=e215]: The structure was understood — the interface was not
+        - paragraph [ref=e216]: Users understood document hierarchy instinctively because they'd been using it for years. The problem wasn't the model — it was the lack of a tool that represented it clearly.
+  - generic [ref=e218]:
+    - generic [ref=e220]: Problem Statement
+    - blockquote [ref=e221]: "\"Manufacturing teams lacked a single, reliable place to create, review, and execute precision instructions — leaving engineers to work from documents they couldn't fully trust.\""
+    - paragraph [ref=e222]: This wasn't a documentation problem. It was a collaboration, traceability, and trust problem — and solving it required a platform that served four distinct user roles simultaneously.
+  - generic [ref=e224]:
+    - generic [ref=e225]:
+      - generic [ref=e227]: Process
+      - heading "The journey was not a straight line." [level=2] [ref=e228]
+      - paragraph [ref=e229]: The process moved fluidly between research and design, constantly returning to earlier stages as new understanding surfaced. What looks sequential in retrospect was iterative and overlapping in practice.
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - generic [ref=e233]: "01"
+        - generic [ref=e235]:
+          - heading "Stakeholder Workshops" [level=4] [ref=e236]
+          - paragraph [ref=e237]: Mapping existing workflows, understanding business goals, identifying pain points across user roles.
+      - generic [ref=e238]:
+        - generic [ref=e240]: "02"
+        - generic [ref=e242]:
+          - heading "Research & Discovery" [level=4] [ref=e243]
+          - paragraph [ref=e244]: Immersive sessions with instruction authors, reviewers, and engineers to understand real-world usage.
+      - generic [ref=e245]:
+        - generic [ref=e247]: "03"
+        - generic [ref=e249]:
+          - heading "Requirement Synthesis" [level=4] [ref=e250]
+          - paragraph [ref=e251]: Distilling workshop outputs into structured design requirements aligned to each user role.
+      - generic [ref=e252]:
+        - generic [ref=e254]: "04"
+        - generic [ref=e256]:
+          - heading "Problem Reframing" [level=4] [ref=e257]
+          - paragraph [ref=e258]: Translating operational ambiguity into clear UX problem statements.
+      - generic [ref=e259]:
+        - generic [ref=e261]: "05"
+        - generic [ref=e263]:
+          - heading "Information Architecture" [level=4] [ref=e264]
+          - paragraph [ref=e265]: Organizing the document hierarchy into a navigation model users could understand intuitively.
+      - generic [ref=e266]:
+        - generic [ref=e268]: "06"
+        - generic [ref=e270]:
+          - heading "Interaction Design" [level=4] [ref=e271]
+          - paragraph [ref=e272]: Designing role-specific interfaces with shared information models and distinct action surfaces.
+      - generic [ref=e273]:
+        - generic [ref=e275]: "07"
+        - generic [ref=e277]:
+          - heading "Wireframing" [level=4] [ref=e278]
+          - paragraph [ref=e279]: Exploring layouts, hierarchies, and interaction patterns through low-to-mid fidelity iterations.
+      - generic [ref=e280]:
+        - generic [ref=e282]: "08"
+        - generic [ref=e284]:
+          - heading "Validation" [level=4] [ref=e285]
+          - paragraph [ref=e286]: Stakeholder walkthroughs and structured feedback sessions to pressure-test early concepts.
+      - generic [ref=e287]:
+        - generic [ref=e289]: "09"
+        - generic [ref=e291]:
+          - heading "Design System" [level=4] [ref=e292]
+          - paragraph [ref=e293]: Building reusable foundations that enforce consistency across a complex multi-role platform.
+      - generic [ref=e294]:
+        - generic [ref=e296]: "10"
+        - generic [ref=e298]:
+          - heading "Visual Design" [level=4] [ref=e299]
+          - paragraph [ref=e300]: Applying deliberate visual language that reduces cognitive load in manufacturing environments.
+      - generic [ref=e301]:
+        - generic [ref=e303]: "11"
+        - generic [ref=e305]:
+          - heading "Prototype" [level=4] [ref=e306]
+          - paragraph [ref=e307]: High-fidelity prototypes for end-to-end workflow demonstration.
+      - generic [ref=e308]:
+        - generic [ref=e310]: "12"
+        - generic [ref=e312]:
+          - heading "Iteration" [level=4] [ref=e313]
+          - paragraph [ref=e314]: Refining based on feedback until the experience felt clear, efficient, and trustworthy.
+  - generic [ref=e317]:
+    - generic [ref=e319]:
+      - paragraph [ref=e320]: Information Architecture
+      - generic [ref=e323]:
+        - paragraph [ref=e324]: Manufacturing Project
+        - paragraph [ref=e325]: Top-level container
+      - generic [ref=e328]:
+        - paragraph [ref=e329]: Instruction Document
+        - paragraph [ref=e330]: One per manufacturing order
+      - generic [ref=e333]:
+        - paragraph [ref=e334]: Section
+        - paragraph [ref=e335]: Major assembly phase
+      - generic [ref=e338]:
+        - paragraph [ref=e339]: Subsection
+        - paragraph [ref=e340]: Component grouping
+      - generic [ref=e343]:
+        - paragraph [ref=e344]: Instruction
+        - paragraph [ref=e345]: Individual step
+      - generic [ref=e348]:
+        - paragraph [ref=e349]: Supporting Assets
+        - paragraph [ref=e350]: Tools · Parts · Images · Checklist
+    - generic [ref=e351]:
+      - generic [ref=e353]: Information Architecture
+      - heading "Organising complexity into a structure people already understood" [level=2] [ref=e354]
+      - generic [ref=e355]:
+        - paragraph [ref=e356]: The document hierarchy wasn't invented — it already existed in how engineers thought about their work. My job was to make that hierarchy navigable rather than invisible.
+        - paragraph [ref=e357]: I explored several navigation models including flat lists with filtering, tab-based section navigation, and a collapsible tree panel. The tree panel won not because it was technically impressive but because it matched the way engineers described their documents when they talked about them.
+        - paragraph [ref=e358]: The key architectural decision was keeping the hierarchy persistent during instruction authoring — so users never lost their position within a document while editing.
+  - generic [ref=e359]:
+    - generic [ref=e361]: Interaction Design
+    - heading "Three decisions that shaped the experience" [level=2] [ref=e362]
+    - generic [ref=e363]:
+      - generic [ref=e364]:
+        - text: "01"
+        - heading "Hierarchical navigation that never loses context" [level=3] [ref=e365]
+        - paragraph [ref=e366]: Documents can contain hundreds of instructions across many sections. I designed a persistent sidebar that shows the full document tree while the main area displays the current instruction.
+        - paragraph [ref=e367]: This meant users could jump between sections, see their position in the overall document, and return to previous instructions without ever needing to navigate away from the authoring interface. The tree collapses and expands on demand — but your current location is always visible.
+        - generic [ref=e368]: Reduced the cognitive effort of navigating complex documents during manufacturing.
+      - generic [ref=e370]:
+        - generic [ref=e375]: hexsolve — Document Tree Navigation
+        - generic [ref=e376]:
+          - generic [ref=e377]:
+            - generic [ref=e378]: Document
+            - generic [ref=e379]: Sections
+            - generic [ref=e380]: Instructions
+            - generic [ref=e381]: Assets
+          - paragraph [ref=e387]: Persistent section tree · Current position highlighted
+    - generic [ref=e388]:
+      - generic [ref=e390]:
+        - generic [ref=e395]: hexsolve — Review Interface
+        - generic [ref=e396]:
+          - generic [ref=e397]:
+            - generic [ref=e398]: Document
+            - generic [ref=e399]: Sections
+            - generic [ref=e400]: Instructions
+            - generic [ref=e401]: Assets
+          - paragraph [ref=e407]: Reviewer sees change indicators · Author sees authoring tools
+      - generic [ref=e408]:
+        - text: "02"
+        - heading "Role-specific interfaces sharing one information model" [level=3] [ref=e409]
+        - paragraph [ref=e410]: Authors, reviewers, and engineers need fundamentally different interactions with the same document. Authors need creation and editing tools. Reviewers need approval controls and change indicators. Engineers need clean, uncluttered reading.
+        - paragraph [ref=e411]: I separated the action surfaces for each role while keeping the underlying information model identical. This meant no data was duplicated, roles always saw the same content, and each user experienced an interface optimized specifically for their job.
+        - generic [ref=e412]: Reduced interface noise for each user while maintaining a consistent information foundation.
+    - generic [ref=e413]:
+      - generic [ref=e414]:
+        - text: "03"
+        - heading "Contextual information embedded within each instruction" [level=3] [ref=e415]
+        - paragraph [ref=e416]: Engineers assembling an engine at a workstation shouldn't need to switch screens to find the tool specification, part number, or reference image for the step they're on.
+        - paragraph [ref=e417]: I designed instruction cards that surface tools, required parts, reference imagery, and the validation checklist inline — scanned at a glance, expanded when needed. Everything for one step, in one place, without navigation.
+        - generic [ref=e418]: Eliminated context-switching during precision assembly work.
+      - generic [ref=e420]:
+        - generic [ref=e421]:
+          - generic [ref=e422]: Instruction 3.2.4 — Apex Seal Installation
+          - generic [ref=e423]: In Progress
+        - generic [ref=e424]:
+          - paragraph [ref=e425]: Apply a thin even coat of assembly lubricant to the apex seal groove before installation. Ensure seal orientation matches the diagram.
+          - generic [ref=e426]:
+            - generic [ref=e427]:
+              - paragraph [ref=e428]: Required Tools
+              - paragraph [ref=e429]: • Torque wrench
+              - paragraph [ref=e430]: • Seal driver
+            - generic [ref=e431]:
+              - paragraph [ref=e432]: Required Parts
+              - paragraph [ref=e433]: • Apex seal set
+              - paragraph [ref=e434]: • Assembly lube
+          - generic [ref=e435]:
+            - paragraph [ref=e436]: Validation Checklist
+            - paragraph [ref=e439]: Seal seated flush
+            - paragraph [ref=e442]: No visible gaps
+            - paragraph [ref=e445]: Orientation verified
+            - paragraph [ref=e448]: Lube coverage even
+  - generic [ref=e451]:
+    - generic [ref=e452]:
+      - generic [ref=e454]: Wireframes
+      - heading "From rough ideas to refined interactions" [level=2] [ref=e455]
+      - paragraph [ref=e456]: "Wireframes weren't documentation — they were conversation starters. Each round raised specific questions: How should reviewers indicate partial approval? What happens to instructions when a section is locked? Can authors reorder instructions without breaking references? The answers shaped the next iteration."
+    - generic [ref=e457]:
+      - generic [ref=e474]: Early sketch — Document List
+      - generic [ref=e491]: Alternative Navigation
+      - generic [ref=e508]: Section Overview v1
+      - generic [ref=e525]: Instruction Layout
+      - generic [ref=e542]: Review Mode
+      - generic [ref=e559]: Refined Document Tree
+  - generic [ref=e561]:
+    - generic [ref=e562]:
+      - generic [ref=e564]: Validation
+      - heading "Testing ideas with the people who would live with them" [level=2] [ref=e565]
+      - paragraph [ref=e566]: Validation happened through structured walkthroughs with stakeholders and individual sessions with representative users. I ran walkthroughs with instruction authors to test the authoring flow, and separate sessions with reviewers to understand how the review interface read in practice.
+    - generic [ref=e567]:
+      - generic [ref=e568]:
+        - paragraph [ref=e569]: Instruction Author
+        - paragraph [ref=e570]: "\"The document tree needs to show me where I am — not just the list.\""
+        - paragraph [ref=e573]: Added active-state highlighting with breadcrumb context above the main content area.
+      - generic [ref=e574]:
+        - paragraph [ref=e575]: Reviewer
+        - paragraph [ref=e576]: "\"I want to see what changed without reading the whole thing again.\""
+        - paragraph [ref=e579]: Introduced a change summary panel visible during review, flagging modified instructions with inline indicators.
+      - generic [ref=e580]:
+        - paragraph [ref=e581]: Assembly Engineer
+        - paragraph [ref=e582]: "\"When I'm on the floor I don't want extra buttons. Just the instruction and the checklist.\""
+        - paragraph [ref=e585]: Created a dedicated 'Assembly View' that strips authoring and review actions entirely, optimized for focused consumption.
+  - generic [ref=e587]:
+    - generic [ref=e589]: Design System
+    - generic [ref=e590]:
+      - heading "Building once, scaling everywhere" [level=2] [ref=e591]
+      - paragraph [ref=e592]: A manufacturing platform used across multiple roles and potentially deployed in different manufacturing contexts needed consistent foundations. The design system wasn't about aesthetics — it was about reducing ambiguity. Every component was built to answer a specific question about how information should be presented.
+    - generic [ref=e593]:
+      - paragraph [ref=e597]: Ink
+      - paragraph [ref=e601]: Surface
+      - paragraph [ref=e605]: Accent Gold
+      - paragraph [ref=e609]: Success
+      - generic [ref=e611]:
+        - generic [ref=e612]: Aa
+        - paragraph [ref=e613]: Display / 48px
+      - generic [ref=e615]:
+        - generic [ref=e616]: Aa
+        - paragraph [ref=e617]: Body / 16px
+      - paragraph [ref=e627]: Spacing Scale
+      - generic [ref=e629]:
+        - generic [ref=e631]: Approve
+        - paragraph [ref=e632]: Primary Button
+  - generic [ref=e633]:
+    - generic [ref=e635]: Final Experience
+    - heading "The platform, assembled" [level=2] [ref=e636]
+    - paragraph [ref=e637]: The final design brought together every insight, decision, and iteration into a coherent platform — one that serves four distinct user roles through a shared information foundation, without compromising on the specific experience each role needs.
+    - generic [ref=e638]:
+      - generic [ref=e640]:
+        - generic [ref=e645]: hexsolve — Authoring Interface
+        - generic [ref=e646]:
+          - generic [ref=e647]:
+            - generic [ref=e648]: Document
+            - generic [ref=e649]: Sections
+            - generic [ref=e650]: Instructions
+            - generic [ref=e651]: Assets
+          - paragraph [ref=e657]: Full-width document editor · Persistent navigation · Inline asset management
+      - generic [ref=e658]:
+        - generic [ref=e659]:
+          - generic [ref=e664]: Review Panel
+          - generic [ref=e665]:
+            - generic [ref=e666]:
+              - generic [ref=e667]: Document
+              - generic [ref=e668]: Sections
+              - generic [ref=e669]: Instructions
+              - generic [ref=e670]: Assets
+            - paragraph [ref=e676]: Change tracking · Approval controls · Comment threads
+        - generic [ref=e677]:
+          - generic [ref=e682]: Assembly View
+          - generic [ref=e683]:
+            - generic [ref=e684]:
+              - generic [ref=e685]: Document
+              - generic [ref=e686]: Sections
+              - generic [ref=e687]: Instructions
+              - generic [ref=e688]: Assets
+            - paragraph [ref=e694]: Clean reading experience for engineers on the floor
+    - generic [ref=e695]:
+      - generic [ref=e697]:
+        - generic [ref=e702]: Document Overview
+        - generic [ref=e703]:
+          - generic [ref=e704]:
+            - generic [ref=e705]: Document
+            - generic [ref=e706]: Sections
+            - generic [ref=e707]: Instructions
+            - generic [ref=e708]: Assets
+          - paragraph [ref=e714]: Section map with completion status
+      - generic [ref=e716]:
+        - generic [ref=e721]: Instruction Card
+        - generic [ref=e722]:
+          - generic [ref=e723]:
+            - generic [ref=e724]: Document
+            - generic [ref=e725]: Sections
+            - generic [ref=e726]: Instructions
+            - generic [ref=e727]: Assets
+          - paragraph [ref=e733]: Inline tools, parts, checklist
+      - generic [ref=e735]:
+        - generic [ref=e740]: QA Validation View
+        - generic [ref=e741]:
+          - generic [ref=e742]:
+            - generic [ref=e743]: Document
+            - generic [ref=e744]: Sections
+            - generic [ref=e745]: Instructions
+            - generic [ref=e746]: Assets
+          - paragraph [ref=e752]: Complete traceability dashboard
+  - generic [ref=e754]:
+    - generic [ref=e756]: Business Impact
+    - heading "What changed when the platform went live" [level=2] [ref=e757]
+    - generic [ref=e758]:
+      - generic [ref=e759]:
+        - generic [ref=e760]: Single
+        - paragraph [ref=e761]: Source of truth for all manufacturing documentation — replacing fragmented formats across teams
+      - generic [ref=e762]:
+        - generic [ref=e763]: 4 Roles
+        - paragraph [ref=e764]: Served through purpose-built interfaces sharing one consistent information model
+      - generic [ref=e765]:
+        - generic [ref=e766]: Clear
+        - paragraph [ref=e767]: Audit trail for every document revision — enabling confident quality assurance and compliance reviews
+      - generic [ref=e768]:
+        - generic [ref=e769]: Faster
+        - paragraph [ref=e770]: Authoring and review cycles through structured tooling, reducing manual re-work and version confusion
+    - paragraph [ref=e772]: The most meaningful outcome wasn't a metric. Assembly engineers reported that they felt more confident starting a job — because they could verify, at a glance, that the document they were working from was the current approved version. In precision manufacturing, that confidence matters more than any quantitative measure.
+  - generic [ref=e774]:
+    - generic [ref=e776]: Reflection
+    - heading "What I took away from this project" [level=2] [ref=e777]
+    - generic [ref=e778]:
+      - generic [ref=e779]:
+        - heading "Domain understanding earns the room" [level=3] [ref=e780]
+        - paragraph [ref=e781]: Walking into manufacturing stakeholder workshops as someone who didn't know the difference between a rotor and a stator could have been a disadvantage. I turned it into a strength by asking precise, genuinely curious questions. By the end of the research phase, I was contributing to conversations about operational trade-offs — not just interface questions.
+      - generic [ref=e783]:
+        - heading "Complexity hides in the workflow, not the interface" [level=3] [ref=e784]
+        - paragraph [ref=e785]: The most important design decisions in HexSolve weren't about visual layout or colour. They were about information flow — who sees what, when, and in what state. Getting those right required understanding the workflow deeply enough to see where the real friction was.
+      - generic [ref=e787]:
+        - heading "A design system is an argument for consistency" [level=3] [ref=e788]
+        - paragraph [ref=e789]: Building the design system wasn't just about reusable components. It was about making a case to the organization that consistency has value — that a reviewer and an assembly engineer seeing the same status indicator should see identical visual language, even though their experiences are different.
+      - generic [ref=e791]:
+        - heading "I'd do something differently" [level=3] [ref=e792]
+        - paragraph [ref=e793]: I would involve QA engineers earlier. Their requirements — traceability, full audit history, version locking — were harder to retrofit into an architecture built primarily for authoring and review. Their perspectives would have influenced information architecture decisions made much earlier in the process.
+  - generic [ref=e795]:
+    - paragraph [ref=e796]: Next Case Study
+    - link "Enterprise SaaS · B2B Designing for complexity where every decision costs money View case study Project Preview" [ref=e797] [cursor=pointer]:
+      - /url: /work/next-project
+      - generic [ref=e799]:
+        - generic [ref=e800]:
+          - generic [ref=e801]: Enterprise SaaS · B2B
+          - heading "Designing for complexity where every decision costs money" [level=2] [ref=e802]
+          - generic [ref=e803]:
+            - generic [ref=e804]: View case study
+            - img [ref=e805]
+        - generic [ref=e810]: Project Preview
+    - generic [ref=e811]:
+      - link "← Back to all work" [ref=e812] [cursor=pointer]:
+        - /url: /
+      - paragraph [ref=e813]: © 2024 Manisha. All rights reserved.

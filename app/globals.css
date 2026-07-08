@@ -12,9 +12,7 @@
   --color-white: #ffffff;
 
   --font-sans: var(--font-jakarta);
-  --font-display: var(--font-display);
   --font-mono: var(--font-geist-mono);
-  --font-handwritten: var(--font-handwritten);
 
   /* HolmesWorld tokens */
   --hw-surface: #F5F3F0;
@@ -92,7 +90,7 @@ html {
 body {
   background: var(--p-surface);
   color: var(--p-ink);
-  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.65;
@@ -102,29 +100,93 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* Display headings — Playfair */
-h1, h2, h3, h4 {
-  font-family: var(--font-display), "Georgia", serif;
-  font-weight: 400;
-  letter-spacing: -0.04rem;
+/* Playfair for all display headings — var(--font-display) is injected by next/font on <html> */
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), "Playfair", Georgia, serif !important;
+    font-weight: 400;
+    letter-spacing: -0.04rem;
+  }
+
+  /* strong/b stays Jakarta */
+  strong, b { font-weight: 600; }
 }
 
-/* Strong/bold body text uses 500 not 700 */
-strong, b {
-  font-weight: 500;
+/* Project cards — 3 col desktop, 1 col mobile */
+.project-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 2vw, 1.75rem); }
+@media (max-width: 900px) { .project-cards-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 580px) { .project-cards-grid { grid-template-columns: 1fr !important; } }
+
+@layer base {
+/* ── Responsive grid utilities ─────────────────────────────────────────── */
+.grid-2col { display: grid; grid-template-columns: 1fr 1fr; }
+.grid-4col { display: grid; grid-template-columns: repeat(4, 1fr); }
+.grid-story { display: grid; grid-template-columns: 200px 1fr; }
+.grid-skills { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+/* Principles: 4-col desktop, horizontal scroll on mobile */
+.principles-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+.principle-card-wrap { height: 100%; }
+
+@media (max-width: 768px) {
+  .grid-2col  { grid-template-columns: 1fr !important; }
+  .grid-4col  { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid-story { grid-template-columns: 1fr !important; }
+  .grid-skills { grid-template-columns: repeat(2, 1fr) !important; }
+  .card-2col  { grid-template-columns: 1fr !important; min-height: unset !important; }
+
+  /* Principles — horizontal scroll strip, one card visible at a time */
+  .principles-container {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 1rem !important;
+    padding-bottom: 1rem !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .principles-container::-webkit-scrollbar { display: none; }
+  .principle-card-wrap {
+    flex: 0 0 85vw !important;
+    max-width: 320px !important;
+    scroll-snap-align: start !important;
+    height: auto !important;
+  }
+
+  /* Hero portrait — cap height on mobile */
+  .hero-portrait {
+    max-height: 320px !important;
+    aspect-ratio: unset !important;
+  }
+
+  /* Project card mockup — reasonable height on mobile */
+  .card-mockup-pane {
+    min-height: 240px !important;
+    max-height: 280px !important;
+  }
+
+  /* Floating status badge — hide on small screens */
+  .hero-status-badge { display: none !important; }
+
+  /* Contact buttons — wrap on mobile */
+  .contact-buttons { flex-wrap: wrap !important; }
 }
 
-::selection {
-  background: var(--p-accent-lt);
-  color: var(--p-ink);
+@media (max-width: 480px) {
+  .grid-4col  { grid-template-columns: 1fr !important; }
+  .grid-skills { grid-template-columns: 1fr !important; }
+  .hero-portrait { max-height: 260px !important; }
+  .principle-card-wrap { flex: 0 0 90vw !important; }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--p-surface); }
-::-webkit-scrollbar-thumb { background: var(--p-s3); border-radius: 2px; }
+}
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

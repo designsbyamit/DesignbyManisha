@@ -1,0 +1,903 @@
+- generic [ref=e3]:
+  - generic [ref=e9]:
+    - link [ref=e10] [cursor=pointer]:
+      - /url: ./
+    - generic [ref=e13]:
+      - link "Discover" [ref=e15] [cursor=pointer]:
+        - /url: ./
+        - paragraph [ref=e17]: Discover
+      - link "Browse" [ref=e20] [cursor=pointer]:
+        - /url: ./browse
+        - paragraph [ref=e22]: Browse
+      - link "Blog" [ref=e25] [cursor=pointer]:
+        - /url: ./blog
+        - paragraph [ref=e27]: Blog
+      - link "About" [ref=e30] [cursor=pointer]:
+        - /url: ./about
+        - paragraph [ref=e32]: About
+    - button "Search Icon" [ref=e39] [cursor=pointer]:
+      - img [ref=e40]
+  - generic [ref=e42]:
+    - generic [ref=e44]:
+      - paragraph [ref=e49]: Updated every Sunday
+      - generic [ref=e50]:
+        - heading "Discover well-designed, carefully curated products" [level=1] [ref=e52]
+        - paragraph [ref=e55]: Subscribe and join 4,500+ readers for weekly emails featuring timeless, design-led products across home, work, and life.
+      - generic [ref=e59] [cursor=pointer]:
+        - textbox "Subscribe" [ref=e61]:
+          - /placeholder: name@email.com
+        - button "Subscribe" [ref=e63]:
+          - paragraph [ref=e65]: Subscribe
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - paragraph [ref=e77] [cursor=pointer]: All
+          - paragraph [ref=e82] [cursor=pointer]: Tech
+          - paragraph [ref=e87] [cursor=pointer]: Workspace
+          - paragraph [ref=e92] [cursor=pointer]: Home
+          - paragraph [ref=e97] [cursor=pointer]: Carry
+          - paragraph [ref=e102] [cursor=pointer]: Books
+          - paragraph [ref=e107] [cursor=pointer]: Lifestyle
+          - paragraph [ref=e112] [cursor=pointer]: Coffee
+          - paragraph [ref=e117] [cursor=pointer]: Watches
+        - generic [ref=e120] [cursor=pointer]:
+          - paragraph [ref=e122]: "Sort by:"
+          - paragraph [ref=e124]: Featured
+      - generic "products" [ref=e126]:
+        - generic [ref=e129] [cursor=pointer]:
+          - link "Studio DisplayStudio Display" [ref=e130]:
+            - /url: ./products/studio-display
+            - img "Studio DisplayStudio Display" [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]:
+                - paragraph [ref=e139]:
+                  - link "Apple" [ref=e140]:
+                    - /url: ./brands/apple
+                - paragraph [ref=e142]: ·
+                - paragraph [ref=e144]:
+                  - link "Tech" [ref=e145]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e147]: Studio Display
+            - paragraph [ref=e150]: $1,599
+          - link [ref=e152]:
+            - /url: https://geni.us/CdaSHA
+        - generic [ref=e158] [cursor=pointer]:
+          - link "151 Stealth Backpack151 Stealth Backpack" [ref=e159]:
+            - /url: ./products/151-stealth-backpack
+            - img "151 Stealth Backpack151 Stealth Backpack" [ref=e163]
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - paragraph [ref=e168]:
+                  - link "Grams28" [ref=e169]:
+                    - /url: ./brands/grams28
+                - paragraph [ref=e171]: ·
+                - paragraph [ref=e173]:
+                  - link "Carry" [ref=e174]:
+                    - /url: ./categories/carry
+              - paragraph [ref=e176]: 151 Stealth Backpack
+            - paragraph [ref=e179]: $889
+          - link [ref=e181]:
+            - /url: https://www.grams28.com/products/151-stealth-backpack
+        - generic [ref=e187] [cursor=pointer]:
+          - link "AeronAeron" [ref=e188]:
+            - /url: ./products/herman-miller-aeron
+            - img "AeronAeron" [ref=e192]
+          - generic [ref=e193]:
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - paragraph [ref=e197]:
+                  - link "Herman Miller" [ref=e198]:
+                    - /url: ./brands/herman-miller
+                - paragraph [ref=e200]: ·
+                - paragraph [ref=e202]:
+                  - link "Workspace" [ref=e203]:
+                    - /url: ./categories/workspace
+              - paragraph [ref=e205]: Aeron
+            - paragraph [ref=e208]: $1,930
+          - link [ref=e210]:
+            - /url: https://www.hermanmiller.com/en_lac/products/seating/office-chairs/aeron-chair/
+        - generic [ref=e216] [cursor=pointer]:
+          - link "Stagg EKG Electric KettleStagg EKG Electric Kettle" [ref=e217]:
+            - /url: ./products/stagg-ekg-electric-kettle
+            - img "Stagg EKG Electric KettleStagg EKG Electric Kettle" [ref=e221]
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - paragraph [ref=e226]:
+                  - link "Fellow" [ref=e227]:
+                    - /url: ./brands/fellow
+                - paragraph [ref=e229]: ·
+                - paragraph [ref=e231]:
+                  - link "Coffee" [ref=e232]:
+                    - /url: ./categories/coffee
+              - paragraph [ref=e234]: Stagg EKG Electric Kettle
+            - paragraph [ref=e237]: $200
+          - link [ref=e239]:
+            - /url: https://geni.us/kcOKP
+        - generic [ref=e245] [cursor=pointer]:
+          - link "Staff Pick 911 Turbo S911 Turbo S" [ref=e246]:
+            - /url: ./products/porsche-911-turbo-s
+            - paragraph [ref=e254]: Staff Pick
+            - img "911 Turbo S911 Turbo S" [ref=e258]
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - generic [ref=e261]:
+                - paragraph [ref=e263]:
+                  - link "Porsche" [ref=e264]:
+                    - /url: ./brands/porsche
+                - paragraph [ref=e266]: ·
+                - paragraph [ref=e268]:
+                  - link "Vehicles" [ref=e269]:
+                    - /url: ./categories/vehicles
+              - paragraph [ref=e271]: 911 Turbo S
+            - paragraph [ref=e274]: $270,000
+          - link [ref=e276]:
+            - /url: https://www.porsche.com
+        - generic [ref=e282] [cursor=pointer]:
+          - link "Staff Pick SpeedmasterSpeedmaster" [ref=e283]:
+            - /url: ./products/speedmaster
+            - paragraph [ref=e291]: Staff Pick
+            - img "SpeedmasterSpeedmaster" [ref=e295]
+          - generic [ref=e296]:
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - paragraph [ref=e300]:
+                  - link "Omega" [ref=e301]:
+                    - /url: ./brands/omega
+                - paragraph [ref=e303]: ·
+                - paragraph [ref=e305]:
+                  - link "Watches" [ref=e306]:
+                    - /url: ./categories/watches
+              - paragraph [ref=e308]: Speedmaster
+            - paragraph [ref=e311]: $7,800
+          - link [ref=e313]:
+            - /url: https://www.omegawatches.com/en-us/watches/speedmaster
+        - generic [ref=e319] [cursor=pointer]:
+          - 'link "Dieter Rams: The Complete WorksDieter Rams: The Complete Works" [ref=e320]':
+            - /url: ./products/dieter-rams-the-complete-works
+            - 'img "Dieter Rams: The Complete WorksDieter Rams: The Complete Works" [ref=e324]'
+          - generic [ref=e325]:
+            - generic [ref=e326]:
+              - generic [ref=e327]:
+                - paragraph [ref=e329]:
+                  - link "Phaidon" [ref=e330]:
+                    - /url: ./brands/phaidon
+                - paragraph [ref=e332]: ·
+                - paragraph [ref=e334]:
+                  - link "Books" [ref=e335]:
+                    - /url: ./categories/books
+              - paragraph [ref=e337]: "Dieter Rams: The Complete Works"
+            - paragraph [ref=e340]: $59
+          - link [ref=e342]:
+            - /url: https://geni.us/b66gl
+        - generic [ref=e348] [cursor=pointer]:
+          - link "Staff Pick Virgil Abloh. Nike. ICONSVirgil Abloh. Nike. ICONS" [ref=e349]:
+            - /url: ./products/virgil-abloh-nike-icons
+            - paragraph [ref=e357]: Staff Pick
+            - img "Virgil Abloh. Nike. ICONSVirgil Abloh. Nike. ICONS" [ref=e361]
+          - generic [ref=e362]:
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - paragraph [ref=e366]:
+                  - link "Taschen" [ref=e367]:
+                    - /url: ./brands/taschen
+                - paragraph [ref=e369]: ·
+                - paragraph [ref=e371]:
+                  - link "Books" [ref=e372]:
+                    - /url: ./categories/books
+              - paragraph [ref=e374]: Virgil Abloh. Nike. ICONS
+            - paragraph [ref=e377]: $59
+          - link [ref=e379]:
+            - /url: https://geni.us/t9OoRRi
+        - generic [ref=e385] [cursor=pointer]:
+          - link "Staff Pick Icons 10295 Porsche 911Icons 10295 Porsche 911" [ref=e386]:
+            - /url: ./products/icons-10295-porsche-911
+            - paragraph [ref=e394]: Staff Pick
+            - img "Icons 10295 Porsche 911Icons 10295 Porsche 911" [ref=e398]
+          - generic [ref=e399]:
+            - generic [ref=e400]:
+              - generic [ref=e401]:
+                - paragraph [ref=e403]:
+                  - link "Lego" [ref=e404]:
+                    - /url: ./brands/lego
+                - paragraph [ref=e406]: ·
+                - paragraph [ref=e408]:
+                  - link "Home" [ref=e409]:
+                    - /url: ./categories/home
+              - paragraph [ref=e411]: Icons 10295 Porsche 911
+            - paragraph [ref=e414]: $170
+          - link [ref=e416]:
+            - /url: https://geni.us/6I81M
+        - generic [ref=e422] [cursor=pointer]:
+          - link "Staff Pick k•no•b•1k•no•b•1" [ref=e423]:
+            - /url: ./products/k-no-b-1
+            - paragraph [ref=e431]: Staff Pick
+            - img "k•no•b•1k•no•b•1" [ref=e435]
+          - generic [ref=e436]:
+            - generic [ref=e437]:
+              - generic [ref=e438]:
+                - paragraph [ref=e440]:
+                  - link "Work Louder" [ref=e441]:
+                    - /url: ./brands/worklouder
+                - paragraph [ref=e443]: ·
+                - paragraph [ref=e445]:
+                  - link "Workspace" [ref=e446]:
+                    - /url: ./categories/workspace
+              - paragraph [ref=e448]: k•no•b•1
+            - paragraph [ref=e451]: $439
+          - link [ref=e453]:
+            - /url: https://worklouder.cc/knob1
+        - generic [ref=e459] [cursor=pointer]:
+          - link "Phone (4a) ProPhone (4a) Pro" [ref=e460]:
+            - /url: ./products/phone-4-a-pro
+            - img "Phone (4a) ProPhone (4a) Pro" [ref=e464]
+          - generic [ref=e465]:
+            - generic [ref=e466]:
+              - generic [ref=e467]:
+                - paragraph [ref=e469]:
+                  - link "Nothing" [ref=e470]:
+                    - /url: ./brands/nothing
+                - paragraph [ref=e472]: ·
+                - paragraph [ref=e474]:
+                  - link "Tech" [ref=e475]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e477]: Phone (4a) Pro
+            - paragraph [ref=e480]: $500
+          - link [ref=e482]:
+            - /url: https://geni.us/51j1YB
+        - generic [ref=e488] [cursor=pointer]:
+          - link "Staff Pick BFBF" [ref=e489]:
+            - /url: ./products/bf
+            - paragraph [ref=e497]: Staff Pick
+            - img "BFBF" [ref=e501]
+          - generic [ref=e502]:
+            - generic [ref=e503]:
+              - generic [ref=e504]:
+                - paragraph [ref=e506]:
+                  - link "Sigma" [ref=e507]:
+                    - /url: ./brands/sigma
+                - paragraph [ref=e509]: ·
+                - paragraph [ref=e511]:
+                  - link "Cameras" [ref=e512]:
+                    - /url: ./categories/cameras
+              - paragraph [ref=e514]: BF
+            - paragraph [ref=e517]: $2,199
+          - link [ref=e519]:
+            - /url: https://geni.us/tYwG
+        - generic [ref=e525] [cursor=pointer]:
+          - link "Staff Pick DatejustDatejust" [ref=e526]:
+            - /url: ./products/datejust
+            - paragraph [ref=e534]: Staff Pick
+            - img "DatejustDatejust" [ref=e538]
+          - generic [ref=e539]:
+            - generic [ref=e540]:
+              - generic [ref=e541]:
+                - paragraph [ref=e543]:
+                  - link "Rolex" [ref=e544]:
+                    - /url: ./brands/rolex
+                - paragraph [ref=e546]: ·
+                - paragraph [ref=e548]:
+                  - link "Watches" [ref=e549]:
+                    - /url: ./categories/watches
+              - paragraph [ref=e551]: Datejust
+            - paragraph [ref=e554]: $10,000
+          - link [ref=e556]:
+            - /url: https://www.rolex.com/watches/datejust
+        - generic [ref=e562] [cursor=pointer]:
+          - link "Saint-Florentin WalletSaint-Florentin Wallet" [ref=e563]:
+            - /url: ./products/saint-florentin-wallet
+            - img "Saint-Florentin WalletSaint-Florentin Wallet" [ref=e567]
+          - generic [ref=e568]:
+            - generic [ref=e569]:
+              - generic [ref=e570]:
+                - paragraph [ref=e572]:
+                  - link "Goyard" [ref=e573]:
+                    - /url: ./brands/goyard
+                - paragraph [ref=e575]: ·
+                - paragraph [ref=e577]:
+                  - link "Carry" [ref=e578]:
+                    - /url: ./categories/carry
+              - paragraph [ref=e580]: Saint-Florentin Wallet
+            - paragraph [ref=e583]: $1,500
+          - link [ref=e585]:
+            - /url: https://www.goyard.com/eu_en/portefeuille-saint-florentin.html
+        - generic [ref=e591] [cursor=pointer]:
+          - link "Base One Max 3-in-1Base One Max 3-in-1" [ref=e592]:
+            - /url: ./products/base-one-max-3-in-1
+            - img "Base One Max 3-in-1Base One Max 3-in-1" [ref=e596]
+          - generic [ref=e597]:
+            - generic [ref=e598]:
+              - generic [ref=e599]:
+                - paragraph [ref=e601]:
+                  - link "Nomad" [ref=e602]:
+                    - /url: ./brands/nomad
+                - paragraph [ref=e604]: ·
+                - paragraph [ref=e606]:
+                  - link "Workspace" [ref=e607]:
+                    - /url: ./categories/workspace
+              - paragraph [ref=e609]: Base One Max 3-in-1
+            - paragraph [ref=e612]: $149
+          - link [ref=e614]:
+            - /url: https://geni.us/PTH5aW
+        - generic [ref=e620] [cursor=pointer]:
+          - link "Flow 2Flow 2" [ref=e621]:
+            - /url: ./products/flow-2
+            - img "Flow 2Flow 2" [ref=e625]
+          - generic [ref=e626]:
+            - generic [ref=e627]:
+              - generic [ref=e628]:
+                - paragraph [ref=e630]:
+                  - link "Lofree" [ref=e631]:
+                    - /url: ./brands/lofree
+                - paragraph [ref=e633]: ·
+                - paragraph [ref=e635]:
+                  - link "Workspace" [ref=e636]:
+                    - /url: ./categories/workspace
+              - paragraph [ref=e638]: Flow 2
+            - paragraph [ref=e641]: $189
+          - link [ref=e643]:
+            - /url: https://geni.us/MBtWgZQ
+        - generic [ref=e649] [cursor=pointer]:
+          - link "Staff Pick iPhone AiriPhone Air" [ref=e650]:
+            - /url: ./products/iphone-air
+            - paragraph [ref=e658]: Staff Pick
+            - img "iPhone AiriPhone Air" [ref=e662]
+          - generic [ref=e663]:
+            - generic [ref=e664]:
+              - generic [ref=e665]:
+                - paragraph [ref=e667]:
+                  - link "Apple" [ref=e668]:
+                    - /url: ./brands/apple
+                - paragraph [ref=e670]: ·
+                - paragraph [ref=e672]:
+                  - link "Tech" [ref=e673]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e675]: iPhone Air
+            - paragraph [ref=e678]: $999
+          - link [ref=e680]:
+            - /url: https://geni.us/yTLp
+        - generic [ref=e686] [cursor=pointer]:
+          - link "Headphones (1)Headphones (1)" [ref=e687]:
+            - /url: ./products/nothing-headphones-(1)
+            - img "Headphones (1)Headphones (1)" [ref=e691]
+          - generic [ref=e692]:
+            - generic [ref=e693]:
+              - generic [ref=e694]:
+                - paragraph [ref=e696]:
+                  - link "Nothing" [ref=e697]:
+                    - /url: ./brands/nothing
+                - paragraph [ref=e699]: ·
+                - paragraph [ref=e701]:
+                  - link "Tech" [ref=e702]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e704]: Headphones (1)
+            - paragraph [ref=e707]: $299
+          - link [ref=e709]:
+            - /url: https://geni.us/a18ZB
+        - generic [ref=e715] [cursor=pointer]:
+          - link "Staff Pick Doric Lamp 01Doric Lamp 01" [ref=e716]:
+            - /url: ./products/doric-lamp-01
+            - paragraph [ref=e724]: Staff Pick
+            - img "Doric Lamp 01Doric Lamp 01" [ref=e728]
+          - generic [ref=e729]:
+            - generic [ref=e730]:
+              - generic [ref=e731]:
+                - paragraph [ref=e733]:
+                  - link "Kismas" [ref=e734]:
+                    - /url: ./brands/kismas
+                - paragraph [ref=e736]: ·
+                - paragraph [ref=e738]:
+                  - link "Home" [ref=e739]:
+                    - /url: ./categories/home
+              - paragraph [ref=e741]: Doric Lamp 01
+            - paragraph [ref=e744]: $169
+          - link [ref=e746]:
+            - /url: https://kismas.com/products/doric-lamp-01
+        - generic [ref=e752] [cursor=pointer]:
+          - link "Leica Q3Leica Q3" [ref=e753]:
+            - /url: ./products/leica-q3
+            - img "Leica Q3Leica Q3" [ref=e757]
+          - generic [ref=e758]:
+            - generic [ref=e759]:
+              - generic [ref=e760]:
+                - paragraph [ref=e762]:
+                  - link "Leica" [ref=e763]:
+                    - /url: ./brands/leica
+                - paragraph [ref=e765]: ·
+                - paragraph [ref=e767]:
+                  - link "Cameras" [ref=e768]:
+                    - /url: ./categories/cameras
+              - paragraph [ref=e770]: Leica Q3
+            - paragraph [ref=e773]: $6,735
+          - link [ref=e775]:
+            - /url: https://geni.us/BApvP
+        - generic [ref=e781] [cursor=pointer]:
+          - link "Classic CabinClassic Cabin" [ref=e782]:
+            - /url: ./products/classic-cabin
+            - img "Classic CabinClassic Cabin" [ref=e786]
+          - generic [ref=e787]:
+            - generic [ref=e788]:
+              - generic [ref=e789]:
+                - paragraph [ref=e791]:
+                  - link "Rimowa" [ref=e792]:
+                    - /url: ./brands/rimowa
+                - paragraph [ref=e794]: ·
+                - paragraph [ref=e796]:
+                  - link "Travel" [ref=e797]:
+                    - /url: ./categories/travel
+              - paragraph [ref=e799]: Classic Cabin
+            - paragraph [ref=e802]: $1,600
+          - link [ref=e804]:
+            - /url: https://www.rimowa.com/us/en/luggage/classic/classic-cabin/97352004.html
+        - generic [ref=e810] [cursor=pointer]:
+          - link "Staff Pick ClockClock 24ClockClock 24" [ref=e811]:
+            - /url: ./products/clockclock-24
+            - paragraph [ref=e819]: Staff Pick
+            - img "ClockClock 24ClockClock 24" [ref=e823]
+          - generic [ref=e824]:
+            - generic [ref=e825]:
+              - generic [ref=e826]:
+                - paragraph [ref=e828]:
+                  - link "Humans Since 1982" [ref=e829]:
+                    - /url: ./brands/humanssince1982
+                - paragraph [ref=e831]: ·
+                - paragraph [ref=e833]:
+                  - link "Workspace" [ref=e834]:
+                    - /url: ./categories/workspace
+              - paragraph [ref=e836]: ClockClock 24
+            - paragraph [ref=e839]: $8,500
+          - link [ref=e841]:
+            - /url: https://www.humanssince1982.com/en-eu/products/clockclock-24-black
+        - generic [ref=e847] [cursor=pointer]:
+          - link "P–1 Pepper MillP–1 Pepper Mill" [ref=e848]:
+            - /url: ./products/p-1-pepper-mill
+            - img "P–1 Pepper MillP–1 Pepper Mill" [ref=e852]
+          - generic [ref=e853]:
+            - generic [ref=e854]:
+              - generic [ref=e855]:
+                - paragraph [ref=e857]:
+                  - link "Crust" [ref=e858]:
+                    - /url: ./brands/crust
+                - paragraph [ref=e860]: ·
+                - paragraph [ref=e862]:
+                  - link "Home" [ref=e863]:
+                    - /url: ./categories/home
+              - paragraph [ref=e865]: P–1 Pepper Mill
+            - paragraph [ref=e868]: $299
+          - link [ref=e870]:
+            - /url: https://crustmill.com/
+        - generic [ref=e876] [cursor=pointer]:
+          - link "Lớp small square in orange acrylicLớp small square in orange acrylic" [ref=e877]:
+            - /url: ./products/lớp-small-square-in-orange-acrylic
+            - img "Lớp small square in orange acrylicLớp small square in orange acrylic" [ref=e881]
+          - generic [ref=e882]:
+            - generic [ref=e883]:
+              - generic [ref=e884]:
+                - paragraph [ref=e886]:
+                  - link "BằNG" [ref=e887]:
+                    - /url: ./brands/bằng
+                - paragraph [ref=e889]: ·
+                - paragraph [ref=e891]:
+                  - link "Home" [ref=e892]:
+                    - /url: ./categories/home
+              - paragraph [ref=e894]: Lớp small square in orange acrylic
+            - paragraph [ref=e897]: $195
+          - link [ref=e899]:
+            - /url: https://bangoibanga.com/products/lop-small-square-in-orange-acrylic
+        - generic [ref=e905] [cursor=pointer]:
+          - link "Staff Pick Noguchi Coffee TableNoguchi Coffee Table" [ref=e906]:
+            - /url: ./products/noguchi-coffee-table
+            - paragraph [ref=e914]: Staff Pick
+            - img "Noguchi Coffee TableNoguchi Coffee Table" [ref=e918]
+          - generic [ref=e919]:
+            - generic [ref=e920]:
+              - generic [ref=e921]:
+                - paragraph [ref=e923]:
+                  - link "Herman Miller" [ref=e924]:
+                    - /url: ./brands/herman-miller
+                - paragraph [ref=e926]: ·
+                - paragraph [ref=e928]:
+                  - link "Home" [ref=e929]:
+                    - /url: ./categories/home
+              - paragraph [ref=e931]: Noguchi Coffee Table
+            - paragraph [ref=e934]: $2,745
+          - link [ref=e936]:
+            - /url: https://www.hermanmiller.com/products/tables/occasional-tables/noguchi-table/
+        - generic [ref=e942] [cursor=pointer]:
+          - link "Pulse (Tandem)Pulse (Tandem)" [ref=e943]:
+            - /url: ./products/pulse-(tandem)
+            - img "Pulse (Tandem)Pulse (Tandem)" [ref=e947]
+          - generic [ref=e948]:
+            - generic [ref=e949]:
+              - generic [ref=e950]:
+                - paragraph [ref=e952]:
+                  - link "Breda" [ref=e953]:
+                    - /url: ./brands/breda
+                - paragraph [ref=e955]: ·
+                - paragraph [ref=e957]:
+                  - link "Watches" [ref=e958]:
+                    - /url: ./categories/watches
+              - paragraph [ref=e960]: Pulse (Tandem)
+            - paragraph [ref=e963]: $230
+          - link [ref=e965]:
+            - /url: https://www.breda.com/products/breda-pulse-tandem-1747b-silver-metal-bracelet-watch
+        - generic [ref=e971] [cursor=pointer]:
+          - link "Ear (3)Ear (3)" [ref=e972]:
+            - /url: ./products/ear-(3)
+            - img "Ear (3)Ear (3)" [ref=e976]
+          - generic [ref=e977]:
+            - generic [ref=e978]:
+              - generic [ref=e979]:
+                - paragraph [ref=e981]:
+                  - link "Nothing" [ref=e982]:
+                    - /url: ./brands/nothing
+                - paragraph [ref=e984]: ·
+                - paragraph [ref=e986]:
+                  - link "Tech" [ref=e987]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e989]: Ear (3)
+            - paragraph [ref=e992]: $149
+          - link [ref=e994]:
+            - /url: https://geni.us/OZrzp
+        - generic [ref=e1000] [cursor=pointer]:
+          - link "Staff Pick M01 4-in-1 Folding Wireless Charging Station & PadM01 4-in-1 Folding Wireless Charging Station & Pad" [ref=e1001]:
+            - /url: ./products/m01-4-in-1-folding-wireless-charging-station-pad
+            - paragraph [ref=e1009]: Staff Pick
+            - img "M01 4-in-1 Folding Wireless Charging Station & PadM01 4-in-1 Folding Wireless Charging Station & Pad" [ref=e1013]
+          - generic [ref=e1014]:
+            - generic [ref=e1015]:
+              - generic [ref=e1016]:
+                - paragraph [ref=e1018]:
+                  - link "Aulumu" [ref=e1019]:
+                    - /url: ./brands/aulumu
+                - paragraph [ref=e1021]: ·
+                - paragraph [ref=e1023]:
+                  - link "Tech" [ref=e1024]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e1026]: M01 4-in-1 Folding Wireless Charging Station & Pad
+            - paragraph [ref=e1029]: $109
+          - link [ref=e1031]:
+            - /url: https://geni.us/on42y
+        - generic [ref=e1037] [cursor=pointer]:
+          - link "Staff Pick Linea MicraLinea Micra" [ref=e1038]:
+            - /url: ./products/linea-micra
+            - paragraph [ref=e1046]: Staff Pick
+            - img "Linea MicraLinea Micra" [ref=e1050]
+          - generic [ref=e1051]:
+            - generic [ref=e1052]:
+              - generic [ref=e1053]:
+                - paragraph [ref=e1055]:
+                  - link "La Marzocco" [ref=e1056]:
+                    - /url: ./brands/la-marzocco
+                - paragraph [ref=e1058]: ·
+                - paragraph [ref=e1060]:
+                  - link "Coffee" [ref=e1061]:
+                    - /url: ./categories/coffee
+              - paragraph [ref=e1063]: Linea Micra
+            - paragraph [ref=e1066]: $4,500
+          - link [ref=e1068]:
+            - /url: https://www.lamarzocco.com/uk/en/home-products/espresso-machines/linea-micra/
+        - generic [ref=e1074] [cursor=pointer]:
+          - link "SubscaleSubscale" [ref=e1075]:
+            - /url: ./products/subscale
+            - img "SubscaleSubscale" [ref=e1079]
+          - generic [ref=e1080]:
+            - generic [ref=e1081]:
+              - generic [ref=e1082]:
+                - paragraph [ref=e1084]:
+                  - link "Subminimal" [ref=e1085]:
+                    - /url: ./brands/subminimal
+                - paragraph [ref=e1087]: ·
+                - paragraph [ref=e1089]:
+                  - link "Coffee" [ref=e1090]:
+                    - /url: ./categories/coffee
+              - paragraph [ref=e1092]: Subscale
+            - paragraph [ref=e1095]: $50
+          - link [ref=e1097]:
+            - /url: https://geni.us/MvraBSK
+        - generic [ref=e1103] [cursor=pointer]:
+          - link "WH-1000 XM6WH-1000 XM6" [ref=e1104]:
+            - /url: ./products/wh1000-xm6
+            - img "WH-1000 XM6WH-1000 XM6" [ref=e1108]
+          - generic [ref=e1109]:
+            - generic [ref=e1110]:
+              - generic [ref=e1111]:
+                - paragraph [ref=e1113]:
+                  - link "Sony" [ref=e1114]:
+                    - /url: ./brands/sony
+                - paragraph [ref=e1116]: ·
+                - paragraph [ref=e1118]:
+                  - link "Tech" [ref=e1119]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e1121]: WH-1000 XM6
+            - paragraph [ref=e1124]: $400
+          - link [ref=e1126]:
+            - /url: https://geni.us/VdYnTJA
+        - generic [ref=e1132] [cursor=pointer]:
+          - link "Staff Pick Switch 2Switch 2" [ref=e1133]:
+            - /url: ./products/nintendo-switch2
+            - paragraph [ref=e1141]: Staff Pick
+            - img "Switch 2Switch 2" [ref=e1145]
+          - generic [ref=e1146]:
+            - generic [ref=e1147]:
+              - generic [ref=e1148]:
+                - paragraph [ref=e1150]:
+                  - link "Nintendo" [ref=e1151]:
+                    - /url: ./brands/nintendo
+                - paragraph [ref=e1153]: ·
+                - paragraph [ref=e1155]:
+                  - link "Lifestyle" [ref=e1156]:
+                    - /url: ./categories/lifestyle
+              - paragraph [ref=e1158]: Switch 2
+            - paragraph [ref=e1161]: $450
+          - link [ref=e1163]:
+            - /url: https://geni.us/uRw1NRl
+        - generic [ref=e1169] [cursor=pointer]:
+          - link "The Design BookThe Design Book" [ref=e1170]:
+            - /url: ./products/the-design-book
+            - img "The Design BookThe Design Book" [ref=e1174]
+          - generic [ref=e1175]:
+            - generic [ref=e1176]:
+              - generic [ref=e1177]:
+                - paragraph [ref=e1179]:
+                  - link "Phaidon" [ref=e1180]:
+                    - /url: ./brands/phaidon
+                - paragraph [ref=e1182]: ·
+                - paragraph [ref=e1184]:
+                  - link "Books" [ref=e1185]:
+                    - /url: ./categories/books
+              - paragraph [ref=e1187]: The Design Book
+            - paragraph [ref=e1190]: $18
+          - link [ref=e1192]:
+            - /url: https://geni.us/C4bO3x
+        - generic [ref=e1198] [cursor=pointer]:
+          - link "xBloom Studio Coffee MachinexBloom Studio Coffee Machine" [ref=e1199]:
+            - /url: ./products/xbloom-studio-coffee-machine
+            - img "xBloom Studio Coffee MachinexBloom Studio Coffee Machine" [ref=e1203]
+          - generic [ref=e1204]:
+            - generic [ref=e1205]:
+              - generic [ref=e1206]:
+                - paragraph [ref=e1208]:
+                  - link "xBloom" [ref=e1209]:
+                    - /url: ./brands/xbloom
+                - paragraph [ref=e1211]: ·
+                - paragraph [ref=e1213]:
+                  - link "Coffee" [ref=e1214]:
+                    - /url: ./categories/coffee
+              - paragraph [ref=e1216]: xBloom Studio Coffee Machine
+            - paragraph [ref=e1219]: $599
+          - link [ref=e1221]:
+            - /url: https://geni.us/eZVxfW
+        - generic [ref=e1227] [cursor=pointer]:
+          - link "iPhone 17 ProiPhone 17 Pro" [ref=e1228]:
+            - /url: ./products/iphone-pro-17
+            - img "iPhone 17 ProiPhone 17 Pro" [ref=e1232]
+          - generic [ref=e1233]:
+            - generic [ref=e1234]:
+              - generic [ref=e1235]:
+                - paragraph [ref=e1237]:
+                  - link "Apple" [ref=e1238]:
+                    - /url: ./brands/apple
+                - paragraph [ref=e1240]: ·
+                - paragraph [ref=e1242]:
+                  - link "Tech" [ref=e1243]:
+                    - /url: ./categories/tech
+              - paragraph [ref=e1245]: iPhone 17 Pro
+            - paragraph [ref=e1248]: $1,099
+          - link [ref=e1250]:
+            - /url: https://geni.us/hPcd59Z
+        - generic [ref=e1256] [cursor=pointer]:
+          - link "Staff Pick Ref. 1174-1 ParadeRef. 1174-1 Parade" [ref=e1257]:
+            - /url: ./products/ref-1174-1-parade
+            - paragraph [ref=e1265]: Staff Pick
+            - img "Ref. 1174-1 ParadeRef. 1174-1 Parade" [ref=e1269]
+          - generic [ref=e1270]:
+            - generic [ref=e1271]:
+              - generic [ref=e1272]:
+                - paragraph [ref=e1274]:
+                  - link "Serica" [ref=e1275]:
+                    - /url: ./brands/serica
+                - paragraph [ref=e1277]: ·
+                - paragraph [ref=e1279]:
+                  - link "Watches" [ref=e1280]:
+                    - /url: ./categories/watches
+              - paragraph [ref=e1282]: Ref. 1174-1 Parade
+            - paragraph [ref=e1285]: $1,490
+          - link [ref=e1287]:
+            - /url: https://serica-watches.com/en/products/1174-parade-brass?variant=51016687812872
+        - generic [ref=e1293] [cursor=pointer]:
+          - link "Staff Pick Togo ® LoveseatTogo ® Loveseat" [ref=e1294]:
+            - /url: ./products/togo-loveseat
+            - paragraph [ref=e1302]: Staff Pick
+            - img "Togo ® LoveseatTogo ® Loveseat" [ref=e1306]
+          - generic [ref=e1307]:
+            - generic [ref=e1308]:
+              - generic [ref=e1309]:
+                - paragraph [ref=e1311]:
+                  - link "Ligne Roset" [ref=e1312]:
+                    - /url: ./brands/ligne-roset
+                - paragraph [ref=e1314]: ·
+                - paragraph [ref=e1316]:
+                  - link "Home" [ref=e1317]:
+                    - /url: ./categories/home
+              - paragraph [ref=e1319]: Togo ® Loveseat
+            - paragraph [ref=e1322]: $6,575
+          - link [ref=e1324]:
+            - /url: https://www.ligne-roset.com/us/p/sofas/loveseat-without-arms-togo-r-3231
+        - generic [ref=e1330] [cursor=pointer]:
+          - link "Solarcycle Morph FloorSolarcycle Morph Floor" [ref=e1331]:
+            - /url: ./products/solarcycle-morph-floor
+            - img "Solarcycle Morph FloorSolarcycle Morph Floor" [ref=e1335]
+          - generic [ref=e1336]:
+            - generic [ref=e1337]:
+              - generic [ref=e1338]:
+                - paragraph [ref=e1340]:
+                  - link "Dyson" [ref=e1341]:
+                    - /url: ./brands/dyson
+                - paragraph [ref=e1343]: ·
+                - paragraph [ref=e1345]:
+                  - link "Home" [ref=e1346]:
+                    - /url: ./categories/home
+              - paragraph [ref=e1348]: Solarcycle Morph Floor
+            - paragraph [ref=e1351]: $849
+          - link [ref=e1353]:
+            - /url: https://www.dyson.com/lighting/floor-lamps/solarcycle-morph-cf06/white-silver
+        - generic [ref=e1359] [cursor=pointer]:
+          - link "Staff Pick SaltSalt" [ref=e1360]:
+            - /url: ./products/salt
+            - paragraph [ref=e1368]: Staff Pick
+            - img "SaltSalt" [ref=e1372]
+          - generic [ref=e1373]:
+            - generic [ref=e1374]:
+              - generic [ref=e1375]:
+                - paragraph [ref=e1377]:
+                  - link "Grau" [ref=e1378]:
+                    - /url: ./brands/grau
+                - paragraph [ref=e1380]: ·
+                - paragraph [ref=e1382]:
+                  - link "Home" [ref=e1383]:
+                    - /url: ./categories/home
+              - paragraph [ref=e1385]: Salt
+            - paragraph [ref=e1388]: $503
+          - link [ref=e1390]:
+            - /url: https://www.grau.art/en-fr/products/salt?variant=55180477923702
+        - button "Show More" [ref=e1395] [cursor=pointer]:
+          - paragraph [ref=e1397]: Show More
+  - generic [ref=e1401]:
+    - generic [ref=e1402]:
+      - generic [ref=e1405]:
+        - generic [ref=e1409] [cursor=pointer]:
+          - textbox "Subscribe" [ref=e1411]:
+            - /placeholder: name@email.com
+          - button "Subscribe" [ref=e1413]:
+            - paragraph [ref=e1415]: Subscribe
+        - paragraph [ref=e1417]: Select links may be affiliate based. Prices listed are non-dynamic and may change. I back what I share, and only include products I use, trust or see real value in.
+      - generic [ref=e1418]:
+        - generic [ref=e1419]:
+          - paragraph [ref=e1421]: Navigation
+          - paragraph [ref=e1423]:
+            - link "Discover" [ref=e1424] [cursor=pointer]:
+              - /url: ./
+          - paragraph [ref=e1426]:
+            - link "Products" [ref=e1427] [cursor=pointer]:
+              - /url: ./products
+          - paragraph [ref=e1429]:
+            - link "Brands" [ref=e1430] [cursor=pointer]:
+              - /url: ./brands
+          - paragraph [ref=e1432]:
+            - link "Categories" [ref=e1433] [cursor=pointer]:
+              - /url: ./categories
+          - paragraph [ref=e1435]:
+            - link "Lists" [ref=e1436] [cursor=pointer]:
+              - /url: ./lists
+          - paragraph [ref=e1438]:
+            - link "Index" [ref=e1439] [cursor=pointer]:
+              - /url: ./index
+        - generic [ref=e1440]:
+          - paragraph [ref=e1442]: Info
+          - paragraph [ref=e1444]:
+            - link "About" [ref=e1445] [cursor=pointer]:
+              - /url: ./about
+          - paragraph [ref=e1447]:
+            - link "Blog" [ref=e1448] [cursor=pointer]:
+              - /url: ./blog
+          - paragraph [ref=e1450]:
+            - link "Legal" [ref=e1451] [cursor=pointer]:
+              - /url: ./legal
+        - generic [ref=e1452]:
+          - paragraph [ref=e1454]: Contact
+          - paragraph [ref=e1456]:
+            - link "Twitter" [ref=e1457] [cursor=pointer]:
+              - /url: https://twitter.com/justinmfarrugia
+          - paragraph [ref=e1459]:
+            - link "Email" [ref=e1460] [cursor=pointer]:
+              - /url: mailto:hey@madebyjus.com
+        - generic [ref=e1461]:
+          - paragraph [ref=e1463]: Categories
+          - generic [ref=e1464]:
+            - link "Tech" [ref=e1465] [cursor=pointer]:
+              - /url: ./categories/tech
+              - paragraph [ref=e1467]: Tech
+            - link "Home" [ref=e1468] [cursor=pointer]:
+              - /url: ./categories/home
+              - paragraph [ref=e1470]: Home
+            - link "Workspace" [ref=e1471] [cursor=pointer]:
+              - /url: ./categories/workspace
+              - paragraph [ref=e1473]: Workspace
+            - link "Carry" [ref=e1474] [cursor=pointer]:
+              - /url: ./categories/carry
+              - paragraph [ref=e1476]: Carry
+            - link "Watches" [ref=e1477] [cursor=pointer]:
+              - /url: ./categories/watches
+              - paragraph [ref=e1479]: Watches
+            - link "Personal" [ref=e1480] [cursor=pointer]:
+              - /url: ./categories/personal
+              - paragraph [ref=e1482]: Personal
+            - link "Books" [ref=e1483] [cursor=pointer]:
+              - /url: ./categories/books
+              - paragraph [ref=e1485]: Books
+            - link "Travel" [ref=e1486] [cursor=pointer]:
+              - /url: ./categories/travel
+              - paragraph [ref=e1488]: Travel
+        - generic [ref=e1489]:
+          - paragraph [ref=e1491]: Brands
+          - generic [ref=e1492]:
+            - link "Apple" [ref=e1493] [cursor=pointer]:
+              - /url: ./brands/apple
+              - paragraph [ref=e1495]: Apple
+            - link "Teenage Engineering" [ref=e1496] [cursor=pointer]:
+              - /url: ./brands/teenage-engineering
+              - paragraph [ref=e1498]: Teenage Engineering
+            - link "Herman Miller" [ref=e1499] [cursor=pointer]:
+              - /url: ./brands/herman-miller
+              - paragraph [ref=e1501]: Herman Miller
+            - link "Lego" [ref=e1502] [cursor=pointer]:
+              - /url: ./brands/lego
+              - paragraph [ref=e1504]: Lego
+            - link "Dyson" [ref=e1505] [cursor=pointer]:
+              - /url: ./brands/dyson
+              - paragraph [ref=e1507]: Dyson
+            - link "Fellow" [ref=e1508] [cursor=pointer]:
+              - /url: ./brands/fellow
+              - paragraph [ref=e1510]: Fellow
+            - link "Omega" [ref=e1511] [cursor=pointer]:
+              - /url: ./brands/omega
+              - paragraph [ref=e1513]: Omega
+            - link "Leica" [ref=e1514] [cursor=pointer]:
+              - /url: ./brands/leica
+              - paragraph [ref=e1516]: Leica
+        - generic [ref=e1517]:
+          - paragraph [ref=e1519]: Lists
+          - generic [ref=e1520]:
+            - link "Home Office Goals" [ref=e1521] [cursor=pointer]:
+              - /url: ./lists/officegoals
+              - paragraph [ref=e1523]: Home Office Goals
+            - link "Cult of Coffee" [ref=e1524] [cursor=pointer]:
+              - /url: ./lists/coffeecult
+              - paragraph [ref=e1526]: Cult of Coffee
+            - link "For Your Coffee Table" [ref=e1527] [cursor=pointer]:
+              - /url: ./lists/coffeetable
+              - paragraph [ref=e1529]: For Your Coffee Table
+            - link "Audiophile Core" [ref=e1530] [cursor=pointer]:
+              - /url: ./lists/audiophile
+              - paragraph [ref=e1532]: Audiophile Core
+            - link "Even Charging can Look Good" [ref=e1533] [cursor=pointer]:
+              - /url: ./lists/charging
+              - paragraph [ref=e1535]: Even Charging can Look Good
+            - link "Nicer Everyday Objects" [ref=e1536] [cursor=pointer]:
+              - /url: ./lists/everyday
+              - paragraph [ref=e1538]: Nicer Everyday Objects
+            - link "Deskworthy" [ref=e1539] [cursor=pointer]:
+              - /url: ./lists/deskworthy
+              - paragraph [ref=e1541]: Deskworthy
+            - link "Everyday Carry" [ref=e1542] [cursor=pointer]:
+              - /url: ./lists/edc
+              - paragraph [ref=e1544]: Everyday Carry
+    - generic [ref=e1545]:
+      - paragraph [ref=e1547]: © 2026 Curated Supply. All rights reserved.
+      - paragraph [ref=e1550]:
+        - text: Made by
+        - link "@justinmfarrugia" [ref=e1551] [cursor=pointer]:
+          - /url: https://twitter.com/justinmfarrugia

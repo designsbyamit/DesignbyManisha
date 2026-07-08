@@ -1,0 +1,946 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - link "M." [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Work" [ref=e6] [cursor=pointer]:
+          - /url: /work
+        - link "About" [ref=e7] [cursor=pointer]:
+          - /url: /about
+        - link "Resume ↓" [ref=e8] [cursor=pointer]:
+          - /url: /resume.pdf
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - paragraph [ref=e12]: Case Study — CogniCure
+          - heading "Making healthcare feel less like a system and more like someone who cares" [level=1] [ref=e13]
+          - paragraph [ref=e14]: How I designed a telehealth app for rural India that connected patients with family doctors, caregivers, and their own health records — in one calm, coherent place.
+          - paragraph [ref=e17]: Scroll to explore
+        - generic [ref=e18]:
+          - generic [ref=e22]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 9:41
+                  - generic:
+                    - generic: 🔋
+                - generic:
+                  - paragraph: Add Family Member
+                  - generic: Cancel
+                - generic:
+                  - paragraph: Mobile number
+                  - generic:
+                    - generic: 98127 82927
+                    - generic:
+                      - generic: 👤
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "1"
+                    - generic:
+                      - generic:
+                        - generic: "2"
+                        - generic: ABC
+                    - generic:
+                      - generic:
+                        - generic: "3"
+                        - generic: DEF
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "4"
+                        - generic: GHI
+                    - generic:
+                      - generic:
+                        - generic: "5"
+                        - generic: JKL
+                    - generic:
+                      - generic:
+                        - generic: "6"
+                        - generic: MNO
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "7"
+                        - generic: PQRS
+                    - generic:
+                      - generic:
+                        - generic: "8"
+                        - generic: TUV
+                    - generic:
+                      - generic:
+                        - generic: "9"
+                        - generic: WXYZ
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: +*#
+                    - generic:
+                      - generic:
+                        - generic: "0"
+                    - generic:
+                      - generic:
+                        - generic: ⌫
+                  - generic:
+                    - generic: 🌐
+          - generic [ref=e28]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 9:41
+                  - generic:
+                    - generic: 📶
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 👨‍⚕️
+                    - generic:
+                      - generic: "!"
+                - generic:
+                  - paragraph: Hi Chandrashekhar!
+                  - paragraph: MY CONSULTATIONS
+                  - generic:
+                    - generic:
+                      - generic: Tomorrow
+                      - generic: 👨‍⚕️
+                      - paragraph: Dr. Nischhal Shetty
+                      - paragraph: Abdominal pain and feeling a discomfo...
+                      - paragraph: Thursday, 6 Mar 2023
+                    - generic:
+                      - generic: 👩‍⚕️
+                      - paragraph: Dr. Tanuja Chandra
+                      - paragraph: Regular follow-up
+                      - paragraph: Thursday, 16 Mar 2023
+                - generic:
+                  - paragraph: Average Energy Activity
+                  - generic:
+                    - generic: 2,985
+                    - generic: kcal
+                  - paragraph: Avg. per day
+                  - generic:
+                    - generic: Mar 23
+                  - generic:
+                    - generic: Feb 23
+                  - generic:
+                    - generic: Jan 23
+                  - generic:
+                    - generic: Dec 22
+                  - generic:
+                    - generic:
+                      - generic: Active Calories
+                    - generic:
+                      - generic: Resting Calories
+                - generic:
+                  - paragraph: INVITES
+                  - generic:
+                    - generic: 👩
+                    - generic:
+                      - paragraph: Pooja Suresh
+                      - paragraph: Adithyapuram, Palakkad
+                    - generic:
+                      - generic:
+                        - generic: ✓
+                      - generic:
+                        - generic: ✕
+                - generic:
+                  - generic:
+                    - generic: 🏠
+                    - generic: Home
+                  - generic:
+                    - generic: 📅
+                    - generic: Consultations
+                  - generic:
+                    - generic: +
+                  - generic:
+                    - generic: 👥
+                    - generic: My Circle
+                  - generic:
+                    - generic: ❤️
+                    - generic: Health Wallet
+          - generic [ref=e31]: Family Circle · 3 members ✓
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: Role
+          - paragraph [ref=e36]: UX Designer
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: Industry
+          - paragraph [ref=e39]: Digital Healthcare
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Platform
+          - paragraph [ref=e42]: iOS · Android
+        - generic [ref=e43]:
+          - paragraph [ref=e44]: Scope
+          - paragraph [ref=e45]: Research to Prototype
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: Users
+          - paragraph [ref=e48]: Patients · Families · Doctors
+    - img "CogniCure app screens — final design overview" [ref=e52]
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - paragraph [ref=e58]: Context
+        - heading "Healthcare is emotionally different from every other product." [level=2] [ref=e59]
+        - paragraph [ref=e60]: When someone interacts with a banking app or a travel booking site, a mistake is inconvenient. When someone interacts with a healthcare product, a missed notification or a buried test result isn't an inconvenience — it's anxiety. It can feel like being abandoned.
+        - paragraph [ref=e61]: COVID made this visible to everyone. Telehealth adoption accelerated by a decade in eighteen months. And yet most digital health experiences were built for administrative efficiency — not for the emotional reality of being sick, scared, or simply trying to stay well.
+      - generic [ref=e63]:
+        - generic [ref=e65]: Lab Results
+        - generic [ref=e67]: Prescriptions
+        - generic [ref=e69]: Appointments
+        - generic [ref=e71]: Doctor Notes
+        - generic [ref=e73]: Family
+        - generic [ref=e74]: No connection
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - paragraph [ref=e79]: The Opportunity
+        - heading "What if the care experience felt as continuous as the care itself?" [level=2] [ref=e80]
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - img [ref=e84]
+          - heading "Patients lose continuity" [level=3] [ref=e86]
+          - paragraph [ref=e87]: Between visits, patients are left to manage fragmented information across apps, printed sheets, and memory. The care stops at the clinic door.
+        - generic [ref=e88]:
+          - img [ref=e90]
+          - heading "Caregivers are invisible" [level=3] [ref=e95]
+          - paragraph [ref=e96]: Family members who provide daily care — reminders, transportation, emotional support — have no formal place in most healthcare products.
+        - generic [ref=e97]:
+          - img [ref=e99]
+          - heading "Trust must come before efficiency" [level=3] [ref=e101]
+          - paragraph [ref=e102]: A system that is fast but opaque creates anxiety. The design challenge was building trust first, then building speed on top of it.
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - paragraph [ref=e107]: Research
+        - heading "Understanding people, not users" [level=2] [ref=e108]
+        - paragraph [ref=e109]: I needed to understand what healthcare actually felt like — not how it was supposed to work. That required listening more than asking.
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - blockquote [ref=e113]: "\"The problem wasn't that people lacked access to their health data. It was that none of it felt connected — to them, or to each other.\""
+          - paragraph [ref=e114]: "I went into this project expecting to find feature gaps. Instead I found something more fundamental: a breakdown in coherence. Every touchpoint in healthcare was an island."
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e118]: "12"
+            - generic [ref=e119]:
+              - paragraph [ref=e120]: Patient interviews
+              - paragraph [ref=e121]: Rural and semi-urban India · Chronic condition management · Ages 22–74
+          - generic [ref=e122]:
+            - generic [ref=e124]: "5"
+            - generic [ref=e125]:
+              - paragraph [ref=e126]: Caregiver conversations
+              - paragraph [ref=e127]: Family members coordinating care — the invisible workforce in healthcare
+          - generic [ref=e128]:
+            - generic [ref=e130]: "3"
+            - generic [ref=e131]:
+              - paragraph [ref=e132]: Provider shadowing sessions
+              - paragraph [ref=e133]: Observing how doctors communicated next steps, follow-ups, and referrals
+          - generic [ref=e134]:
+            - generic [ref=e136]: 386+
+            - generic [ref=e137]:
+              - paragraph [ref=e138]: Screens designed
+              - paragraph [ref=e139]: Addressing approximately 90% of the problems identified during research
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - generic [ref=e145]:
+            - generic [ref=e146]: 🧑‍💻
+            - generic [ref=e147]:
+              - paragraph [ref=e148]: Yatish
+              - paragraph [ref=e149]: Young citizen
+              - paragraph [ref=e150]: 33 yrs, Cochin
+              - paragraph [ref=e151]: IT Professional
+          - generic [ref=e152]:
+            - paragraph [ref=e153]: 90%
+            - paragraph [ref=e154]: Relevance
+        - paragraph [ref=e155]: "\"Need a family doctor for regular consultations for myself and family.\""
+        - generic [ref=e156]:
+          - paragraph [ref=e157]: Goals
+          - paragraph [ref=e158]: · Lead a healthy life with consistent medical support for self and family.
+        - generic [ref=e159]:
+          - paragraph [ref=e160]: Pain points
+          - paragraph [ref=e161]: · No personal connects with any doctor
+          - paragraph [ref=e162]: · Longer wait time at consultations
+          - paragraph [ref=e163]: · Need to carry papers from different consultations
+        - generic [ref=e164]:
+          - paragraph [ref=e165]: Personality
+          - generic [ref=e166]:
+            - generic [ref=e167]: Extrovert
+            - generic [ref=e168]: Well versed with mobile apps
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - generic [ref=e172]: 👴
+            - generic [ref=e173]:
+              - paragraph [ref=e174]: Sengupta
+              - paragraph [ref=e175]: Senior citizen
+              - paragraph [ref=e176]: 68 yrs, Thiruvallam
+              - paragraph [ref=e177]: Retd. Bank Clerk
+          - generic [ref=e178]:
+            - paragraph [ref=e179]: 80%
+            - paragraph [ref=e180]: Relevance
+        - paragraph [ref=e181]: "\"Need regular consultations for my diabetes and knee joint pain.\""
+        - generic [ref=e182]:
+          - paragraph [ref=e183]: Goals
+          - paragraph [ref=e184]: · Easy connect with health professional consistently and on need basis.
+        - generic [ref=e185]:
+          - paragraph [ref=e186]: Pain points
+          - paragraph [ref=e187]: · Difficulty in travel outside
+          - paragraph [ref=e188]: · Forgets or misplaces previous health records
+          - paragraph [ref=e189]: · Wait long to get appointment with the same doctor
+        - generic [ref=e190]:
+          - paragraph [ref=e191]: Personality
+          - generic [ref=e192]:
+            - generic [ref=e193]: Vulnerable
+            - generic [ref=e194]: Novice user of smartphone
+      - generic [ref=e195]:
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - generic [ref=e198]: 👨‍⚕️
+            - generic [ref=e199]:
+              - paragraph [ref=e200]: Faizal
+              - paragraph [ref=e201]: Family Doctor
+              - paragraph [ref=e202]: 42 yrs, Calicut
+              - paragraph [ref=e203]: MD, General Practitioner
+          - generic [ref=e204]:
+            - paragraph [ref=e205]: 85%
+            - paragraph [ref=e206]: Relevance
+        - paragraph [ref=e207]: "\"Healthcare in India needs a paradigm shift in terms of digital infrastructure.\""
+        - generic [ref=e208]:
+          - paragraph [ref=e209]: Goals
+          - paragraph [ref=e210]: · Serve more people and build a bigger network of healthcare professionals.
+        - generic [ref=e211]:
+          - paragraph [ref=e212]: Pain points
+          - paragraph [ref=e213]: · Unable to connect to a larger pool of people who need services
+          - paragraph [ref=e214]: · Unable to manage appointments optimally
+        - generic [ref=e215]:
+          - paragraph [ref=e216]: Personality
+          - generic [ref=e217]:
+            - generic [ref=e218]: Objective
+            - generic [ref=e219]: Tech savvy and gadget lover
+    - generic [ref=e221]:
+      - generic [ref=e222]:
+        - paragraph [ref=e224]: What changed our thinking
+        - heading "Four moments that redirected the design." [level=2] [ref=e225]
+      - generic [ref=e226]:
+        - generic [ref=e227] [cursor=pointer]:
+          - generic [ref=e228]:
+            - img [ref=e230]
+            - generic [ref=e232]: "01"
+          - heading "Patients wanted reassurance more than information." [level=3] [ref=e233]
+          - paragraph [ref=e234]: Every participant could access test results online. Almost none felt confident interpreting them. The gap wasn't data — it was context, tone, and a sense that someone was watching over them.
+        - generic [ref=e235] [cursor=pointer]:
+          - generic [ref=e236]:
+            - img [ref=e238]
+            - generic [ref=e243]: "02"
+          - heading "Families were invisible in most healthcare experiences." [level=3] [ref=e244]
+          - paragraph [ref=e245]: The daughter coordinating her mother's appointments was doing the work of a care coordinator — but had no official role in any system. She worked around every tool, not with them.
+        - generic [ref=e246] [cursor=pointer]:
+          - generic [ref=e247]:
+            - img [ref=e249]
+            - generic [ref=e251]: "03"
+          - heading "People remembered emotional moments, not medical details." [level=3] [ref=e252]
+          - paragraph [ref=e253]: Participants recalled exactly how they felt when a doctor rushed them, when a result was buried behind a portal login, when a reminder came too late. Emotional memory outlasts clinical memory.
+        - generic [ref=e254] [cursor=pointer]:
+          - generic [ref=e255]:
+            - img [ref=e257]
+            - generic [ref=e259]: "04"
+          - heading "The gap between appointments was the most neglected space." [level=3] [ref=e260]
+          - paragraph [ref=e261]: Providers focused on the visit. Patients felt most lost between visits. The follow-up care, the action items, the sense that the care was continuing — that was where trust was actually built or broken.
+    - generic [ref=e264]:
+      - paragraph [ref=e265]: Problem Statement
+      - blockquote [ref=e266]: "\"How might we design a healthcare experience where patients feel continuously held — not just during appointments, but through every moment of managing their health?\""
+      - generic [ref=e267]:
+        - generic [ref=e268]: Continuous care, not episodic
+        - generic [ref=e269]: Families as first-class users
+        - generic [ref=e270]: Trust before feature depth
+        - generic [ref=e271]: Calm information hierarchy
+    - generic [ref=e275]:
+      - generic [ref=e276]: "\""
+      - paragraph [ref=e277]: How might we
+      - paragraph [ref=e278]: solve for lack of healthcare facilities and professionals in rural/semi-urban areas and connect people with a bigger local network of holistic healthcare.
+    - generic [ref=e280]:
+      - generic [ref=e281]:
+        - paragraph [ref=e283]: Making Sense of Complexity
+        - heading "Three ecosystems. One coherent experience." [level=2] [ref=e284]
+        - paragraph [ref=e285]: The first structural challenge was that patients, doctors, and caregivers needed radically different views of the same underlying information. The IA had to unify them without flattening them.
+      - generic [ref=e286]:
+        - generic [ref=e287]:
+          - generic [ref=e288]: Patient
+          - generic [ref=e289]:
+            - generic [ref=e292]: Dashboard · Health Summary
+            - generic [ref=e295]: Appointments · Book & Manage
+            - generic [ref=e298]: Medical Records · Full History
+            - generic [ref=e301]: Medications · Schedule & Refills
+            - generic [ref=e304]: Family Circle · Manage Access
+            - generic [ref=e307]: Follow-Up · Action Items
+        - generic [ref=e308]:
+          - generic [ref=e309]: Caregiver
+          - generic [ref=e310]:
+            - generic [ref=e313]: Family Overview · All Members
+            - generic [ref=e316]: Shared Calendar · Appointments
+            - generic [ref=e319]: Medication Reminders · Alerts
+            - generic [ref=e322]: Care Notes · Provider Updates
+            - generic [ref=e325]: Emergency Contacts
+            - generic [ref=e328]: Delegate Access · Permissions
+        - generic [ref=e329]:
+          - generic [ref=e330]: Provider
+          - generic [ref=e331]:
+            - generic [ref=e334]: Today's Schedule · Appointments
+            - generic [ref=e337]: Patient Queue · Status
+            - generic [ref=e340]: Clinical Notes · Create & Share
+            - generic [ref=e343]: Lab Results · Review & Flag
+            - generic [ref=e346]: Prescriptions · Renew & Issue
+            - generic [ref=e349]: Referral Management
+    - generic [ref=e352]:
+      - generic [ref=e353]:
+        - generic [ref=e354]:
+          - img [ref=e355]
+          - generic [ref=e362]: 👴
+          - generic [ref=e363]: 👩‍🦳
+          - generic [ref=e364]: 👩‍🦳
+          - generic [ref=e365]: 👦
+          - generic [ref=e366]: 👱
+          - generic [ref=e367]: 👨
+          - generic [ref=e368]: 👧
+          - generic [ref=e369]: 🧕
+        - generic [ref=e374]:
+          - img [ref=e375]
+          - generic [ref=e379]: 👩‍⚕️
+          - generic [ref=e380]: 👨‍⚕️
+          - generic [ref=e381]: 🧑‍⚕️
+          - generic [ref=e382]: 👩‍⚕️
+          - generic [ref=e383]: 👨‍⚕️
+      - paragraph [ref=e384]: Patient's family network ↔ Doctor's care network — connected through CogniCure
+    - generic [ref=e386]:
+      - generic [ref=e387]:
+        - paragraph [ref=e389]: Early Thinking
+        - heading "What didn't survive — and why that mattered." [level=2] [ref=e390]
+        - paragraph [ref=e391]: The strongest ideas weren't the first ones. Most of the early exploration was about eliminating directions that felt obvious — because obvious, in healthcare, often means cold.
+      - generic [ref=e392]:
+        - generic [ref=e393]:
+          - generic [ref=e394]: ✗
+          - generic [ref=e396]: Clinical dashboard
+          - generic [ref=e398]: Discarded
+          - paragraph [ref=e399]: Modeled after hospital EMR systems. Felt like being managed, not cared for. Prioritised completeness over comprehension.
+        - generic [ref=e400]:
+          - generic [ref=e401]: ✗
+          - generic [ref=e403]: Notification-first design
+          - generic [ref=e405]: Discarded
+          - paragraph [ref=e406]: Generated too much anxiety. Patients described a prototype heavy on reminders as 'feeling like an alarm'. Healthcare needs calm, not urgency.
+        - generic [ref=e407]:
+          - generic [ref=e408]: ✓
+          - generic [ref=e410]: Calm summary view
+          - generic [ref=e412]: Evolved into final
+          - paragraph [ref=e413]: A single coherent daily view — what matters today, what's next, what's been done. Created a sense of being looked after rather than managed.
+    - generic [ref=e416]:
+      - paragraph [ref=e417]: Onboarding user flow
+      - generic [ref=e418]:
+        - generic [ref=e420]: Onboarding Sliders — 4
+        - generic [ref=e421]: ↓
+        - generic [ref=e422]:
+          - generic [ref=e423]: Sign Up using Mobile number
+          - generic [ref=e424]: Create Account / Login
+          - generic [ref=e427]: Sign Up using Mobile number
+        - generic [ref=e428]: ↓
+        - generic [ref=e430]: OTP Validation
+        - generic [ref=e431]: ↓
+        - generic [ref=e433]: Welcome Screen
+        - generic [ref=e434]: ↓
+        - generic [ref=e435]:
+          - generic [ref=e437]: Need Immediate Consultation?
+          - generic [ref=e440]: Yes → Alternative Flow
+        - generic [ref=e441]: ↓ No
+        - generic [ref=e443]: Rewards Message
+        - generic [ref=e444]: ↓
+        - generic [ref=e446]: Dashboard — 0
+    - generic [ref=e448]:
+      - generic [ref=e449]:
+        - paragraph [ref=e451]: The Turning Points
+        - heading "The decisions that shaped trust." [level=2] [ref=e452]
+      - generic [ref=e453]:
+        - generic [ref=e454]:
+          - generic [ref=e455]:
+            - generic [ref=e456]: "01"
+            - heading "Making the family caregiver a first-class user" [level=3] [ref=e457]
+            - generic [ref=e458]:
+              - generic [ref=e459]: Challenge
+              - paragraph [ref=e460]: Most platforms treated caregivers as external — adding someone as an 'emergency contact' rather than a participant in care.
+            - generic [ref=e461]:
+              - generic [ref=e462]: Alternatives
+              - paragraph [ref=e463]: Role-based permissions only. A read-only 'care portal'. Treating caregivers identically to patients.
+            - generic [ref=e464]:
+              - generic [ref=e465]: Trade-off
+              - paragraph [ref=e466]: Adding a third user type increased IA complexity significantly. It required designing separate entry points and permission models.
+            - generic [ref=e467]:
+              - generic [ref=e468]: Reasoning
+              - paragraph [ref=e469]: "The research was clear: the person who remembers appointments, who coordinates between providers, who drives to the pharmacy — that person deserved to be designed for explicitly. Not as an afterthought."
+          - generic [ref=e475]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 9:41
+                  - generic:
+                    - generic: 🔋
+                - generic:
+                  - paragraph: Add Family Member
+                  - generic: Cancel
+                - generic:
+                  - paragraph: Mobile number
+                  - generic:
+                    - generic: 98127 82927
+                    - generic:
+                      - generic: 👤
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "1"
+                    - generic:
+                      - generic:
+                        - generic: "2"
+                        - generic: ABC
+                    - generic:
+                      - generic:
+                        - generic: "3"
+                        - generic: DEF
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "4"
+                        - generic: GHI
+                    - generic:
+                      - generic:
+                        - generic: "5"
+                        - generic: JKL
+                    - generic:
+                      - generic:
+                        - generic: "6"
+                        - generic: MNO
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "7"
+                        - generic: PQRS
+                    - generic:
+                      - generic:
+                        - generic: "8"
+                        - generic: TUV
+                    - generic:
+                      - generic:
+                        - generic: "9"
+                        - generic: WXYZ
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: +*#
+                    - generic:
+                      - generic:
+                        - generic: "0"
+                    - generic:
+                      - generic:
+                        - generic: ⌫
+                  - generic:
+                    - generic: 🌐
+        - generic [ref=e478]:
+          - generic [ref=e484]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 9:41
+                  - generic:
+                    - generic: 🔋
+                - generic:
+                  - generic: 👨‍⚕️
+                  - generic:
+                    - text: 👴
+                    - generic:
+                      - generic: ⤡
+                  - generic:
+                    - paragraph: Chandrasekhar Nair
+                    - paragraph: 12:04
+                - generic:
+                  - generic:
+                    - generic: 🎤
+                  - generic:
+                    - generic: 📞
+                  - generic:
+                    - generic: 🔊
+          - generic [ref=e487]:
+            - generic [ref=e488]: "02"
+            - heading "Post-visit summaries as a designed experience" [level=3] [ref=e489]
+            - generic [ref=e490]:
+              - generic [ref=e491]: Challenge
+              - paragraph [ref=e492]: Most follow-up care was communicated through an auto-generated PDF or a brief note that arrived with no structure or human warmth.
+            - generic [ref=e493]:
+              - generic [ref=e494]: Alternatives
+              - paragraph [ref=e495]: Standard discharge summary format. Email-only notifications. App push notifications alone.
+            - generic [ref=e496]:
+              - generic [ref=e497]: Trade-off
+              - paragraph [ref=e498]: Required provider workflow changes — doctors needed to generate structured summaries rather than free-form notes.
+            - generic [ref=e499]:
+              - generic [ref=e500]: Reasoning
+              - paragraph [ref=e501]: The gap between appointments was where anxiety lived. A structured, warm, action-oriented follow-up view turned passive patients into confident participants in their own care.
+        - generic [ref=e502]:
+          - generic [ref=e503]:
+            - generic [ref=e504]: "03"
+            - heading "Calm information hierarchy over clinical completeness" [level=3] [ref=e505]
+            - generic [ref=e506]:
+              - generic [ref=e507]: Challenge
+              - paragraph [ref=e508]: Healthcare data is extensive. Showing all of it creates a dashboard that feels like a medical chart — complete, but exhausting.
+            - generic [ref=e509]:
+              - generic [ref=e510]: Alternatives
+              - paragraph [ref=e511]: Full data display. Tabbed category views. A search-first approach.
+            - generic [ref=e512]:
+              - generic [ref=e513]: Trade-off
+              - paragraph [ref=e514]: Some clinical information was intentionally not surfaced on the dashboard. Providers initially resisted reducing what patients could see.
+            - generic [ref=e515]:
+              - generic [ref=e516]: Reasoning
+              - paragraph [ref=e517]: Patients didn't need all their information immediately. They needed the right information at the right moment, presented in a way that reduced rather than increased cognitive load.
+          - generic [ref=e523]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: 9:41
+                  - generic:
+                    - generic: 📶
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: 👨‍⚕️
+                    - generic:
+                      - generic: "!"
+                - generic:
+                  - paragraph: Hi Chandrashekhar!
+                  - paragraph: MY CONSULTATIONS
+                  - generic:
+                    - generic:
+                      - generic: Tomorrow
+                      - generic: 👨‍⚕️
+                      - paragraph: Dr. Nischhal Shetty
+                      - paragraph: Abdominal pain and feeling a discomfo...
+                      - paragraph: Thursday, 6 Mar 2023
+                    - generic:
+                      - generic: 👩‍⚕️
+                      - paragraph: Dr. Tanuja Chandra
+                      - paragraph: Regular follow-up
+                      - paragraph: Thursday, 16 Mar 2023
+                - generic:
+                  - paragraph: Average Energy Activity
+                  - generic:
+                    - generic: 2,985
+                    - generic: kcal
+                  - paragraph: Avg. per day
+                  - generic:
+                    - generic: Mar 23
+                  - generic:
+                    - generic: Feb 23
+                  - generic:
+                    - generic: Jan 23
+                  - generic:
+                    - generic: Dec 22
+                  - generic:
+                    - generic:
+                      - generic: Active Calories
+                    - generic:
+                      - generic: Resting Calories
+                - generic:
+                  - paragraph: INVITES
+                  - generic:
+                    - generic: 👩
+                    - generic:
+                      - paragraph: Pooja Suresh
+                      - paragraph: Adithyapuram, Palakkad
+                    - generic:
+                      - generic:
+                        - generic: ✓
+                      - generic:
+                        - generic: ✕
+                - generic:
+                  - generic:
+                    - generic: 🏠
+                    - generic: Home
+                  - generic:
+                    - generic: 📅
+                    - generic: Consultations
+                  - generic:
+                    - generic: +
+                  - generic:
+                    - generic: 👥
+                    - generic: My Circle
+                  - generic:
+                    - generic: ❤️
+                    - generic: Health Wallet
+    - generic [ref=e529]:
+      - generic [ref=e533]: 👴
+      - generic [ref=e534]: 🫁
+      - generic [ref=e535]: 💊
+      - generic [ref=e536]: 🌿
+      - generic [ref=e537]: 🧘
+      - generic [ref=e538]: 👱
+      - generic [ref=e539]: 👨‍🦱
+      - paragraph [ref=e541]: Need a family doctor who can be always available 🕐
+      - paragraph [ref=e543]: Need consultation for my diabetes & cardiac problems!
+      - paragraph [ref=e545]: Manage and organise all my health data across apps. 📁
+    - generic [ref=e547]:
+      - generic [ref=e548]:
+        - paragraph [ref=e550]: Building Confidence
+        - heading "Building confidence, not just confidence-testing." [level=2] [ref=e551]
+      - generic [ref=e552]:
+        - generic [ref=e553]:
+          - paragraph [ref=e554]: "Round 1: Navigation testing"
+          - generic [ref=e555]:
+            - paragraph [ref=e556]: What we weren't sure about
+            - paragraph [ref=e557]: Could patients find what they needed without instruction?
+          - generic [ref=e558]:
+            - paragraph [ref=e559]: What we found
+            - paragraph [ref=e560]: The dashboard landing created genuine orientation. Participants started exploring naturally — a sign the hierarchy was working.
+          - generic [ref=e561]:
+            - paragraph [ref=e562]: What changed
+            - paragraph [ref=e563]: Increased visual weight of the appointment card after two participants missed it on first pass.
+        - generic [ref=e564]:
+          - paragraph [ref=e565]: "Round 2: Caregiver flow"
+          - generic [ref=e566]:
+            - paragraph [ref=e567]: What we weren't sure about
+            - paragraph [ref=e568]: Would family members understand their permission model?
+          - generic [ref=e569]:
+            - paragraph [ref=e570]: What we found
+            - paragraph [ref=e571]: "The 'Family Circle' framing resonated deeply. One caregiver said: 'Finally, I'm actually in the system — not just copied on an email.'"
+          - generic [ref=e572]:
+            - paragraph [ref=e573]: What changed
+            - paragraph [ref=e574]: Added explicit confirmation screens when caregivers were granted new access levels, reducing uncertainty about what sharing meant.
+        - generic [ref=e575]:
+          - paragraph [ref=e576]: "Round 3: Emotional tone"
+          - generic [ref=e577]:
+            - paragraph [ref=e578]: What we weren't sure about
+            - paragraph [ref=e579]: Did the product feel reassuring — not just usable?
+          - generic [ref=e580]:
+            - paragraph [ref=e581]: What we found
+            - paragraph [ref=e582]: Participants used the word 'calm' unprompted in three of five sessions. One said it felt 'like having a nurse who isn't rushed'.
+          - generic [ref=e583]:
+            - paragraph [ref=e584]: What changed
+            - paragraph [ref=e585]: Reduced notification density on the dashboard — confirmed our instinct that less urgency created more trust.
+        - generic [ref=e586]:
+          - paragraph [ref=e587]: "Round 4: Provider alignment"
+          - generic [ref=e588]:
+            - paragraph [ref=e589]: What we weren't sure about
+            - paragraph [ref=e590]: Would the doctor-side portal align with clinical workflow?
+          - generic [ref=e591]:
+            - paragraph [ref=e592]: What we found
+            - paragraph [ref=e593]: The schedule view reduced cognitive overhead. Providers appreciated that patient context was surfaced inline, not behind an extra click.
+          - generic [ref=e594]:
+            - paragraph [ref=e595]: What changed
+            - paragraph [ref=e596]: Adjusted appointment card density after providers asked for slightly more clinical detail in the list view.
+    - generic [ref=e598]:
+      - generic [ref=e599]:
+        - generic [ref=e600]:
+          - paragraph [ref=e602]: A Language for Care
+          - heading "Consistency creates trust." [level=2] [ref=e603]:
+            - text: Consistency
+            - text: creates trust.
+        - paragraph [ref=e604]: "Every visual decision — color, spacing, type weight, interaction — was in service of one idea: that the product should feel like a person who is calm, organised, and quietly watching out for you."
+      - generic [ref=e605]:
+        - generic [ref=e608]:
+          - paragraph [ref=e609]: Deep Navy
+          - paragraph [ref=e610]: "#1B3A5C"
+        - generic [ref=e613]:
+          - paragraph [ref=e614]: Teal
+          - paragraph [ref=e615]: "#3D9B8F"
+        - generic [ref=e618]:
+          - paragraph [ref=e619]: Teal Light
+          - paragraph [ref=e620]: "#BFD8D5"
+        - generic [ref=e623]:
+          - paragraph [ref=e624]: Warm White
+          - paragraph [ref=e625]: "#F5F5F0"
+        - generic [ref=e626]:
+          - generic [ref=e628]: Aa
+          - paragraph [ref=e629]: Display / 40px
+        - generic [ref=e630]:
+          - generic [ref=e632]: Aa
+          - paragraph [ref=e633]: Body / 14px
+      - generic [ref=e634]:
+        - generic [ref=e635]:
+          - generic [ref=e637]: Book Appointment
+          - paragraph [ref=e638]: Primary
+        - generic [ref=e639]:
+          - generic [ref=e641]: View records
+          - paragraph [ref=e642]: Ghost
+        - generic [ref=e643]:
+          - generic [ref=e645]: Normal range
+          - paragraph [ref=e646]: Normal
+        - generic [ref=e647]:
+          - generic [ref=e649]: Review needed
+          - paragraph [ref=e650]: Attention
+        - generic [ref=e651]:
+          - generic [ref=e653]: New result
+          - paragraph [ref=e654]: New
+        - generic [ref=e655]:
+          - generic [ref=e658]:
+            - generic [ref=e659]: Care Plan
+            - generic [ref=e660]: 3/5
+          - paragraph [ref=e663]: Completion
+    - generic [ref=e665]:
+      - generic [ref=e666]:
+        - paragraph [ref=e668]: The Experience
+        - heading "A day with CogniCure." [level=2] [ref=e669]
+        - paragraph [ref=e670]: Follow a patient from morning to follow-up. Every screen from the production prototype.
+      - generic [ref=e671]:
+        - generic [ref=e672]:
+          - button "Dashboard" [ref=e673] [cursor=pointer]
+          - button "Consultations" [ref=e674] [cursor=pointer]
+          - button "Health Records" [ref=e675] [cursor=pointer]
+          - button "My Circles" [ref=e676] [cursor=pointer]
+          - button "Add Family" [ref=e677] [cursor=pointer]
+          - button "Video Call" [ref=e678] [cursor=pointer]
+        - generic [ref=e679]:
+          - generic [ref=e680]:
+            - generic [ref=e685]:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: 9:41
+                    - generic:
+                      - generic: 📶
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: 👨‍⚕️
+                      - generic:
+                        - generic: "!"
+                  - generic:
+                    - paragraph: Hi Chandrashekhar!
+                    - paragraph: MY CONSULTATIONS
+                    - generic:
+                      - generic:
+                        - generic: Tomorrow
+                        - generic: 👨‍⚕️
+                        - paragraph: Dr. Nischhal Shetty
+                        - paragraph: Abdominal pain and feeling a discomfo...
+                        - paragraph: Thursday, 6 Mar 2023
+                      - generic:
+                        - generic: 👩‍⚕️
+                        - paragraph: Dr. Tanuja Chandra
+                        - paragraph: Regular follow-up
+                        - paragraph: Thursday, 16 Mar 2023
+                  - generic:
+                    - paragraph: Average Energy Activity
+                    - generic:
+                      - generic: 2,985
+                      - generic: kcal
+                    - paragraph: Avg. per day
+                    - generic:
+                      - generic: Mar 23
+                    - generic:
+                      - generic: Feb 23
+                    - generic:
+                      - generic: Jan 23
+                    - generic:
+                      - generic: Dec 22
+                    - generic:
+                      - generic:
+                        - generic: Active Calories
+                      - generic:
+                        - generic: Resting Calories
+                  - generic:
+                    - paragraph: INVITES
+                    - generic:
+                      - generic: 👩
+                      - generic:
+                        - paragraph: Pooja Suresh
+                        - paragraph: Adithyapuram, Palakkad
+                      - generic:
+                        - generic:
+                          - generic: ✓
+                        - generic:
+                          - generic: ✕
+                  - generic:
+                    - generic:
+                      - generic: 🏠
+                      - generic: Home
+                    - generic:
+                      - generic: 📅
+                      - generic: Consultations
+                    - generic:
+                      - generic: +
+                    - generic:
+                      - generic: 👥
+                      - generic: My Circle
+                    - generic:
+                      - generic: ❤️
+                      - generic: Health Wallet
+            - generic [ref=e688]:
+              - button [ref=e689] [cursor=pointer]
+              - button [ref=e690] [cursor=pointer]
+              - button [ref=e691] [cursor=pointer]
+              - button [ref=e692] [cursor=pointer]
+              - button [ref=e693] [cursor=pointer]
+              - button [ref=e694] [cursor=pointer]
+            - button "Auto-play" [ref=e696] [cursor=pointer]:
+              - img [ref=e697]
+              - text: Auto-play
+          - generic [ref=e700]:
+            - generic [ref=e701]:
+              - generic [ref=e703]: "1"
+              - paragraph [ref=e704]: Dashboard
+            - paragraph [ref=e705]: The home view — consultations at a glance, energy activity, and incoming invites from your circle.
+            - generic [ref=e706]:
+              - generic [ref=e709]: Dashboard
+              - generic [ref=e712]: Consultations
+              - generic [ref=e715]: Health Records
+              - generic [ref=e718]: My Circles
+              - generic [ref=e721]: Add Family
+              - generic [ref=e724]: Video Call
+    - generic [ref=e726]:
+      - generic [ref=e727]:
+        - paragraph [ref=e729]: What Became Better
+        - heading "What became better." [level=2] [ref=e730]
+      - generic [ref=e731]:
+        - generic [ref=e732]:
+          - generic [ref=e733]: "01"
+          - heading "Calm replaced anxiety" [level=3] [ref=e734]
+          - paragraph [ref=e735]: Participants described the experience using words like 'organised', 'held', and 'calm' — unprompted.
+        - generic [ref=e736]:
+          - generic [ref=e737]: "02"
+          - heading "Families were included" [level=3] [ref=e738]
+          - paragraph [ref=e739]: The Family Circle model gave caregivers a designed role — removing the workaround burden entirely.
+        - generic [ref=e740]:
+          - generic [ref=e741]: "03"
+          - heading "Care felt continuous" [level=3] [ref=e742]
+          - paragraph [ref=e743]: Follow-up summaries and action items made patients feel the care hadn't ended when the appointment did.
+        - generic [ref=e744]:
+          - generic [ref=e745]: "04"
+          - heading "Complexity became manageable" [level=3] [ref=e746]
+          - paragraph [ref=e747]: Three distinct user types — patient, caregiver, provider — unified under one coherent information model.
+      - paragraph [ref=e750]: "\"The most meaningful outcome wasn't a usability score. It was that participants stopped talking about the app — and started talking about how they felt. When someone says 'it felt like someone was actually paying attention', that's the design working.\""
+    - generic [ref=e752]:
+      - generic [ref=e753]:
+        - paragraph [ref=e755]: Reflection
+        - heading "What I carried forward." [level=2] [ref=e756]
+      - generic [ref=e757]:
+        - generic [ref=e758]:
+          - generic [ref=e759]: "01"
+          - paragraph [ref=e760]: Healthcare is as much about reassurance as it is about functionality.
+        - generic [ref=e761]:
+          - generic [ref=e762]: "02"
+          - paragraph [ref=e763]: Designing for the caregiver is designing for the patient — they are part of the same care system.
+        - generic [ref=e764]:
+          - generic [ref=e765]: "03"
+          - paragraph [ref=e766]: The most important interaction sometimes happens in the quiet space between screens.
+        - generic [ref=e767]:
+          - generic [ref=e768]: "04"
+          - paragraph [ref=e769]: Calm is a design decision. It requires removing as much as adding.
+    - generic [ref=e771]:
+      - paragraph [ref=e772]: Next Case Study
+      - link "Industrial Manufacturing · Enterprise Engineering a single source of truth for precision assembly View case study ✦" [ref=e773] [cursor=pointer]:
+        - /url: /work/hexsolve
+        - generic [ref=e774]:
+          - generic [ref=e775]:
+            - paragraph [ref=e776]: Industrial Manufacturing · Enterprise
+            - heading "Engineering a single source of truth for precision assembly" [level=3] [ref=e777]
+            - generic [ref=e778]:
+              - text: View case study
+              - img [ref=e779]
+          - generic [ref=e783]: ✦
+      - generic [ref=e784]:
+        - link "← Back to all work" [ref=e785] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e786]: © 2025 Manisha. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e792] [cursor=pointer]:
+    - img [ref=e793]

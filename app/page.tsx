@@ -280,6 +280,8 @@ function Hero() {
 
       <motion.div
         ref={ref}
+        className="hero-grid"
+        className="grid-2col"
         style={{
           y,
           opacity,
@@ -287,8 +289,6 @@ function Hero() {
           maxWidth: 1200,
           margin: "0 auto",
           padding: "0 clamp(1.5rem, 5vw, 4rem)",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: "clamp(2rem, 5vw, 5rem)",
           alignItems: "center",
         }}
@@ -443,6 +443,7 @@ function Hero() {
           />
           {/* Portrait frame */}
           <div
+            className="hero-portrait"
             style={{
               position: "relative",
               zIndex: 1,
@@ -466,6 +467,7 @@ function Hero() {
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="hero-status-badge"
             style={{
               position: "absolute",
               bottom: "10%",
@@ -527,12 +529,11 @@ function ProjectMockupPane({ slug, title }: { slug: string; title: string }) {
   return null;
 }
 
-/* ─── Project card ───────────────────────────────────────────────────────── */
+/* ─── Project card — image top, details below ───────────────────────────── */
 function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const imageLeft = index % 2 === 0;
 
   return (
     <motion.div
@@ -553,35 +554,32 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
             overflow: "hidden",
             background: "var(--p-card-bg)",
             border: `1px solid ${P.s3}`,
-            display: "grid",
-            gridTemplateColumns: "1.1fr 1fr",
-            minHeight: 380,
             transition: "box-shadow 0.35s, transform 0.3s",
-            boxShadow: hovered ? "0 28px 72px rgba(0,0,0,0.11)" : "0 4px 20px rgba(0,0,0,0.05)",
+            boxShadow: hovered ? "0 28px 72px rgba(0,0,0,0.13)" : "0 4px 20px rgba(0,0,0,0.05)",
             transform: hovered ? "translateY(-4px)" : "translateY(0)",
           }}
         >
-          {/* Image — left on even rows */}
-          {imageLeft && (
-            <div style={{ position: "relative", overflow: "hidden", minHeight: 380 }}>
-              <ProjectMockupPane slug={project.slug} title={project.title} />
-            </div>
-          )}
+          {/* Mockup — full width, fixed aspect ratio, safe padding inside */}
+          <div style={{ position: "relative", overflow: "hidden", aspectRatio: "21/9", background: "var(--p-s2)" }}>
+            <ProjectMockupPane slug={project.slug} title={project.title} />
+          </div>
 
-          {/* Content */}
-          <div style={{ padding: "clamp(2rem, 4vw, 3rem)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-            <div>
-              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: "1.25rem" }}>
-                {project.tags.map((tag) => (
-                  <span key={tag} style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: project.accent, background: project.accentLight, borderRadius: 6, padding: "3px 10px" }}>{tag}</span>
-                ))}
-              </div>
-              <p style={{ fontSize: 12, color: P.subtle, margin: "0 0 0.4rem", letterSpacing: "0.04em" }}>{project.title}</p>
-              <h3 style={{ fontSize: "clamp(1.2rem, 2.2vw, 1.65rem)", color: P.ink, lineHeight: 1.25, marginBottom: "0.9rem" }}>{project.headline}</h3>
-              <p style={{ fontSize: 14, color: P.muted, lineHeight: 1.7, marginBottom: "1.5rem" }}>{project.description}</p>
+          {/* Details below */}
+          <div style={{ padding: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+            {/* Tags */}
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: "1rem" }}>
+              {project.tags.map((tag) => (
+                <span key={tag} style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: P.muted, background: P.s2, borderRadius: 6, padding: "3px 10px" }}>{tag}</span>
+              ))}
             </div>
-            <div>
-              <div style={{ display: "flex", gap: "1.75rem", padding: "1.25rem 0", borderTop: `1px solid ${P.s2}`, borderBottom: `1px solid ${P.s2}`, marginBottom: "1.25rem", flexWrap: "wrap" }}>
+
+            <p style={{ fontSize: 11, color: P.subtle, margin: "0 0 0.35rem", letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600 }}>{project.title}</p>
+            <h3 style={{ fontSize: "clamp(1.1rem, 2vw, 1.45rem)", color: P.ink, lineHeight: 1.3, marginBottom: "0.6rem" }}>{project.headline}</h3>
+            <p style={{ fontSize: 14, color: P.muted, lineHeight: 1.65, marginBottom: "1.25rem" }}>{project.description}</p>
+
+            {/* Meta row */}
+            <div style={{ display: "flex", gap: "1.5rem", paddingTop: "1rem", borderTop: `1px solid ${P.s2}`, flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
                 {[{ label: "Industry", value: project.industry }, { label: "Role", value: project.role }, { label: "Duration", value: project.duration }].map(({ label, value }) => (
                   <div key={label}>
                     <p style={{ fontSize: 11, color: P.subtle, margin: 0, letterSpacing: "0.04em" }}>{label}</p>
@@ -589,18 +587,13 @@ function ProjectCard({ project, index }: { project: (typeof PROJECTS)[0]; index:
                   </div>
                 ))}
               </div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, fontWeight: 600, color: project.accent }}>
-                View Case Study <ArrowRight size={14} style={{ transition: "transform 0.2s", transform: hovered ? "translateX(4px)" : "translateX(0)" }} />
+              {/* Consistent accent CTA */}
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 13, fontWeight: 600, color: "var(--p-accent)", flexShrink: 0 }}>
+                View Case Study
+                <ArrowRight size={14} style={{ transition: "transform 0.2s", transform: hovered ? "translateX(4px)" : "translateX(0)" }} />
               </div>
             </div>
           </div>
-
-          {/* Image — right on odd rows */}
-          {!imageLeft && (
-            <div style={{ position: "relative", overflow: "hidden", minHeight: 380 }}>
-              <ProjectMockupPane slug={project.slug} title={project.title} />
-            </div>
-          )}
         </div>
       </Link>
     </motion.div>
@@ -656,12 +649,12 @@ function SelectedWork() {
           </div>
         </Reveal>
 
-        {/* Full-width stacked cards */}
+        {/* 3-column grid of image-top cards */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "clamp(1.5rem, 3vw, 2rem)",
+            gap: "clamp(2rem, 4vw, 3rem)",
           }}
         >
           {PROJECTS.map((project, i) => (
@@ -715,16 +708,10 @@ function Principles() {
           </h2>
         </Reveal>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            alignItems: "stretch",
-            gap: "clamp(1.5rem, 3vw, 2.5rem)",
-          }}
-        >
+        {/* Desktop: 4-col grid. Mobile: horizontal scroll strip */}
+        <div className="principles-container">
           {PRINCIPLES.map((p, i) => (
-            <Reveal key={p.number} delay={i * 0.08} style={{ height: "100%" }}>
+            <Reveal key={p.number} delay={i * 0.08} className="principle-card-wrap">
               <div
                 style={{
                   background: "var(--p-card-bg)",
@@ -1091,7 +1078,7 @@ function Contact() {
             on something meaningful, I'd love to hear about it.
           </p>
 
-          <div style={{ display: "flex", gap: "1.25rem", flexWrap: "wrap", marginBottom: "4rem" }}>
+          <div className="contact-buttons" style={{ display: "flex", gap: "1.25rem", flexWrap: "wrap", marginBottom: "4rem" }}>
             <a
               href="mailto:manisha@example.com"
               style={{

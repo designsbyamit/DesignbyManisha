@@ -1,0 +1,199 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Holmes World" [ref=e5] [cursor=pointer]:
+          - /url: /work/holmesworld
+          - generic [ref=e6]: Holmes
+          - generic [ref=e7]: World
+        - navigation [ref=e8]:
+          - button "Categories" [ref=e10]:
+            - text: Categories
+            - img [ref=e11]
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /work/holmesworld/projects
+          - generic "Coming soon" [ref=e14]: Experience Centre
+        - button "Open search" [ref=e16]:
+          - img [ref=e17]
+        - link "Upload BoM" [ref=e20] [cursor=pointer]:
+          - /url: /work/holmesworld/bom
+          - img [ref=e21]
+          - text: Upload BoM
+        - button "Notifications" [ref=e24]:
+          - img [ref=e25]
+        - link "Cart — 0 items" [ref=e28] [cursor=pointer]:
+          - /url: /work/holmesworld/cart
+          - img [ref=e29]
+    - main [ref=e33]:
+      - generic [ref=e34]:
+        - navigation [ref=e35]:
+          - link "Home" [ref=e36] [cursor=pointer]:
+            - /url: /work/holmesworld
+          - img [ref=e37]
+          - link "Categories" [ref=e39] [cursor=pointer]:
+            - /url: /work/holmesworld/categories
+          - img [ref=e40]
+          - link "tiles" [ref=e42] [cursor=pointer]:
+            - /url: /work/holmesworld/categories/tiles
+          - img [ref=e43]
+          - generic [ref=e45]: Kajaria Glazed Vitrified White Marble Tile
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img "Kajaria Glazed Vitrified White Marble Tile — view 1" [ref=e50]
+            - generic [ref=e51]:
+              - button "Thumbnail 1" [ref=e52]:
+                - img "Thumbnail 1" [ref=e53]
+              - button "Thumbnail 2" [ref=e54]:
+                - img "Thumbnail 2" [ref=e55]
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: Kajaria
+            - heading "Kajaria Glazed Vitrified White Marble Tile" [level=1] [ref=e58]
+            - generic [ref=e59]:
+              - generic [ref=e60]: ★★★★☆
+              - generic [ref=e61]: 4.6 (312 reviews)
+            - paragraph [ref=e62]: "SKU: P-001"
+            - generic [ref=e63]:
+              - paragraph [ref=e64]:
+                - text: ₹185
+                - generic [ref=e65]: /sq ft
+              - generic [ref=e66]:
+                - paragraph [ref=e67]: BULK PRICING
+                - table [ref=e68]:
+                  - rowgroup [ref=e69]:
+                    - row "Quantity Price per unit You save" [ref=e70]:
+                      - columnheader "Quantity" [ref=e71]
+                      - columnheader "Price per unit" [ref=e72]
+                      - columnheader "You save" [ref=e73]
+                  - rowgroup [ref=e74]:
+                    - row "100+ sq ft ₹172 ₹13/sq ft" [ref=e75]:
+                      - cell "100+ sq ft" [ref=e76]
+                      - cell "₹172" [ref=e77]
+                      - cell "₹13/sq ft" [ref=e78]
+                    - row "500+ sq ft ₹160 ₹25/sq ft" [ref=e79]:
+                      - cell "500+ sq ft" [ref=e80]
+                      - cell "₹160" [ref=e81]
+                      - cell "₹25/sq ft" [ref=e82]
+            - generic [ref=e83]:
+              - paragraph [ref=e84]: Quantity
+              - generic [ref=e85]:
+                - button [ref=e86]:
+                  - img [ref=e87]
+                - generic [ref=e88]: "1"
+                - button [ref=e89]:
+                  - img [ref=e90]
+              - generic [ref=e91]: "Total: ₹185"
+            - generic [ref=e92]:
+              - paragraph [ref=e93]:
+                - img [ref=e94]
+                - text: Check delivery
+              - generic [ref=e97]:
+                - textbox "Enter PIN code" [ref=e98]
+                - button "Check" [ref=e99]
+            - generic [ref=e100]:
+              - button "Add to Cart" [ref=e101]
+              - button "Add to Project" [ref=e102]:
+                - img [ref=e103]
+                - text: Add to Project
+            - generic [ref=e105]:
+              - img [ref=e106]
+              - generic [ref=e109]: 7-day returns for unused items in original packaging. Shipping charges may apply.
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - button "Technical Specs" [ref=e112]
+            - button "Dimensions" [ref=e113]
+            - button "FAQs" [ref=e114]
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - paragraph [ref=e118]: Size
+              - paragraph [ref=e119]: 800×800 mm
+            - generic [ref=e120]:
+              - paragraph [ref=e121]: Finish
+              - paragraph [ref=e122]: Glossy
+            - generic [ref=e123]:
+              - paragraph [ref=e124]: Thickness
+              - paragraph [ref=e125]: 10 mm
+            - generic [ref=e126]:
+              - paragraph [ref=e127]: WaterAbsorption
+              - paragraph [ref=e128]: <0.5%
+        - generic [ref=e129]:
+          - heading "Related Products" [level=2] [ref=e130]
+          - generic [ref=e131]:
+            - link "Somany Glossy White Wall Tile 300×600 Somany Somany Glossy White Wall Tile 300×600 ₹55/sq ft" [ref=e132] [cursor=pointer]:
+              - /url: /work/holmesworld/products/somany-wall-tile-glossy-white
+              - generic [ref=e133]:
+                - img "Somany Glossy White Wall Tile 300×600" [ref=e135]
+                - generic [ref=e136]:
+                  - paragraph [ref=e137]: Somany
+                  - paragraph [ref=e138]: Somany Glossy White Wall Tile 300×600
+                  - paragraph [ref=e139]: ₹55/sq ft
+            - link "Hindware Towel Rail 24-inch Chrome Hindware Hindware Towel Rail 24-inch Chrome ₹2,200/piece" [ref=e140] [cursor=pointer]:
+              - /url: /work/holmesworld/products/hindware-towel-rail-chrome
+              - generic [ref=e141]:
+                - img "Hindware Towel Rail 24-inch Chrome" [ref=e143]
+                - generic [ref=e144]:
+                  - paragraph [ref=e145]: Hindware
+                  - paragraph [ref=e146]: Hindware Towel Rail 24-inch Chrome
+                  - paragraph [ref=e147]: ₹2,200/piece
+            - link "Jaquar EON Health Faucet with Holder Jaquar Jaquar EON Health Faucet with Holder ₹1,850/piece" [ref=e148] [cursor=pointer]:
+              - /url: /work/holmesworld/products/jaquar-eon-health-faucet
+              - generic [ref=e149]:
+                - img "Jaquar EON Health Faucet with Holder" [ref=e151]
+                - generic [ref=e152]:
+                  - paragraph [ref=e153]: Jaquar
+                  - paragraph [ref=e154]: Jaquar EON Health Faucet with Holder
+                  - paragraph [ref=e155]: ₹1,850/piece
+            - link "UltraTech OPC 53 Grade Cement UltraTech Cement UltraTech OPC 53 Grade Cement ₹410/bag" [ref=e156] [cursor=pointer]:
+              - /url: /work/holmesworld/products/ultratech-opc-53-grade-cement
+              - generic [ref=e157]:
+                - img "UltraTech OPC 53 Grade Cement" [ref=e159]
+                - generic [ref=e160]:
+                  - paragraph [ref=e161]: UltraTech Cement
+                  - paragraph [ref=e162]: UltraTech OPC 53 Grade Cement
+                  - paragraph [ref=e163]: ₹410/bag
+    - contentinfo [ref=e164]:
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - generic [ref=e168]:
+              - generic [ref=e169]: Holmes
+              - generic [ref=e170]: World
+            - paragraph [ref=e171]: Premium construction materials for Indian homes. Delivered fast, priced right.
+          - generic [ref=e172]:
+            - paragraph [ref=e173]: Categories
+            - list [ref=e174]:
+              - listitem [ref=e175]:
+                - link "Tiles & Flooring" [ref=e176] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e177]:
+                - link "Bathroom Fittings" [ref=e178] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e179]:
+                - link "Cement & Concrete" [ref=e180] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e181]:
+                - link "Steel & TMT" [ref=e182] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e183]:
+                - link "Paints" [ref=e184] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+          - generic [ref=e185]:
+            - paragraph [ref=e186]: Support
+            - list [ref=e187]:
+              - listitem [ref=e188]: Track Order
+              - listitem [ref=e189]: Returns Policy
+              - listitem [ref=e190]: Bulk Orders
+              - listitem [ref=e191]: Installation Help
+              - listitem [ref=e192]: Contact Us
+          - generic [ref=e193]:
+            - paragraph [ref=e194]: Connect
+            - list [ref=e195]:
+              - listitem [ref=e196]: Instagram
+              - listitem [ref=e197]: YouTube
+              - listitem [ref=e198]: LinkedIn
+              - listitem [ref=e199]: WhatsApp Business
+        - generic [ref=e200]:
+          - paragraph [ref=e201]: © HolmesWorld 2025. All rights reserved.
+          - paragraph [ref=e202]: "Made in India 🇮🇳 · GST: 29AABCH1234M1Z5"
+  - button "Open Next.js Dev Tools" [ref=e208] [cursor=pointer]:
+    - img [ref=e209]
+  - alert [ref=e212]

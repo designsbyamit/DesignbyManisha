@@ -1,0 +1,83 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Holmes World" [ref=e5] [cursor=pointer]:
+          - /url: /work/holmesworld
+          - generic [ref=e6]: Holmes
+          - generic [ref=e7]: World
+        - navigation [ref=e8]:
+          - button "Categories" [ref=e10]:
+            - text: Categories
+            - img [ref=e11]
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /work/holmesworld/projects
+          - generic "Coming soon" [ref=e14]: Experience Centre
+        - button "Open search" [ref=e16]:
+          - img [ref=e17]
+        - link "Upload BoM" [ref=e20] [cursor=pointer]:
+          - /url: /work/holmesworld/bom
+          - img [ref=e21]
+          - text: Upload BoM
+        - button "Notifications" [ref=e24]:
+          - img [ref=e25]
+        - link "Cart — 0 items" [ref=e28] [cursor=pointer]:
+          - /url: /work/holmesworld/cart
+          - img [ref=e29]
+    - main [ref=e33]:
+      - generic [ref=e34]:
+        - img [ref=e35]
+        - heading "Your cart is empty" [level=1] [ref=e38]
+        - paragraph [ref=e39]: Browse our catalogue or upload a Bill of Materials to get started.
+        - generic [ref=e40]:
+          - link "Browse Materials" [ref=e41] [cursor=pointer]:
+            - /url: /work/holmesworld/categories
+          - link "Upload BoM" [ref=e42] [cursor=pointer]:
+            - /url: /work/holmesworld/bom
+    - contentinfo [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: Holmes
+              - generic [ref=e49]: World
+            - paragraph [ref=e50]: Premium construction materials for Indian homes. Delivered fast, priced right.
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: Categories
+            - list [ref=e53]:
+              - listitem [ref=e54]:
+                - link "Tiles & Flooring" [ref=e55] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e56]:
+                - link "Bathroom Fittings" [ref=e57] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e58]:
+                - link "Cement & Concrete" [ref=e59] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e60]:
+                - link "Steel & TMT" [ref=e61] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e62]:
+                - link "Paints" [ref=e63] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+          - generic [ref=e64]:
+            - paragraph [ref=e65]: Support
+            - list [ref=e66]:
+              - listitem [ref=e67]: Track Order
+              - listitem [ref=e68]: Returns Policy
+              - listitem [ref=e69]: Bulk Orders
+              - listitem [ref=e70]: Installation Help
+              - listitem [ref=e71]: Contact Us
+          - generic [ref=e72]:
+            - paragraph [ref=e73]: Connect
+            - list [ref=e74]:
+              - listitem [ref=e75]: Instagram
+              - listitem [ref=e76]: YouTube
+              - listitem [ref=e77]: LinkedIn
+              - listitem [ref=e78]: WhatsApp Business
+        - generic [ref=e79]:
+          - paragraph [ref=e80]: © HolmesWorld 2025. All rights reserved.
+          - paragraph [ref=e81]: "Made in India 🇮🇳 · GST: 29AABCH1234M1Z5"
+  - button "Open Next.js Dev Tools" [ref=e87] [cursor=pointer]:
+    - img [ref=e88]
+  - alert [ref=e91]

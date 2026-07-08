@@ -86,12 +86,11 @@ const UPCOMING = [
   { title: "More coming soon", domain: "Various industries", accent: "#a8a8a8" },
 ];
 
-/* ─── Featured card (full-width row) ────────────────────────────────────── */
+/* ─── Featured card — image top, details below (matches homepage) ─────── */
 function FeaturedCard({ project, index }: { project: (typeof FEATURED)[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const isEven = index % 2 === 0;
 
   return (
     <motion.div
@@ -112,26 +111,41 @@ function FeaturedCard({ project, index }: { project: (typeof FEATURED)[0]; index
             overflow: "hidden",
             background: "var(--p-card-bg)",
             border: `1px solid ${P.s3}`,
-            display: "grid",
-            gridTemplateColumns: isEven ? "1fr 1fr" : "1fr 1fr",
-            minHeight: 400,
-            transition: "box-shadow 0.35s, transform 0.35s",
-            boxShadow: hovered ? "0 28px 64px rgba(0,0,0,0.11)" : "0 4px 20px rgba(0,0,0,0.05)",
+            transition: "box-shadow 0.35s, transform 0.3s",
+            boxShadow: hovered ? "0 28px 72px rgba(0,0,0,0.13)" : "0 4px 20px rgba(0,0,0,0.05)",
             transform: hovered ? "translateY(-4px)" : "translateY(0)",
           }}
         >
-          {/* Image — left on even, right on odd */}
-          {isEven ? (
-            <>
-              <ImagePane project={project} hovered={hovered} />
-              <ContentPane project={project} hovered={hovered} />
-            </>
-          ) : (
-            <>
-              <ContentPane project={project} hovered={hovered} />
-              <ImagePane project={project} hovered={hovered} />
-            </>
-          )}
+          {/* Mockup — full width, fixed aspect ratio */}
+          <div style={{ position: "relative", overflow: "hidden", aspectRatio: "21/9", background: "var(--p-s2)" }}>
+            <ImagePane project={project} hovered={hovered} />
+          </div>
+
+          {/* Details below */}
+          <div style={{ padding: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: "1rem" }}>
+              {project.tags.map((tag) => (
+                <span key={tag} style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: P.muted, background: P.s2, borderRadius: 6, padding: "3px 10px" }}>{tag}</span>
+              ))}
+            </div>
+            <p style={{ fontSize: 11, color: P.subtle, margin: "0 0 0.35rem", letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600 }}>{project.title}</p>
+            <h3 style={{ fontSize: "clamp(1.1rem, 2vw, 1.45rem)", color: P.ink, lineHeight: 1.3, marginBottom: "0.6rem" }}>{project.headline}</h3>
+            <p style={{ fontSize: 14, color: P.muted, lineHeight: 1.65, marginBottom: "1.25rem" }}>{project.description}</p>
+
+            <div style={{ display: "flex", gap: "1.5rem", paddingTop: "1rem", borderTop: `1px solid ${P.s2}`, flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+              <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
+                {[{ label: "Industry", value: project.industry }, { label: "Role", value: project.role }, { label: "Duration", value: project.duration }].map(({ label, value }) => (
+                  <div key={label}>
+                    <p style={{ fontSize: 11, color: P.subtle, margin: 0, letterSpacing: "0.04em" }}>{label}</p>
+                    <p style={{ fontSize: 13, color: P.ink, fontWeight: 500, margin: 0 }}>{value}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 13, fontWeight: 600, color: "var(--p-accent)", flexShrink: 0 }}>
+                View Case Study <ArrowRight size={14} style={{ transition: "transform 0.2s", transform: hovered ? "translateX(4px)" : "translateX(0)" }} />
+              </div>
+            </div>
+          </div>
         </div>
       </Link>
     </motion.div>
@@ -405,7 +419,7 @@ export default function WorkPage() {
             margin: "0 auto",
             display: "flex",
             flexDirection: "column",
-            gap: "clamp(1.5rem, 3vw, 2.5rem)",
+            gap: "clamp(2rem, 4vw, 3rem)",
           }}
         >
           {FEATURED.map((project, i) => (

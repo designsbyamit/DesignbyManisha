@@ -1,0 +1,174 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Holmes World" [ref=e5] [cursor=pointer]:
+          - /url: /work/holmesworld
+          - generic [ref=e6]: Holmes
+          - generic [ref=e7]: World
+        - navigation [ref=e8]:
+          - button "Categories" [ref=e10]:
+            - text: Categories
+            - img [ref=e11]
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /work/holmesworld/projects
+          - generic "Coming soon" [ref=e14]: Experience Centre
+        - button "Open search" [ref=e16]:
+          - img [ref=e17]
+        - button "Notifications" [ref=e20]:
+          - img [ref=e21]
+        - link "Cart — 0 items" [ref=e24] [cursor=pointer]:
+          - /url: /work/holmesworld/cart
+          - img [ref=e25]
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: "1"
+            - generic [ref=e34]: Delivery
+            - img [ref=e35]
+          - generic [ref=e37]:
+            - generic [ref=e38]: "2"
+            - generic [ref=e39]: Payment
+            - img [ref=e40]
+          - generic [ref=e42]:
+            - generic [ref=e43]: "3"
+            - generic [ref=e44]: Confirm
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - heading "Delivery Address" [level=2] [ref=e47]
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - generic [ref=e50]:
+                  - generic [ref=e51]: Flat / House No. *
+                  - textbox "Flat 402" [ref=e52]
+                - generic [ref=e53]:
+                  - generic [ref=e54]: Building / Society
+                  - textbox "Prestige Lakeside" [ref=e55]
+              - generic [ref=e56]:
+                - generic [ref=e57]: Locality / Area *
+                - textbox "Whitefield, Koramangala..." [ref=e58]
+              - generic [ref=e59]:
+                - generic [ref=e60]:
+                  - generic [ref=e61]: City *
+                  - textbox [ref=e62]: Bengaluru
+                - generic [ref=e63]:
+                  - generic [ref=e64]: State *
+                  - combobox [ref=e65]:
+                    - option "Andhra Pradesh"
+                    - option "Arunachal Pradesh"
+                    - option "Assam"
+                    - option "Bihar"
+                    - option "Chhattisgarh"
+                    - option "Goa"
+                    - option "Gujarat"
+                    - option "Haryana"
+                    - option "Himachal Pradesh"
+                    - option "Jharkhand"
+                    - option "Karnataka" [selected]
+                    - option "Kerala"
+                    - option "Madhya Pradesh"
+                    - option "Maharashtra"
+                    - option "Manipur"
+                    - option "Meghalaya"
+                    - option "Mizoram"
+                    - option "Nagaland"
+                    - option "Odisha"
+                    - option "Punjab"
+                    - option "Rajasthan"
+                    - option "Sikkim"
+                    - option "Tamil Nadu"
+                    - option "Telangana"
+                    - option "Tripura"
+                    - option "Uttar Pradesh"
+                    - option "Uttarakhand"
+                    - option "West Bengal"
+                    - option "Delhi"
+                    - option "Jammu & Kashmir"
+                    - option "Ladakh"
+                - generic [ref=e66]:
+                  - generic [ref=e67]: PIN Code *
+                  - textbox "560001" [ref=e68]
+            - heading "Delivery Date" [level=3] [ref=e69]
+            - generic [ref=e70]:
+              - button "Standard 3–5 business days Dec 27–29" [ref=e71]:
+                - paragraph [ref=e72]: Standard
+                - paragraph [ref=e73]: 3–5 business days
+                - paragraph [ref=e74]: Dec 27–29
+              - button "Express Next business day Dec 24 +₹299" [ref=e75]:
+                - paragraph [ref=e76]: Express
+                - paragraph [ref=e77]: Next business day
+                - paragraph [ref=e78]: Dec 24
+                - paragraph [ref=e79]: +₹299
+              - button "Scheduled Choose a date Dec 30" [ref=e80]:
+                - paragraph [ref=e81]: Scheduled
+                - paragraph [ref=e82]: Choose a date
+                - paragraph [ref=e83]: Dec 30
+            - generic [ref=e84] [cursor=pointer]:
+              - checkbox "Add professional installation (+₹1,200) Certified installer will contact you within 24 hours" [ref=e85]
+              - generic [ref=e86]:
+                - paragraph [ref=e87]: Add professional installation (+₹1,200)
+                - paragraph [ref=e88]: Certified installer will contact you within 24 hours
+            - button "Continue to Payment" [disabled] [ref=e89]
+          - generic [ref=e90]:
+            - heading "Order Summary" [level=3] [ref=e91]
+            - generic [ref=e92]:
+              - generic [ref=e93]:
+                - generic [ref=e94]: Subtotal
+                - generic [ref=e95]: ₹0
+              - generic [ref=e96]:
+                - generic [ref=e97]: GST (12%)
+                - generic [ref=e98]: ₹0
+              - generic [ref=e99]:
+                - generic [ref=e100]: Delivery
+                - generic [ref=e101]: ₹299
+            - generic [ref=e102]:
+              - generic [ref=e103]: Total
+              - generic [ref=e104]: ₹299
+    - contentinfo [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: Holmes
+              - generic [ref=e111]: World
+            - paragraph [ref=e112]: Premium construction materials for Indian homes. Delivered fast, priced right.
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: Categories
+            - list [ref=e115]:
+              - listitem [ref=e116]:
+                - link "Tiles & Flooring" [ref=e117] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e118]:
+                - link "Bathroom Fittings" [ref=e119] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e120]:
+                - link "Cement & Concrete" [ref=e121] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e122]:
+                - link "Steel & TMT" [ref=e123] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e124]:
+                - link "Paints" [ref=e125] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: Support
+            - list [ref=e128]:
+              - listitem [ref=e129]: Track Order
+              - listitem [ref=e130]: Returns Policy
+              - listitem [ref=e131]: Bulk Orders
+              - listitem [ref=e132]: Installation Help
+              - listitem [ref=e133]: Contact Us
+          - generic [ref=e134]:
+            - paragraph [ref=e135]: Connect
+            - list [ref=e136]:
+              - listitem [ref=e137]: Instagram
+              - listitem [ref=e138]: YouTube
+              - listitem [ref=e139]: LinkedIn
+              - listitem [ref=e140]: WhatsApp Business
+        - generic [ref=e141]:
+          - paragraph [ref=e142]: © HolmesWorld 2025. All rights reserved.
+          - paragraph [ref=e143]: "Made in India 🇮🇳 · GST: 29AABCH1234M1Z5"
+  - button "Open Next.js Dev Tools" [ref=e149] [cursor=pointer]:
+    - img [ref=e150]
+  - alert [ref=e153]

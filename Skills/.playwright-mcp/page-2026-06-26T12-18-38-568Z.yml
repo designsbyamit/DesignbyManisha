@@ -1,0 +1,312 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Holmes World" [ref=e5] [cursor=pointer]:
+          - /url: /work/holmesworld
+          - generic [ref=e6]: Holmes
+          - generic [ref=e7]: World
+        - navigation [ref=e8]:
+          - button "Categories" [ref=e10]:
+            - text: Categories
+            - img [ref=e11]
+          - link "Projects" [ref=e13] [cursor=pointer]:
+            - /url: /work/holmesworld/projects
+          - generic "Coming soon" [ref=e14]: Experience Centre
+        - button "Open search" [ref=e16]:
+          - img [ref=e17]
+        - link "Upload BoM" [ref=e20] [cursor=pointer]:
+          - /url: /work/holmesworld/bom
+          - img [ref=e21]
+          - text: Upload BoM
+        - button "Notifications" [ref=e24]:
+          - img [ref=e25]
+        - link "Cart — 0 items" [ref=e28] [cursor=pointer]:
+          - /url: /work/holmesworld/cart
+          - img [ref=e29]
+    - main [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - img "Premium home interiors" [ref=e37]
+          - generic [ref=e40]:
+            - heading "Build Better. Live Better." [level=1] [ref=e41]:
+              - text: Build Better.
+              - text: Live Better.
+            - generic [ref=e42]:
+              - generic:
+                - img
+              - textbox "Search tiles, cement, fittings, steel..." [ref=e43]
+              - button "Search" [ref=e44]
+            - generic [ref=e45]:
+              - link "Tiles & Flooring" [ref=e46] [cursor=pointer]:
+                - /url: /work/holmesworld/categories
+              - link "Bathroom Fittings" [ref=e47] [cursor=pointer]:
+                - /url: /work/holmesworld/categories
+              - link "Cement" [ref=e48] [cursor=pointer]:
+                - /url: /work/holmesworld/categories
+              - link "Steel TMT" [ref=e49] [cursor=pointer]:
+                - /url: /work/holmesworld/categories
+              - link "Paint" [ref=e50] [cursor=pointer]:
+                - /url: /work/holmesworld/categories
+              - link "Electrical" [ref=e51] [cursor=pointer]:
+                - /url: /work/holmesworld/categories
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - paragraph [ref=e56]: Shop by Category
+            - link "All" [ref=e57] [cursor=pointer]:
+              - /url: /work/holmesworld/categories
+              - text: All
+              - img [ref=e58]
+          - generic [ref=e60]:
+            - link "Tiles & Flooring Tiles & Flooring 8 products" [ref=e62] [cursor=pointer]:
+              - /url: /work/holmesworld/categories/tiles
+              - generic [ref=e63]:
+                - img "Tiles & Flooring" [ref=e65]
+                - generic [ref=e66]:
+                  - paragraph [ref=e67]: Tiles & Flooring
+                  - paragraph [ref=e68]: 8 products
+            - link "Bathroom Fittings Bathroom Fittings 8 products" [ref=e70] [cursor=pointer]:
+              - /url: /work/holmesworld/categories/bathroom-fittings
+              - generic [ref=e71]:
+                - img "Bathroom Fittings" [ref=e73]
+                - generic [ref=e74]:
+                  - paragraph [ref=e75]: Bathroom Fittings
+                  - paragraph [ref=e76]: 8 products
+            - link "Cement & Concrete Cement & Concrete 4 products" [ref=e78] [cursor=pointer]:
+              - /url: /work/holmesworld/categories/cement
+              - generic [ref=e79]:
+                - img "Cement & Concrete" [ref=e81]
+                - generic [ref=e82]:
+                  - paragraph [ref=e83]: Cement & Concrete
+                  - paragraph [ref=e84]: 4 products
+            - link "Steel & TMT Bars Steel & TMT Bars 4 products" [ref=e86] [cursor=pointer]:
+              - /url: /work/holmesworld/categories/steel
+              - generic [ref=e87]:
+                - img "Steel & TMT Bars" [ref=e89]
+                - generic [ref=e90]:
+                  - paragraph [ref=e91]: Steel & TMT Bars
+                  - paragraph [ref=e92]: 4 products
+            - link "Paints & Primers Paints & Primers 6 products" [ref=e94] [cursor=pointer]:
+              - /url: /work/holmesworld/categories/paint
+              - generic [ref=e95]:
+                - img "Paints & Primers" [ref=e97]
+                - generic [ref=e98]:
+                  - paragraph [ref=e99]: Paints & Primers
+                  - paragraph [ref=e100]: 6 products
+            - link "Electrical Electrical 4 products" [ref=e102] [cursor=pointer]:
+              - /url: /work/holmesworld/categories/electrical
+              - generic [ref=e103]:
+                - img "Electrical" [ref=e105]
+                - generic [ref=e106]:
+                  - paragraph [ref=e107]: Electrical
+                  - paragraph [ref=e108]: 4 products
+        - generic [ref=e111]:
+          - heading "Curated for Your Home" [level=2] [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e114] [cursor=pointer]:
+              - img "Premium bathroom tile wall" [ref=e115]
+              - generic [ref=e116]:
+                - paragraph [ref=e117]: Bathroom
+                - paragraph [ref=e118]: Premium Shower Tile Systems
+                - link "Explore" [ref=e119]:
+                  - /url: /work/holmesworld/categories/bathroom-fittings
+            - generic [ref=e120]:
+              - generic [ref=e121] [cursor=pointer]:
+                - img "Kitchen tile flooring" [ref=e122]
+                - generic [ref=e123]:
+                  - paragraph [ref=e124]: Kitchen Tile Floors
+                  - link "View →" [ref=e125]:
+                    - /url: /work/holmesworld/categories/tiles
+              - generic [ref=e126] [cursor=pointer]:
+                - img "Living room wood-look floor" [ref=e127]
+                - generic [ref=e128]:
+                  - paragraph [ref=e129]: Wood-Look Flooring
+                  - link "View →" [ref=e130]:
+                    - /url: /work/holmesworld/categories/tiles
+        - generic [ref=e132]:
+          - heading "Shop by Stage" [level=2] [ref=e133]
+          - generic [ref=e134]:
+            - button "🏗️ Foundation Cement, TMT Steel, Aggregates, Waterproofing" [ref=e136]:
+              - generic [ref=e137]: 🏗️
+              - generic [ref=e138]:
+                - paragraph [ref=e139]: Foundation
+                - paragraph [ref=e140]: Cement, TMT Steel, Aggregates, Waterproofing
+              - img [ref=e141]
+            - button "🧱 Structural Work Bricks, Blocks, Columns, Beams" [ref=e144]:
+              - generic [ref=e145]: 🧱
+              - generic [ref=e146]:
+                - paragraph [ref=e147]: Structural Work
+                - paragraph [ref=e148]: Bricks, Blocks, Columns, Beams
+              - img [ref=e149]
+            - button "🪨 Masonry Mortar, Plaster, Dry-wall, Cladding" [ref=e152]:
+              - generic [ref=e153]: 🪨
+              - generic [ref=e154]:
+                - paragraph [ref=e155]: Masonry
+                - paragraph [ref=e156]: Mortar, Plaster, Dry-wall, Cladding
+              - img [ref=e157]
+            - button "⚡ Electrical Wires, Switches, Panels, MCBs" [ref=e160]:
+              - generic [ref=e161]: ⚡
+              - generic [ref=e162]:
+                - paragraph [ref=e163]: Electrical
+                - paragraph [ref=e164]: Wires, Switches, Panels, MCBs
+              - img [ref=e165]
+            - button "🚿 Plumbing CPVC Pipes, Faucets, Tanks, Valves" [ref=e168]:
+              - generic [ref=e169]: 🚿
+              - generic [ref=e170]:
+                - paragraph [ref=e171]: Plumbing
+                - paragraph [ref=e172]: CPVC Pipes, Faucets, Tanks, Valves
+              - img [ref=e173]
+            - button "🪵 Flooring Tiles, Marble, Wood, Vinyl, Epoxy" [ref=e176]:
+              - generic [ref=e177]: 🪵
+              - generic [ref=e178]:
+                - paragraph [ref=e179]: Flooring
+                - paragraph [ref=e180]: Tiles, Marble, Wood, Vinyl, Epoxy
+              - img [ref=e181]
+            - button "🎨 Finishing Paints, Putty, Primers, Texture" [ref=e184]:
+              - generic [ref=e185]: 🎨
+              - generic [ref=e186]:
+                - paragraph [ref=e187]: Finishing
+                - paragraph [ref=e188]: Paints, Putty, Primers, Texture
+              - img [ref=e189]
+            - button "🛋️ Interiors Doors, Windows, False Ceiling, Lighting" [ref=e192]:
+              - generic [ref=e193]: 🛋️
+              - generic [ref=e194]:
+                - paragraph [ref=e195]: Interiors
+                - paragraph [ref=e196]: Doors, Windows, False Ceiling, Lighting
+              - img [ref=e197]
+        - generic [ref=e201]:
+          - generic [ref=e202]:
+            - heading "Trending Products" [level=2] [ref=e203]
+            - link "View all" [ref=e204] [cursor=pointer]:
+              - /url: /work/holmesworld/categories
+              - text: View all
+              - img [ref=e205]
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - link "Somany Glossy White Wall Tile 300×600 by Somany Somany Somany Glossy White Wall Tile 300×600 ★★★★ (445) ₹55/sq ft" [ref=e209] [cursor=pointer]:
+                - /url: /work/holmesworld/products/somany-wall-tile-glossy-white
+                - img "Somany Glossy White Wall Tile 300×600 by Somany" [ref=e211]
+                - generic [ref=e212]:
+                  - paragraph [ref=e213]: Somany
+                  - paragraph [ref=e214]: Somany Glossy White Wall Tile 300×600
+                  - generic [ref=e215]:
+                    - generic [ref=e216]: ★★★★
+                    - generic [ref=e217]: (445)
+                  - paragraph [ref=e218]:
+                    - text: ₹55
+                    - generic [ref=e219]: /sq ft
+              - button "Add to Cart" [ref=e221]
+            - generic [ref=e222]:
+              - link "Hindware Towel Rail 24-inch Chrome by Hindware Hindware Hindware Towel Rail 24-inch Chrome ★★★★ (567) ₹2,200/piece" [ref=e223] [cursor=pointer]:
+                - /url: /work/holmesworld/products/hindware-towel-rail-chrome
+                - img "Hindware Towel Rail 24-inch Chrome by Hindware" [ref=e225]
+                - generic [ref=e226]:
+                  - paragraph [ref=e227]: Hindware
+                  - paragraph [ref=e228]: Hindware Towel Rail 24-inch Chrome
+                  - generic [ref=e229]:
+                    - generic [ref=e230]: ★★★★
+                    - generic [ref=e231]: (567)
+                  - paragraph [ref=e232]:
+                    - text: ₹2,200
+                    - generic [ref=e233]: /piece
+              - button "Add to Cart" [ref=e235]
+            - generic [ref=e236]:
+              - link "Jaquar EON Health Faucet with Holder by Jaquar Jaquar Jaquar EON Health Faucet with Holder ★★★★ (892) ₹1,850/piece" [ref=e237] [cursor=pointer]:
+                - /url: /work/holmesworld/products/jaquar-eon-health-faucet
+                - img "Jaquar EON Health Faucet with Holder by Jaquar" [ref=e239]
+                - generic [ref=e240]:
+                  - paragraph [ref=e241]: Jaquar
+                  - paragraph [ref=e242]: Jaquar EON Health Faucet with Holder
+                  - generic [ref=e243]:
+                    - generic [ref=e244]: ★★★★
+                    - generic [ref=e245]: (892)
+                  - paragraph [ref=e246]:
+                    - text: ₹1,850
+                    - generic [ref=e247]: /piece
+              - button "Add to Cart" [ref=e249]
+            - generic [ref=e250]:
+              - link "UltraTech OPC 53 Grade Cement by UltraTech Cement UltraTech Cement UltraTech OPC 53 Grade Cement ★★★★ (1,204) ₹410/bag" [ref=e251] [cursor=pointer]:
+                - /url: /work/holmesworld/products/ultratech-opc-53-grade-cement
+                - img "UltraTech OPC 53 Grade Cement by UltraTech Cement" [ref=e253]
+                - generic [ref=e254]:
+                  - paragraph [ref=e255]: UltraTech Cement
+                  - paragraph [ref=e256]: UltraTech OPC 53 Grade Cement
+                  - generic [ref=e257]:
+                    - generic [ref=e258]: ★★★★
+                    - generic [ref=e259]: (1,204)
+                  - paragraph [ref=e260]:
+                    - text: ₹410
+                    - generic [ref=e261]: /bag
+              - button "Add to Cart" [ref=e263]
+        - generic [ref=e266]:
+          - paragraph [ref=e267]: Limited Time
+          - heading "No Cost EMI on orders above ₹50,000" [level=2] [ref=e268]
+          - paragraph [ref=e269]: Available on HDFC, ICICI, SBI, and Axis cards. Tenures of 3, 6, 9, and 12 months.
+          - link "Shop Now" [ref=e271] [cursor=pointer]:
+            - /url: /work/holmesworld/categories
+            - text: Shop Now
+            - img [ref=e272]
+        - generic [ref=e275]:
+          - generic [ref=e276]:
+            - paragraph [ref=e277]: Smart Procurement
+            - heading "Have a Bill of Materials?" [level=2] [ref=e278]
+            - paragraph [ref=e279]: Upload your architect's list and we'll find everything in minutes. Matched, priced, and ready to order.
+            - list [ref=e280]:
+              - listitem [ref=e281]:
+                - img [ref=e282]
+                - generic [ref=e285]: Matches 95%+ of standard BoM items
+              - listitem [ref=e286]:
+                - img [ref=e287]
+                - generic [ref=e290]: Instant price estimates
+              - listitem [ref=e291]:
+                - img [ref=e292]
+                - generic [ref=e295]: One-click add all to cart
+          - link "Upload BoM" [ref=e297] [cursor=pointer]:
+            - /url: /work/holmesworld/bom
+    - contentinfo [ref=e298]:
+      - generic [ref=e299]:
+        - generic [ref=e300]:
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - generic [ref=e303]: Holmes
+              - generic [ref=e304]: World
+            - paragraph [ref=e305]: Premium construction materials for Indian homes. Delivered fast, priced right.
+          - generic [ref=e306]:
+            - paragraph [ref=e307]: Categories
+            - list [ref=e308]:
+              - listitem [ref=e309]:
+                - link "Tiles & Flooring" [ref=e310] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e311]:
+                - link "Bathroom Fittings" [ref=e312] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e313]:
+                - link "Cement & Concrete" [ref=e314] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e315]:
+                - link "Steel & TMT" [ref=e316] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+              - listitem [ref=e317]:
+                - link "Paints" [ref=e318] [cursor=pointer]:
+                  - /url: /work/holmesworld/categories
+          - generic [ref=e319]:
+            - paragraph [ref=e320]: Support
+            - list [ref=e321]:
+              - listitem [ref=e322]: Track Order
+              - listitem [ref=e323]: Returns Policy
+              - listitem [ref=e324]: Bulk Orders
+              - listitem [ref=e325]: Installation Help
+              - listitem [ref=e326]: Contact Us
+          - generic [ref=e327]:
+            - paragraph [ref=e328]: Connect
+            - list [ref=e329]:
+              - listitem [ref=e330]: Instagram
+              - listitem [ref=e331]: YouTube
+              - listitem [ref=e332]: LinkedIn
+              - listitem [ref=e333]: WhatsApp Business
+        - generic [ref=e334]:
+          - paragraph [ref=e335]: © HolmesWorld 2025. All rights reserved.
+          - paragraph [ref=e336]: "Made in India 🇮🇳 · GST: 29AABCH1234M1Z5"
+  - button "Open Next.js Dev Tools" [ref=e342] [cursor=pointer]:
+    - img [ref=e343]
+  - alert [ref=e346]

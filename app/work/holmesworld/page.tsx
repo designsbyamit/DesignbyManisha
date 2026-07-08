@@ -480,14 +480,10 @@ function NextProject() {
                 View case study <ChevronRight size={14} />
               </div>
             </div>
-            <div style={{
-              background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)",
-              borderRadius: 16, height: 200,
-              display: "flex", alignItems: "center", justifyContent: "center",
-            }}>
-              <div style={{ width: 60, height: 60, borderRadius: 14, background: "rgba(27,58,92,0.3)", border: "1px solid rgba(79,156,249,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 22 }}>🏥</span>
-              </div>
+            <div style={{ borderRadius: 16, height: 200, overflow: "hidden", position: "relative" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/cognicure/mob.png" alt="CogniCure"
+                style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center", background: "#061218" }} />
             </div>
           </motion.div>
         </Link>

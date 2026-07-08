@@ -1,0 +1,463 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e8]:
+      - link [ref=e10] [cursor=pointer]:
+        - /url: ./
+      - generic [ref=e12]:
+        - paragraph [ref=e18] [cursor=pointer]: Get in touch
+        - img [ref=e24] [cursor=pointer]
+    - generic [ref=e27]:
+      - img [ref=e32]:
+        - generic [ref=e34]: DEECO FLOORS - THAILAND 2024.
+      - heading "Good floors, Happy life!" [level=1] [ref=e39]:
+        - text: Good floors,
+        - text: Happy life!
+      - generic [ref=e40]:
+        - paragraph [ref=e44]: Discover our range of premium wooden floors, crafted with care and passion, to elevate your space into something truly special!
+        - paragraph [ref=e50]: European Quality & Design
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e56]: OUR PRODUCTS
+          - heading "A perfect harmony of design and functionality" [level=2] [ref=e59]
+        - link "Get in touch" [ref=e61] [cursor=pointer]:
+          - /url: ./#contact
+          - generic [ref=e62]:
+            - paragraph [ref=e65]: Get in touch
+            - img [ref=e68]
+      - generic [ref=e72]:
+        - generic [ref=e75]:
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - paragraph [ref=e95]: 2,499
+              - paragraph [ref=e98]: THB/m²
+            - generic [ref=e99]:
+              - generic [ref=e100]:
+                - paragraph [ref=e102]: 2,760
+                - paragraph [ref=e105]: THB/m²
+              - paragraph [ref=e109]: Promotion
+          - generic [ref=e111]:
+            - generic [ref=e113]:
+              - heading "ULTRA PREMIUM OAK, 100% WOOD" [level=4] [ref=e115]
+              - paragraph [ref=e117]: Nature at your feet! Genuine, elegant oak floors in beautiful, trendy colors.
+            - generic [ref=e118]:
+              - heading "BOURBON (DP-190-087)" [level=6] [ref=e120]
+              - generic [ref=e121]:
+                - paragraph [ref=e130] [cursor=pointer]: "%"
+                - paragraph [ref=e136] [cursor=pointer]: "%"
+          - link "Download Spec Sheet" [ref=e138] [cursor=pointer]:
+            - /url: https://framerusercontent.com/assets/OA22c4qmCL3lu1OWVeRRg1QZY.pdf
+            - img [ref=e139]
+            - text: Download Spec Sheet
+        - generic [ref=e143]:
+          - generic [ref=e161]:
+            - paragraph [ref=e163]: 1,499
+            - paragraph [ref=e166]: THB/m²
+          - generic [ref=e168]:
+            - generic [ref=e170]:
+              - heading "PREMIUM ENGINEERED OAK" [level=4] [ref=e172]
+              - paragraph [ref=e174]: This VSPC floor has a 1mm oak top layer and an SPC base, with 5G click-lock.
+            - heading "OSLO (DW-190-001)" [level=6] [ref=e177]
+          - link "Download Spec Sheet" [ref=e189] [cursor=pointer]:
+            - /url: https://framerusercontent.com/assets/rvm1BPU88UQMsTo5ibMFPE54mo.pdf
+            - img [ref=e190]
+            - text: Download Spec Sheet
+        - generic [ref=e194]:
+          - generic [ref=e212]:
+            - paragraph [ref=e214]: "925"
+            - paragraph [ref=e217]: THB/m²
+          - generic [ref=e219]:
+            - generic [ref=e221]:
+              - heading "EUROPEAN LUXURY HERRINGBONE" [level=4] [ref=e223]
+              - paragraph [ref=e225]: Beautiful SPC floors in herringbone pattern. Wearlayer is 0.7mm, suitable for high traffic areas.
+            - heading "LEIE (DF-146-001)" [level=6] [ref=e228]
+          - link "Download Spec Sheet" [ref=e240] [cursor=pointer]:
+            - /url: https://framerusercontent.com/assets/m5pHzu8h9K3KnSj9XYwFwemIQ8.pdf
+            - img [ref=e241]
+            - text: Download Spec Sheet
+        - generic [ref=e245]:
+          - generic [ref=e263]:
+            - paragraph [ref=e265]: "599"
+            - paragraph [ref=e268]: THB/m²
+          - generic [ref=e270]:
+            - generic [ref=e272]:
+              - heading "EUROPEAN AFFORDABLE LUXURY" [level=4] [ref=e274]
+              - paragraph [ref=e276]: This floor is made of Stone Plastic Composite (SPC), with 5G click-lock.
+            - heading "LONDON (DF-180-001)" [level=6] [ref=e279]
+          - link "Download Spec Sheet" [ref=e300] [cursor=pointer]:
+            - /url: https://framerusercontent.com/assets/FVmK4m4opGPiXRPEBKLUDNMmkQ.pdf
+            - img [ref=e301]
+            - text: Download Spec Sheet
+    - banner [ref=e303]:
+      - list [ref=e307]:
+        - listitem [ref=e308]:
+          - generic [ref=e309]:
+            - heading "Your only REAL WOODEN FLOOR shop in Thailand!" [level=3] [ref=e311]
+            - img [ref=e315]:
+              - generic [ref=e317]: DEECO FLOORS - THAILAND 2024.
+            - heading "BEST PRICE QUALITY guarantee in Thailand!" [level=3] [ref=e320]
+            - img [ref=e324]:
+              - generic [ref=e326]: DEECO FLOORS - THAILAND 2024.
+        - listitem [ref=e328]:
+          - generic [ref=e329]:
+            - heading "Your only REAL WOODEN FLOOR shop in Thailand!" [level=3] [ref=e331]
+            - img [ref=e335]:
+              - generic [ref=e337]: DEECO FLOORS - THAILAND 2024.
+            - heading "BEST PRICE QUALITY guarantee in Thailand!" [level=3] [ref=e340]
+            - img [ref=e344]:
+              - generic [ref=e346]: DEECO FLOORS - THAILAND 2024.
+        - listitem [ref=e348]:
+          - generic [ref=e349]:
+            - heading [level=3] [ref=e351]: Your only REAL WOODEN FLOOR shop in Thailand!
+            - img [ref=e355]:
+              - generic [ref=e357]: DEECO FLOORS - THAILAND 2024.
+            - heading [level=3] [ref=e360]: BEST PRICE QUALITY guarantee in Thailand!
+            - img [ref=e364]:
+              - generic [ref=e366]: DEECO FLOORS - THAILAND 2024.
+        - listitem [ref=e368]:
+          - generic [ref=e369]:
+            - heading [level=3] [ref=e371]: Your only REAL WOODEN FLOOR shop in Thailand!
+            - img [ref=e375]:
+              - generic [ref=e377]: DEECO FLOORS - THAILAND 2024.
+            - heading [level=3] [ref=e380]: BEST PRICE QUALITY guarantee in Thailand!
+            - img [ref=e384]:
+              - generic [ref=e386]: DEECO FLOORS - THAILAND 2024.
+        - listitem [ref=e388]:
+          - generic [ref=e389]:
+            - heading [level=3] [ref=e391]: Your only REAL WOODEN FLOOR shop in Thailand!
+            - img [ref=e395]:
+              - generic [ref=e397]: DEECO FLOORS - THAILAND 2024.
+            - heading [level=3] [ref=e400]: BEST PRICE QUALITY guarantee in Thailand!
+            - img [ref=e404]:
+              - generic [ref=e406]: DEECO FLOORS - THAILAND 2024.
+        - listitem [ref=e408]:
+          - generic [ref=e409]:
+            - heading [level=3] [ref=e411]: Your only REAL WOODEN FLOOR shop in Thailand!
+            - img [ref=e415]:
+              - generic [ref=e417]: DEECO FLOORS - THAILAND 2024.
+            - heading [level=3] [ref=e420]: BEST PRICE QUALITY guarantee in Thailand!
+            - img [ref=e424]:
+              - generic [ref=e426]: DEECO FLOORS - THAILAND 2024.
+      - iframe [ref=e430]:
+        - generic [ref=f3e10]:
+          - generic [ref=f3e12]: Wood Flooring Cost Calculator
+          - generic [ref=f3e13]:
+            - generic [ref=f3e14]:
+              - generic [ref=f3e16]:
+                - generic [ref=f3e17]:
+                  - generic [ref=f3e18]:
+                    - generic [ref=f3e19]: Area in Square Meters
+                    - generic: 50 m²
+                    - textbox "Area in Square Meters" [ref=f3e23]: 50 m²
+                  - generic [ref=f3e24]:
+                    - slider "Area in Square Meters" [ref=f3e25] [cursor=pointer]
+                    - generic [ref=f3e28]:
+                      - generic [ref=f3e29]: 20 m²
+                      - generic [ref=f3e30]: 1,000 m²
+                  - status [ref=f3e31]
+                - strong [ref=f3e34]: Adjust the slider to represent the floor area you need.
+              - generic [ref=f3e35]:
+                - generic [ref=f3e36]: Floor Type
+                - generic [ref=f3e37]:
+                  - generic [ref=f3e38] [cursor=pointer]:
+                    - combobox "Floor Type" [ref=f3e39]: Select Value
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                  - strong [ref=f3e42]: Select the type of flooring.
+              - generic [ref=f3e43]:
+                - generic [ref=f3e44]: Skirting & Installation
+                - generic [ref=f3e45]:
+                  - generic [ref=f3e46] [cursor=pointer]:
+                    - combobox "Skirting & Installation" [ref=f3e47]: "Yes"
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                  - generic [ref=f3e48]:
+                    - strong [ref=f3e50]: "Remarks:"
+                    - generic [ref=f3e51]:
+                      - strong [ref=f3e52]: 1)
+                      - strong [ref=f3e54]: Please consider ±5% extra square meters for cutting loss of random patterns, and ±10% for brick and herringbone patterns.
+                    - strong [ref=f3e56]: 2) FREE DELIVERY in Pattaya area. In case of delivery outside Pattaya area, please contact DEECO FLOORS to confirm the extra delivery cost.
+            - generic [ref=f3e57]:
+              - generic [ref=f3e58]:
+                - generic [ref=f3e59]: Subtotal Floors Cost*
+                - generic [ref=f3e60]:
+                  - generic: "0.00"
+                  - generic [ref=f3e61]: "0.00"
+                - generic [ref=f3e63]: "*Excluding VAT & Other fees"
+              - generic [ref=f3e65]:
+                - generic [ref=f3e67]: Skirting & Installation
+                - generic [ref=f3e68]:
+                  - generic: "0.00"
+                  - generic [ref=f3e69]: "0.00"
+              - generic [ref=f3e70]:
+                - generic [ref=f3e72]: VAT (7%)
+                - generic [ref=f3e73]:
+                  - generic: "0.00"
+                  - generic [ref=f3e74]: "0.00"
+              - generic [ref=f3e75]:
+                - generic [ref=f3e76]:
+                  - generic [ref=f3e77]: Total Cost of Floors
+                  - generic [ref=f3e79]: Cost is calculated based on the selected type of Wood and the total area.
+                - generic [ref=f3e80]:
+                  - generic: 0 THB
+                  - generic [ref=f3e81]: 0 THB
+              - generic [ref=f3e82]:
+                - generic [ref=f3e83]: Ready to Enhance Your Space?
+                - generic [ref=f3e85]: BEST PRICE QUALITY guarantee in Thailand!
+                - button "Get Your Quote Now" [ref=f3e86] [cursor=pointer]:
+                  - generic [ref=f3e88]: Get Your Quote Now
+    - generic [ref=e435]:
+      - heading "Why choose DEECO SPC’s floors (European Affordable Quality)?" [level=3] [ref=e438]
+      - generic [ref=e439]:
+        - generic [ref=e441]:
+          - heading "SPC = Stone Plastic Composite" [level=4] [ref=e443]
+          - paragraph [ref=e445]: Made from 70% limestone + 30% PVC — stable, durable, recyclable, and low in emissions. Anti-termite, anti-bacterial, and fire-retardant. Cheaper SPC = 100% PVC — less stable, less durable, higher emissions.
+        - generic [ref=e447]:
+          - heading "BEST price / quality, BEST deal in Thailand!" [level=4] [ref=e449]
+          - paragraph [ref=e451]: Top value for European quality at local prices.
+        - generic [ref=e453]:
+          - heading "100% Water Resistant" [level=4] [ref=e455]
+          - paragraph [ref=e457]: Easy to clean and perfect for all areas.
+        - generic [ref=e459]:
+          - heading "5G Click-System for Fast & Easy Installation" [level=4] [ref=e461]
+          - paragraph [ref=e463]: Latest 5G tech ensures strong, long-lasting locks. Can be installed over existing floors. Cheaper 2G systems loosen over time and may break.
+        - generic [ref=e465]:
+          - heading "Wear Layer = 0.55mm" [level=4] [ref=e467]
+          - paragraph [ref=e469]: Scratch-resistant, pet-friendly, slip-resistant, and UV-resistant. Matt finish — trendy and long-lasting. Cheaper floors = 0.3mm layer — wear out faster
+        - generic [ref=e471]:
+          - heading "Natural Wood Decors" [level=4] [ref=e473]
+          - paragraph [ref=e475]: Realistic wood look with light embossing and at least 5 unique planks for a more natural, non-repetitive appearance.
+    - list [ref=e481]:
+      - listitem [ref=e482]
+      - listitem [ref=e487]
+      - listitem [ref=e492]
+      - listitem [ref=e497]
+      - listitem [ref=e502]
+      - listitem [ref=e507]
+      - listitem [ref=e512]
+      - listitem [ref=e517]
+      - listitem [ref=e522]
+      - listitem [ref=e527]
+      - listitem [ref=e532]
+      - listitem [ref=e537]
+      - listitem [ref=e542]
+      - listitem [ref=e547]
+      - listitem [ref=e552]
+      - listitem [ref=e557]
+      - listitem [ref=e562]
+      - listitem [ref=e567]
+      - listitem [ref=e572]
+      - listitem [ref=e577]
+      - listitem [ref=e582]
+    - generic [ref=e588]:
+      - generic [ref=e589]:
+        - paragraph [ref=e591]: ABOUT US
+        - heading "Flooring Excellence" [level=2] [ref=e594]
+        - paragraph [ref=e596]: Discover DEECO’s journey from Belgium to Thailand, bringing premium European flooring with unmatched quality and style.
+      - generic [ref=e597]:
+        - generic [ref=e600]:
+          - paragraph [ref=e604]: "1904"
+          - generic [ref=e608]:
+            - paragraph [ref=e610]: Establishment
+            - paragraph [ref=e612]: In 1904, the brothers Auguste and Alphonse Hanssens founded 'Une société en nom collectif' with the name 'A & A Hanssens'. With its registered office at Stroplaan 73 in Ghent.
+        - generic [ref=e614]:
+          - paragraph [ref=e618]: "1923"
+          - generic [ref=e622]:
+            - paragraph [ref=e624]: Alphonse Hanssens
+            - paragraph [ref=e626]: On September 18, 1923, Auguste Hanssens decided to transfer his shares in the company to his brother Alphonse Hanssens.
+        - generic [ref=e628]:
+          - paragraph [ref=e632]: "1960"
+          - generic [ref=e636]:
+            - paragraph [ref=e638]: Port-Arthurlaan
+            - paragraph [ref=e640]: "In 1960 it was decided to move the trading activities from Stroplaan to the port area: Port-Arthurlaan 90 in Ghent."
+        - generic [ref=e642]:
+          - paragraph [ref=e646]: "2005"
+          - generic [ref=e650]:
+            - paragraph [ref=e652]: Engineered Wooden Flooring Trade
+            - paragraph [ref=e654]: In 2005, a trade company specializing in the production of engineered wooden floors was set up in Shanghai, China. Over the course of 20 years, this company collaborated with a network of over 30 factories across China to produce high-quality oak floors for distribution partners in Europe. This extensive production network ensured floors were tailored to meet customer specifications, maintaining a focus on elegance, modernity, and quality.
+        - generic [ref=e656]:
+          - paragraph [ref=e660]: "2024"
+          - generic [ref=e664]:
+            - paragraph [ref=e666]: DEECO FLOORS Launch in Pattaya
+            - paragraph [ref=e668]: After years of planning and development, the first DEECO FLOORS shop was launched in Pattaya in May 2024, offering a range of premium wooden flooring solutions with a blend of European design and quality craftsmanship.
+        - generic [ref=e670]:
+          - paragraph [ref=e674]: "2025"
+          - generic [ref=e678]:
+            - paragraph [ref=e680]: The Deeco Team is Expanding
+            - paragraph [ref=e682]: In the year 2025, the Deeco Team experienced a remarkable expansion, which not only increased the number of team members but also contributed to substantial growth and success for the company as a whole. This pivotal moment marked a turning point, allowing Deeco to explore new opportunities and enhance its market presence.
+    - generic [ref=e684]:
+      - generic [ref=e685]:
+        - generic [ref=e689]: "100"
+        - generic [ref=e690]:
+          - paragraph [ref=e692]: Years of Craftsmanship
+          - paragraph [ref=e694]: A legacy of woodworking since Belgium, 1904.
+      - generic [ref=e695]:
+        - generic [ref=e698]:
+          - generic [ref=e699]: "10"
+          - generic [ref=e700]: +
+        - generic [ref=e701]:
+          - paragraph [ref=e703]: Partner Factories
+          - paragraph [ref=e705]: A vast network ensuring premium engineered wood production.
+      - generic [ref=e706]:
+        - generic [ref=e710]: "0"
+        - generic [ref=e711]:
+          - paragraph [ref=e713]: Years of Innovation
+          - paragraph [ref=e715]: Crafting high-quality oak floors for global markets.
+      - generic [ref=e716]:
+        - generic [ref=e720]: "2004"
+        - generic [ref=e721]:
+          - paragraph [ref=e723]: Thailand Launch
+          - paragraph [ref=e725]: Introducing DEECO FLOORS with European-inspired designs.
+    - generic [ref=e742]:
+      - generic [ref=e743]:
+        - paragraph [ref=e745]: TESTIMONIALS
+        - heading "Our Projects" [level=2] [ref=e747]
+      - generic [ref=e748]:
+        - generic [ref=e750]:
+          - paragraph [ref=e752]: "\"Couldn’t find real wooden flooring in Pattaya—until I discovered Deeco. Beautiful, affordable, and top-notch service. 100% recommend!\""
+          - generic [ref=e753]:
+            - paragraph [ref=e755]: GHENT (Mar 2025)
+            - generic:
+              - paragraph
+        - link "View All Projects" [ref=e758] [cursor=pointer]:
+          - /url: ./projects
+          - generic [ref=e759]:
+            - paragraph [ref=e762]: View All Projects
+            - img [ref=e765]
+    - generic [ref=e775]:
+      - generic [ref=e777]:
+        - generic [ref=e778]:
+          - heading "Unlock Your Dream Floor Today!" [level=2] [ref=e780]:
+            - text: Unlock Your Dream
+            - text: Floor Today!
+          - paragraph [ref=e782]: We encourage clients to actively participate in discussions, share their ideas, preferences, and feedback.
+        - generic [ref=e783]:
+          - generic [ref=e784]:
+            - paragraph [ref=e786]: Name
+            - textbox "Name" [ref=e788]:
+              - /placeholder: Jane Smith
+          - generic [ref=e789]:
+            - paragraph [ref=e791]: Email
+            - textbox "Email" [ref=e793]:
+              - /placeholder: jane@framer.com
+          - generic [ref=e794]:
+            - paragraph [ref=e796]: Subject
+            - textbox "Subject" [ref=e798]:
+              - /placeholder: Jane Smith
+          - generic [ref=e799]:
+            - paragraph [ref=e801]: Message
+            - textbox "Message" [ref=e804]:
+              - /placeholder: Write here...
+          - button "Send a message" [ref=e806] [cursor=pointer]:
+            - paragraph [ref=e808]: Send a message
+      - generic [ref=e809]:
+        - generic [ref=e810]:
+          - heading "Interested in DEECO Floors?" [level=3] [ref=e812]
+          - paragraph [ref=e814]: Fill out the form on the side to get a quotation or an appointment with our teams. We will answer you quickly.
+        - generic [ref=e815]:
+          - generic [ref=e816]:
+            - paragraph [ref=e818]: Working Mail
+            - paragraph [ref=e820]:
+              - link "hello@deecofloors.co.th" [ref=e821] [cursor=pointer]:
+                - /url: mailto:hello@deecofloors.co.th
+          - generic [ref=e822]:
+            - paragraph [ref=e824]: TAX ID
+            - paragraph [ref=e826]: "0205567026909"
+          - generic [ref=e827]:
+            - paragraph [ref=e829]: Phone
+            - generic [ref=e830]:
+              - generic [ref=e831]:
+                - paragraph [ref=e833]:
+                  - link "+66 61 414 7294" [ref=e834] [cursor=pointer]:
+                    - /url: tel:+66 61 414 7294
+                - paragraph [ref=e836]: (Bangkok)
+              - generic [ref=e837]:
+                - paragraph [ref=e839]:
+                  - link "+66 65 013 9282" [ref=e840] [cursor=pointer]:
+                    - /url: tel:+66 61 414 7294
+                - paragraph [ref=e842]: (Chonburi – Pattaya – Rayong)
+          - generic [ref=e843]:
+            - paragraph [ref=e845]: Office Address
+            - paragraph [ref=e847]: Deeco Floors Co., Ltd. (Head Office) 138/62 M.12 Chaiyaphruek Road, Nongprue, Banglamung, Chonburi 20150, Thailand
+    - generic [ref=e854]:
+      - generic [ref=e855]:
+        - generic [ref=e856]:
+          - paragraph [ref=e858]: FAQS
+          - heading "Still Have A Question?" [level=2] [ref=e861]
+        - link "See all FAQs" [ref=e863] [cursor=pointer]:
+          - /url: ./faq
+          - generic [ref=e864]:
+            - paragraph [ref=e867]: See all FAQs
+            - img [ref=e870]
+      - generic [ref=e874]:
+        - heading "Explore our Frequently Asked Questions to find quick answers to common inquiries about Deeco’s products, services, and support." [level=3] [ref=e877]
+        - generic [ref=e878]:
+          - link "Cleaning & Maintenance Tips and instructions to keep your floors looking their best." [ref=e879] [cursor=pointer]:
+            - /url: ./faq/how-to-clean-an-spc-floor
+            - generic [ref=e884]:
+              - img [ref=e887]
+              - paragraph [ref=e890]: Cleaning & Maintenance
+              - paragraph [ref=e892]: Tips and instructions to keep your floors looking their best.
+          - link "Installation Step-by-step guides to help you install your floors with confidence." [ref=e893] [cursor=pointer]:
+            - /url: ./faq/how-to-install-an-engineered-oak-floor-(ultra-premium)
+            - generic [ref=e898]:
+              - img [ref=e901]
+              - paragraph [ref=e905]: Installation
+              - paragraph [ref=e907]: Step-by-step guides to help you install your floors with confidence.
+          - link "Warranty Details about product coverage and customer protection." [ref=e908] [cursor=pointer]:
+            - /url: ./faq/what-is-the-warranty-for-spc-floors-(european-affordable-luxury)
+            - generic [ref=e913]:
+              - img [ref=e916]
+              - paragraph [ref=e919]: Warranty
+              - paragraph [ref=e921]: Details about product coverage and customer protection.
+    - generic [ref=e926]:
+      - generic [ref=e927]:
+        - generic [ref=e928]:
+          - heading "Ready To Build Your Dream Project?" [level=2] [ref=e930]
+          - link "Get in touch" [ref=e932] [cursor=pointer]:
+            - /url: ./#contact
+            - generic [ref=e933]:
+              - paragraph [ref=e936]: Get in touch
+              - img [ref=e939]
+        - generic [ref=e943]:
+          - generic [ref=e945]:
+            - link "Products" [ref=e947] [cursor=pointer]:
+              - /url: ./#products
+              - paragraph [ref=e949]: Products
+            - link "Calculator" [ref=e951] [cursor=pointer]:
+              - /url: ./#calculator
+              - paragraph [ref=e953]: Calculator
+            - link "Our Projects" [ref=e955] [cursor=pointer]:
+              - /url: ./#our-projects
+              - paragraph [ref=e957]: Our Projects
+            - link "About Us" [ref=e959] [cursor=pointer]:
+              - /url: ./#about
+              - paragraph [ref=e961]: About Us
+            - link "FAQs" [ref=e963] [cursor=pointer]:
+              - /url: ./faq#faq-details
+              - paragraph [ref=e965]: FAQs
+          - generic [ref=e966]:
+            - link "Facebook" [ref=e968] [cursor=pointer]:
+              - /url: https://www.facebook.com/@deecofloors/
+              - paragraph [ref=e970]: Facebook
+            - link "Instagram" [ref=e972] [cursor=pointer]:
+              - /url: https://www.instagram.com/deecofloors/#
+              - paragraph [ref=e974]: Instagram
+            - link "Tiktok" [ref=e976] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@deeco.floors
+              - paragraph [ref=e978]: Tiktok
+            - link "Lemon8" [ref=e980] [cursor=pointer]:
+              - /url: https://www.lemon8-app.com/@deeco.floors?_r=1&_t=MGcEDG7apesXQdzk1QaY5gRFSQ415I5cTN9RO%2FEhXZBeHrYw40glIKQuqLgUyDxXAGwgGcPOPlBWN8TIaIZ%2B98OqRHr%2F8d1SPpBGI5%2BOegfZ8Pt5123UBBDOT1bBqk%2Blu8nbEISvYn2G&region=th&share_platform=copy
+              - paragraph [ref=e982]: Lemon8
+      - generic [ref=e983]:
+        - generic [ref=e985]:
+          - paragraph [ref=e988]: Deeco Floors Co., Ltd. (Head Office) 138/62 M.12 Chaiyaphruek Road, Nongprue, Banglamung, Chonburi 20150, Thailand
+          - paragraph [ref=e991]: hello@deecofloors.co.th
+        - link [ref=e994] [cursor=pointer]:
+          - /url: ./
+  - button "Open chat window" [ref=e997] [cursor=pointer]:
+    - img [ref=e1002]

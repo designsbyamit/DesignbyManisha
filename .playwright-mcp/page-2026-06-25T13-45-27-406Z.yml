@@ -1,0 +1,52 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: HEXSOLVE
+        - paragraph [ref=e8]: Engineering Intelligence Platform
+      - generic [ref=e9]:
+        - img [ref=e10]
+        - generic [ref=e37]:
+          - heading "Precision at Every Assembly Step" [level=2] [ref=e38]:
+            - text: Precision at Every
+            - text: Assembly Step
+          - paragraph [ref=e39]: Manage engine manufacturing workflows, instruction documents, and quality assurance in one unified platform built for aerospace-grade precision.
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - img [ref=e43]
+            - generic [ref=e45]: Real-time assembly instruction tracking
+          - generic [ref=e46]:
+            - img [ref=e48]
+            - generic [ref=e50]: Multi-role approval workflows
+          - generic [ref=e51]:
+            - img [ref=e53]
+            - generic [ref=e55]: Integrated QA checkpoints
+      - paragraph [ref=e57]: Trusted by precision engineering teams worldwide
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - paragraph [ref=e61]: Welcome back
+          - heading "Sign in to HexSolve" [level=1] [ref=e62]
+          - paragraph [ref=e63]: Enter your credentials to continue
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: Email address
+            - textbox "name@aie.com" [active] [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e71]: Password
+              - generic [ref=e72]:
+                - textbox "Enter your password" [ref=e73]
+                - button "Show" [ref=e74]
+            - button "Forgot password?" [ref=e76]
+          - button "Sign In" [ref=e78] [cursor=pointer]:
+            - generic [ref=e79]: Sign In
+          - paragraph [ref=e80]:
+            - text: Need help signing in?
+            - button "Contact IT Support" [ref=e81]
+        - generic [ref=e83]:
+          - generic [ref=e86]: Secure connection established
+          - generic [ref=e87]: v2.4.1
+      - paragraph [ref=e89]: © 2025 AIE. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e95] [cursor=pointer]:
+    - img [ref=e96]

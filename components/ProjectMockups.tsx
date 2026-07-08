@@ -76,6 +76,8 @@ export function IPadMockup({ src, alt = "" }: { src: string; alt?: string }) {
       display: "flex", alignItems: "center", justifyContent: "center",
       background: "linear-gradient(145deg, #0d0d0d 0%, #1a0a0a 50%, #0d0d14 100%)",
       overflow: "hidden",
+      padding: "5% 4%",
+      boxSizing: "border-box",
     }}>
       {/* Background grid lines */}
       <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(204,41,41,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(204,41,41,0.05) 1px, transparent 1px)", backgroundSize: "40px 40px", pointerEvents: "none" }} />
@@ -106,6 +108,8 @@ export function BrowserMockupWithShine({ src, alt = "" }: { src: string; alt?: s
       position: "relative", width: "100%", height: "100%",
       display: "flex", alignItems: "center", justifyContent: "center",
       background: "linear-gradient(145deg, #0a0e1a 0%, #0f1823 60%, #0a1510 100%)",
+      padding: "5% 4%",
+      boxSizing: "border-box",
       overflow: "hidden",
     }}>
       {/* Background ambient blobs */}
@@ -142,6 +146,8 @@ export function PhoneRotatingMockup({ alt = "" }: { alt?: string }) {
       background: "#061218",
       overflow: "hidden",
       minHeight: 380,
+      padding: "4% 3%",
+      boxSizing: "border-box",
     }}>
       {/* Mesh gradient animation */}
       <style>{`
@@ -199,19 +205,20 @@ export function PhoneRotatingMockup({ alt = "" }: { alt?: string }) {
         animation: "meshBlob4 9s ease-in-out infinite",
       }} />
 
-      {/* Mockup image — above the mesh */}
+      {/* Mockup image — padded so phones are never clipped */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/cognicure/mob.png"
         alt={alt}
         style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "contain",
-          objectPosition: "center",
+          position: "relative",
           zIndex: 1,
+          width: "90%",
+          maxWidth: 520,
+          height: "auto",
+          objectFit: "contain",
+          display: "block",
+          padding: "5% 4%",
         }}
       />
 
